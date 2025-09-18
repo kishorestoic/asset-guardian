@@ -2,39 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of pages</title>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <title>AssetGuardian : List of pages</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --olive-green: #4EBE38;
+            --leaf-green: #24981C;
+            --navy-blue: #000074;
+            --blue: #0140AC;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--olive-green)",
+                        "secondary": "var(--navy-blue)",
+                        "background-light": "#f7f9f5",
+                        "background-dark": "#0d1a12",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 
 <body>
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700">
-            <tr>
-                <th scope="col" class="px-6 py-3">Page</th>
-                <th scope="col" class="px-6 py-3">List</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <td class="px-6 py-4">Property Listing - 1</td>
-                <td class="px-6 py-4"><a href="property-list-1.html">View page</a></td>
-            </tr>
-            <tr class="bg-gray-50 dark:bg-gray-700">
-                <td class="px-6 py-4">Property Listing - 2</td>
-                <td class="px-6 py-4"><a href="property-list-2.html">View page</a></td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <td class="px-6 py-4">Property Details - 1</td>
-                <td class="px-6 py-4"><a href="property-details-1.html">View page</a></td>
-            </tr>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ded2e8;
+        }
 
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <td class="px-6 py-4">Property Details - 2</td>
-                <td class="px-6 py-4"><a href="property-details-2.html">View page</a></td>
-            </tr>
-        </tbody>
-    </table>
+        th {
+            background-color: #f7f9f5;
+        }
+
+        a {
+            color: #24981C;
+        }
+
+        a:hover {
+            color: #000074;
+        }
+    </style>
+    <div class="p-8 m-8">
+        <h1 class="text-xl font-medium text-gray-900 dark:text-white mb-5">List of pages</h1>
+        <table class="w-[550px] text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3">Page</th>
+                    <th scope="col" class="px-6 py-3">List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b">
+                    <td class="px-6 py-4">Property Listing - 1</td>
+                    <td class="px-6 py-4"><a href="property-list-1.html" class="hover:text-primary">View page</a></td>
+                </tr>
+                <tr class="bg-gray-50 ">
+                    <td class="px-6 py-4">Property Listing - 2</td>
+                    <td class="px-6 py-4"><a href="property-list-2.html" class="hover:text-primary">View page</a></td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800">
+                    <td class="px-6 py-4">Property Details - 1</td>
+                    <td class="px-6 py-4"><a href="property-details-1.html" class="hover:text-primary">View page</a>
+                    </td>
+                </tr>
+
+                <tr class="bg-white border-b dark:bg-gray-800">
+                    <td class="px-6 py-4">Property Details - 2</td>
+                    <td class="px-6 py-4"><a href="property-details-2.html" class="hover:text-primary">View page</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

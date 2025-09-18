@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <title>AssetGuard - Properties for Sale</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --olive-green: #4EBE38;
+            --leaf-green: #24981C;
+            --navy-blue: #000074;
+            --blue: #0140AC;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--olive-green)",
+                        "secondary": "var(--navy-blue)",
+                        "background-light": "#f7f9f5",
+                        "background-dark": "#0d1a12",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <script>
+        function toggleView(view) {
+            const gridView = document.getElementById('grid-view');
+            const listView = document.getElementById('list-view');
+            const gridButton = document.getElementById('grid-button');
+            const listButton = document.getElementById('list-button');
+            if (view === 'grid') {
+                gridView.classList.remove('hidden');
+                listView.classList.add('hidden');
+                gridButton.classList.add('bg-primary', 'text-white');
+                gridButton.classList.remove('text-gray-600', 'dark:text-gray-300', 'hover:bg-gray-200', 'dark:hover:bg-gray-800');
+                listButton.classList.add('text-gray-600', 'dark:text-gray-300', 'hover:bg-gray-200', 'dark:hover:bg-gray-800');
+                listButton.classList.remove('bg-primary', 'text-white');
+            } else {
+                gridView.classList.add('hidden');
+                listView.classList.remove('hidden');
+                listButton.classList.add('bg-primary', 'text-white');
+                listButton.classList.remove('text-gray-600', 'dark:text-gray-300', 'hover:bg-gray-200', 'dark:hover:bg-gray-800');
+                gridButton.classList.add('text-gray-600', 'dark:text-gray-300', 'hover:bg-gray-200', 'dark:hover:bg-gray-800');
+                gridButton.classList.remove('bg-primary', 'text-white');
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex flex-col min-h-screen">
+        <header
+            class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-3xl">real_estate_agent</span>
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">AssetGuard</h1>
+                        </div>
+                        <nav class="hidden md:flex items-center gap-6">
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary"
+                                href="#">Buy</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary"
+                                href="#">Rent</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary"
+                                href="#">Commercial</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary"
+                                href="#">PG &amp; Co-living</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary"
+                                href="#">Plots</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary"
+                                href="#">Projects</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden sm:block">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+                            <input
+                                class="form-input rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary"
+                                placeholder="Search" type="text" />
+                        </div>
+                        <button
+                            class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+                            <span class="material-symbols-outlined">favorite_border</span>
+                        </button>
+                        <button
+                            class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </button>
+                        <div class="w-8 h-8 rounded-full bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKRRa_LzlG80wmsSu7FhVS3mdC8AbAssh2JOMYXGKujp3fGkV4P2BfR5KYmrxhdEUS_2OdCo-hi3GBLQesOX6D0orr3ZD--oMaJok527u0Ir9Oehb_-P5vTLAkeVNBAYgR3GXhHYv9LIfpDCDINJDyEAnwBNZrNFrC8UVQbA1JlZupRYDBzPlZ16aqJI7SqDFI1uZp7dLZQEL3pwGWWMIR_L6omSx80y5uZYeOFh7J6KcfcGM3br_97cG9s7SwxvNIoJlELRoHnXiX");'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="w-full lg:w-1/4">
+                    <div class="sticky top-24">
+                        <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Filters</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Property
+                                    Type</label>
+                                <div class="flex flex-wrap gap-2">
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 bg-primary text-white">All</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">Apartment</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">Individual</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">Villa</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Occupancy/Rooms</label>
+                                <div class="flex flex-wrap gap-2">
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600 bg-primary text-white">Any</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">1
+                                        BHK</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">2
+                                        BHK</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">3
+                                        BHK</button>
+                                    <button
+                                        class="px-3 py-1 text-sm border rounded-full hover:bg-primary hover:text-white transition-colors border-gray-300 dark:border-gray-600">4+
+                                        BHK</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Amount
+                                    Range</label>
+                                <div class="relative">
+                                    <input
+                                        class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer"
+                                        max="10000000" min="100000" style="accent-color: var(--olive-green);"
+                                        type="range" value="2500000" />
+                                    <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                        <span>$100k</span>
+                                        <span>$10M</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Furnished
+                                    Type</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input checked="" class="form-radio text-primary focus:ring-primary"
+                                            name="furnished-type" type="radio" />
+                                        <span class="ml-2 text-sm">Any</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input class="form-radio text-primary focus:ring-primary" name="furnished-type"
+                                            type="radio" />
+                                        <span class="ml-2 text-sm">Furnished</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input class="form-radio text-primary focus:ring-primary" name="furnished-type"
+                                            type="radio" />
+                                        <span class="ml-2 text-sm">Semi-Furnished</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input class="form-radio text-primary focus:ring-primary" name="furnished-type"
+                                            type="radio" />
+                                        <span class="ml-2 text-sm">Unfurnished</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Appliances</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Washing Machine</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Refrigerator</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Microwave</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Stove</span></label>
+
+
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Features/Community</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Air Conditioning</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Alarm</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Backyard</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Swimming Pool</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Gym</span></label>
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Utilities</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Gas</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Water</span></label>
+                                    <label class="flex items-center"><input
+                                            class="form-checkbox text-primary rounded focus:ring-primary"
+                                            type="checkbox" /><span class="ml-2 text-sm">Electricity</span></label>
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Availability</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input checked="" class="form-radio text-primary focus:ring-primary"
+                                            name="availability-type" type="radio" />
+                                        <span class="ml-2 text-sm">Immediately</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input class="form-radio text-primary focus:ring-primary"
+                                            name="availability-type" type="radio" />
+                                        <span class="ml-2 text-sm">Within 30 Days</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="w-full lg:w-3/4">
+                    <nav aria-label="Breadcrumb" class="text-sm mb-4">
+                        <ol class="list-none p-0 inline-flex">
+                            <li class="flex items-center">
+                                <a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Home</a>
+                                <span
+                                    class="material-symbols-outlined mx-2 text-gray-400 dark:text-gray-500">chevron_right</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-gray-700 dark:text-gray-200">Properties</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                        <h1 class="text-3xl font-medium text-secondary dark:text-white mb-2 sm:mb-0">Properties for Sale
+                            in Mumbai</h1>
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-2">
+                                <label class="text-sm font-medium text-gray-700 dark:text-gray-300" for="sort-by">Sort
+                                    by:</label>
+                                <select
+                                    class="form-select rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-sm focus:ring-primary focus:border-primary"
+                                    id="sort-by">
+                                    <option>Price Low to High</option>
+                                    <option>Updated Newest to Oldest</option>
+                                </select>
+                            </div>
+                            <div class="flex items-center border border-gray-300 dark:border-gray-700 rounded-lg">
+                                <button class="p-2 flex align-items-center rounded-l-lg bg-primary text-white"
+                                    id="grid-button" onclick="toggleView('grid')">
+                                    <span class="material-symbols-outlined">grid_view</span>
+                                </button>
+                                <button
+                                    class="p-2 flex align-items-center rounded-r-lg text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+                                    id="list-button" onclick="toggleView('list')">
+                                    <span class="material-symbols-outlined">view_list</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="grid-view">
+                        <div
+                            class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                            <div class="relative group h-48">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXHxcQ1bULQ2Tk6y0qwKWT_xmt5aFNGiue3giD9YBqEoEDOCWgU6m9KwiQBs5NjmNvFw2qQHyI3V5Gap7ttMyIBuF5mKY-TaoPa9B3u0JWGmEMJs4qvYJ2UYLkbypP_J6GSjfOvEYGQ-y8X3jyahvRg9JCaa-iPdtE1M1M_fJt8k3hilRx9KtROQDcge7LJ0Y2GHntrWvEADALrDJFImIIpb_oDxJ0A4FivrS4epBWo_ZT9LirI1ogk6DOk5YKX9X7Zn1aCXNRSMJL");'>
+                                </div>
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="absolute top-2 right-2">
+                                    <button
+                                        class="p-2 flex align-items-center rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+                                        <span class="material-symbols-outlined">favorite_border</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h2 class="text-lg font-bold text-secondary dark:text-white">
+                                    <a class="hover:text-primary" href="#">Luxury Apartment in Bandra West</a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Bandra West, Mumbai</p>
+                                <p class="text-lg font-bold text-primary mb-3">$1,200,000</p>
+                                <div
+                                    class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bed</span> 3 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bathtub</span> 3 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">square_foot</span> 1,800 sq
+                                        ft</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                                    </button>
+                                    <div class="flex-grow"></div>
+                                    <button
+                                        class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                                        <span class="material-symbols-outlined text-base text-nowrap">call</span>
+                                        Get Enquiry Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                            <div class="relative group h-48">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIIUzSoYES-B3wvanS8tglrEj7zYMnMtu3-pTz1mveQBl9K-dLekVYJPRM_-B-r3i3gqFLzsaVv7pUI1TJp0-3Ry9t2IsW-VMv2aq1lbLft2FEwm4k1AUIu6iRWGI_gakabLifeL-Wj23dvaCM2OQ7c88638BTBtbNJ6qJuG_0PR6ysaoi_zcHf48vPeE-mrB7p531Xw27bW9mchbnXsywVYzw97bErG08tOaaKHrfoAFjeOwkI5rCh1YGNz53pTj6iolfCyAgEbpZ");'>
+                                </div>
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="absolute top-2 right-2">
+                                    <button
+                                        class="p-2 flex align-items-center rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+                                        <span class="material-symbols-outlined">favorite_border</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h2 class="text-lg font-bold text-secondary dark:text-white">
+                                    <a class="hover:text-primary" href="#">Spacious Villa in Juhu</a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Juhu, Mumbai</p>
+                                <p class="text-lg font-bold text-primary mb-3">$2,500,000</p>
+                                <div
+                                    class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bed</span> 4 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bathtub</span> 5 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">square_foot</span> 3,200 sq
+                                        ft</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                                    </button>
+                                    <div class="flex-grow"></div>
+                                    <button
+                                        class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                                        <span class="material-symbols-outlined text-base text-nowrap">call</span>
+                                        Get Enquiry Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                            <div class="relative group h-48">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuzHDamgdex9GP1_pRR7NHXeTEsYET0sXq8_AruvW5uB5G3Px2jb6B80lwgcKIKIPJ8pu1DCXVH94YJi2vXBRJLXKao5fQYvCQJOpQOvDvFbwMBKAgu9cRF0zKpyxcbFuDCJg1WcQ1YaPQ0ZqmQmvCNq3jJc7YADa9EYz0TUBBLHAR74IV5GmGSXsJwQ9hAQ86JMeKbeM2l2ChP8ChbvVFSAJs-DAQHlp_VaCfkFIhbiMCKH_OjasArK4lv72IbYVS_eOVgrynqLhk");'>
+                                </div>
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="absolute top-2 right-2">
+                                    <button
+                                        class="p-2 flex align-items-center rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+                                        <span class="material-symbols-outlined">favorite_border</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h2 class="text-lg font-bold text-secondary dark:text-white">
+                                    <a class="hover:text-primary" href="#">Modern House in Powai</a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Powai, Mumbai</p>
+                                <p class="text-lg font-bold text-primary mb-3">$950,000</p>
+                                <div
+                                    class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bed</span> 2 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bathtub</span> 2 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">square_foot</span> 1,200 sq
+                                        ft</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                                    </button>
+                                    <div class="flex-grow"></div>
+                                    <button
+                                        class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                                        <span class="material-symbols-outlined text-base text-nowrap">call</span>
+                                        Get Enquiry Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden space-y-6" id="list-view">
+                        <div
+                            class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex">
+                            <div class="w-1/3 h-auto relative group">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXHxcQ1bULQ2Tk6y0qwKWT_xmt5aFNGiue3giD9YBqEoEDOCWgU6m9KwiQBs5NjmNvFw2qQHyI3V5Gap7ttMyIBuF5mKY-TaoPa9B3u0JWGmEMJs4qvYJ2UYLkbypP_J6GSjfOvEYGQ-y8X3jyahvRg9JCaa-iPdtE1M1M_fJt8k3hilRx9KtROQDcge7LJ0Y2GHntrWvEADALrDJFImIIpb_oDxJ0A4FivrS4epBWo_ZT9LirI1ogk6DOk5YKX9X7Zn1aCXNRSMJL");'>
+                                </div>
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="absolute top-2 right-2">
+                                    <button
+                                        class="p-2 flex align-items-center rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+                                        <span class="material-symbols-outlined">favorite_border</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow w-2/3">
+                                <h2 class="text-lg font-bold text-secondary dark:text-white">
+                                    <a class="hover:text-primary" href="#">Luxury Apartment in Bandra West</a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Bandra West, Mumbai</p>
+                                <p class="text-lg font-bold text-primary mb-3">$1,200,000</p>
+                                <div
+                                    class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bed</span> 3 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bathtub</span> 3 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">square_foot</span> 1,800 sq
+                                        ft</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                                    </button>
+                                    <div class="flex-grow"></div>
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                                        <span class="material-symbols-outlined text-base text-nowrap">call</span>
+                                        Get Enquiry Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex">
+                            <div class="w-1/3 h-auto relative group">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIIUzSoYES-B3wvanS8tglrEj7zYMnMtu3-pTz1mveQBl9K-dLekVYJPRM_-B-r3i3gqFLzsaVv7pUI1TJp0-3Ry9t2IsW-VMv2aq1lbLft2FEwm4k1AUIu6iRWGI_gakabLifeL-Wj23dvaCM2OQ7c88638BTBtbNJ6qJuG_0PR6ysaoi_zcHf48vPeE-mrB7p531Xw27bW9mchbnXsywVYzw97bErG08tOaaKHrfoAFjeOwkI5rCh1YGNz53pTj6iolfCyAgEbpZ");'>
+                                </div>
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="absolute top-2 right-2">
+                                    <button
+                                        class="p-2 flex align-items-center rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+                                        <span class="material-symbols-outlined">favorite_border</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow w-2/3">
+                                <h2 class="text-lg font-bold text-secondary dark:text-white">
+                                    <a class="hover:text-primary" href="#">Spacious Villa in Juhu</a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Juhu, Mumbai</p>
+                                <p class="text-lg font-bold text-primary mb-3">$2,500,000</p>
+                                <div
+                                    class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bed</span> 4 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bathtub</span> 5 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">square_foot</span> 3,200 sq
+                                        ft</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                                    </button>
+                                    <div class="flex-grow"></div>
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                                        <span class="material-symbols-outlined text-base text-nowrap">call</span>
+                                        Get Enquiry Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex">
+                            <div class="w-1/3 h-auto relative group">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuzHDamgdex9GP1_pRR7NHXeTEsYET0sXq8_AruvW5uB5G3Px2jb6B80lwgcKIKIPJ8pu1DCXVH94YJi2vXBRJLXKao5fQYvCQJOpQOvDvFbwMBKAgu9cRF0zKpyxcbFuDCJg1WcQ1YaPQ0ZqmQmvCNq3jJc7YADa9EYz0TUBBLHAR74IV5GmGSXsJwQ9hAQ86JMeKbeM2l2ChP8ChbvVFSAJs-DAQHlp_VaCfkFIhbiMCKH_OjasArK4lv72IbYVS_eOVgrynqLhk");'>
+                                </div>
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="absolute top-2 right-2">
+                                    <button
+                                        class="p-2 flex align-items-center rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+                                        <span class="material-symbols-outlined">favorite_border</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow w-2/3">
+                                <h2 class="text-lg font-bold text-secondary dark:text-white">
+                                    <a class="hover:text-primary" href="#">Modern House in Powai</a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Powai, Mumbai</p>
+                                <p class="text-lg font-bold text-primary mb-3">$950,000</p>
+                                <div
+                                    class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bed</span> 2 Beds</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">bathtub</span> 2 Baths</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">square_foot</span> 1,200 sq
+                                        ft</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                        <span class="material-symbols-outlined text-base">mail</span> Contact
+                                    </button>
+                                    <div class="flex-grow"></div>
+                                    <button
+                                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                                        <span class="material-symbols-outlined text-base text-nowrap">call</span>
+                                        Get Enquiry Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

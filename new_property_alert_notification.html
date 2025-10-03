@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Property Alert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="flex items-center justify-center min-h-screen">
+<div class="w-full max-w-md bg-background-light dark:bg-background-dark rounded-xl shadow-2xl overflow-hidden font-display m-4">
+<div class="p-6 sm:p-8">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/20 dark:bg-primary/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">
+                            notifications
+                            </span>
+</div>
+<h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">New Property Alert!</h2>
+</div>
+<button class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400">
+<span class="material-symbols-outlined">
+                        close
+                     </span>
+</button>
+</div>
+<div class="mt-6 border-t border-gray-200 dark:border-gray-700 pt-6">
+<div class="flex items-center gap-4">
+<div class="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0">
+<img alt="Property Image" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4LPioR3MJbYEVt52jSSYpLA3zDgiuHBduxCh4lxnx8mkdmg72FL8By1FWqs_hGQPsNspfl0xAPVBSkE1TSyZSzjbnjq0Af7wtrBAcIzi7XBkD1hLQG2HdHVmHYK1vtcQNzKPRNKog6s4_VtwRogr-rjmE_5F7-hjpR4v8_lMBOdjkOyNHsERLy_pYm8pHWO0Qzf4jOdnL5cZ7kR1oq0B4s7-hZmQkWDkDmCucmwF_oF74nggRXGVQ997z4OfBZBvu76pggbuADrcj"/>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-tight">Cozy 2-Bedroom Apartment in Downtown</p>
+<p class="text-sm text-gray-600 dark:text-gray-300 mt-1">$2,500/month</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">123 Elm Street, Anytown</p>
+</div>
+</div>
+</div>
+<div class="mt-8 flex flex-col sm:flex-row sm:justify-end gap-3">
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary text-sm font-bold tracking-wide">
+                        Dismiss
+                    </button>
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-primary text-gray-900 dark:text-black text-sm font-bold tracking-wide">
+                        View Property
+                    </button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

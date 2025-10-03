@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Announcements</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0D1A0D",
+                        "card-dark": "#1A291A",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100">
+<div class="flex h-screen">
+<aside class="w-64 bg-white dark:bg-card-dark flex-shrink-0 border-r border-border-light dark:border-border-dark">
+<div class="p-6">
+<h1 class="text-2xl font-bold text-primary">Admin Panel</h1>
+</div>
+<nav class="mt-6">
+<a class="flex items-center px-6 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center px-6 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined mr-3">apartment</span>
+                Properties
+            </a>
+<a class="flex items-center px-6 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined mr-3">group</span>
+                Users
+            </a>
+<a class="flex items-center px-6 py-3 text-primary bg-primary/10 dark:bg-primary/20 font-semibold border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined mr-3">campaign</span>
+                Announcements
+            </a>
+<a class="flex items-center px-6 py-3 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+                Settings
+            </a>
+</nav>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl font-bold mb-8">Announcements</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-md border border-border-light dark:border-border-dark">
+<h3 class="text-xl font-semibold mb-4">Compose New Announcement</h3>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-2" for="message">Message</label>
+<div class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg">
+<div class="p-2 border-b border-border-light dark:border-border-dark flex items-center space-x-2">
+<button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-lg">format_bold</span></button>
+<button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-lg">format_italic</span></button>
+<button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-lg">format_underlined</span></button>
+<button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-lg">format_list_bulleted</span></button>
+<button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined text-lg">link</span></button>
+</div>
+<textarea class="w-full h-40 p-4 bg-transparent focus:ring-0 border-0" id="message" placeholder="Type your announcement here..."></textarea>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-md border border-border-light dark:border-border-dark">
+<h3 class="text-xl font-semibold mb-4">Delivery Options</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-2" for="audience">Target Audience</label>
+<select class="w-full py-2 px-4 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary" id="audience">
+<option>All Users</option>
+<option>Landlords Only</option>
+<option>Tenants Only</option>
+<option>Users with active listings</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-2" for="channels">Notification Channels</label>
+<div class="space-y-2">
+<label class="flex items-center">
+<input checked="" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-sm">In-app Banner</span>
+</label>
+<label class="flex items-center">
+<input checked="" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-sm">Email</span>
+</label>
+<label class="flex items-center">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-sm">Push Notification</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-2" for="schedule">Schedule</label>
+<div class="flex items-center space-x-2">
+<input checked="" class="h-4 w-4 text-primary focus:ring-primary border-gray-300" id="send-now" name="schedule-type" type="radio"/>
+<label for="send-now">Send Immediately</label>
+</div>
+<div class="flex items-center space-x-2 mt-2">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300" id="schedule-later" name="schedule-type" type="radio"/>
+<label for="schedule-later">Schedule for later</label>
+</div>
+<input class="mt-2 w-full py-2 px-4 bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary" id="schedule-datetime" type="datetime-local"/>
+</div>
+</div>
+<div class="mt-6 flex justify-end space-x-4">
+<button class="px-6 py-2 border border-border-light dark:border-border-dark rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Save as Draft</button>
+<button class="px-6 py-2 bg-primary text-white rounded-lg shadow-sm hover:bg-green-600 transition-colors flex items-center">
+<span class="material-symbols-outlined mr-2">send</span>
+                        Send Announcement
+                    </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark p-6 rounded-xl shadow-md border border-border-light dark:border-border-dark">
+<h3 class="text-xl font-semibold mb-4">Announcement History</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="mr-4 mt-1"><span class="material-symbols-outlined text-green-500">check_circle</span></div>
+<div>
+<p class="font-medium">System Maintenance on Oct 30th</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Sent on Oct 25, 2023 to All Users</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Channels: Email, In-app Banner</p>
+<p class="text-xs mt-1"><span class="font-semibold">Status:</span> Delivered</p>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark my-4"></div>
+<div class="flex items-start">
+<div class="mr-4 mt-1"><span class="material-symbols-outlined text-primary">schedule</span></div>
+<div>
+<p class="font-medium">New Feature: Instant Messaging</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Scheduled for Oct 28, 2023 to Landlords Only</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Channels: Email, Push Notification</p>
+<p class="text-xs mt-1"><span class="font-semibold">Status:</span> Scheduled</p>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark my-4"></div>
+<div class="flex items-start">
+<div class="mr-4 mt-1"><span class="material-symbols-outlined text-yellow-500">pending</span></div>
+<div>
+<p class="font-medium">Reminder: Update Your Listings</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Sent on Oct 20, 2023 to Users with active listings</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Channels: In-app Banner</p>
+<p class="text-xs mt-1"><span class="font-semibold">Status:</span> Sending...</p>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark my-4"></div>
+<div class="flex items-start">
+<div class="mr-4 mt-1"><span class="material-symbols-outlined text-gray-400">draft</span></div>
+<div>
+<p class="font-medium">Holiday Greetings</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Saved on Oct 15, 2023</p>
+<p class="text-xs mt-1"><span class="font-semibold">Status:</span> Draft</p>
+</div>
+</div>
+</div>
+<div class="mt-6 text-center">
+<a class="text-primary hover:underline text-sm font-medium" href="#">View All History</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed bottom-8 right-8 z-50">
+<div class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow-lg dark:text-gray-400 dark:bg-card-dark border dark:border-border-dark" id="toast-success" role="alert">
+<div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div class="ml-3 text-sm font-normal">Announcement sent successfully!</div>
+<button aria-label="Close" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-card-dark dark:hover:bg-gray-700" data-dismiss-target="#toast-success" type="button">
+<span class="sr-only">Close</span>
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<div class="fixed bottom-24 right-8 z-50">
+<div class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow-lg dark:text-gray-400 dark:bg-card-dark border dark:border-border-dark" id="toast-scheduled" role="alert">
+<div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-primary bg-primary/10 rounded-lg dark:bg-primary/20 dark:text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="ml-3 text-sm font-normal">Announcement scheduled for 11/01/2023, 10:00 AM!</div>
+<button aria-label="Close" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-card-dark dark:hover:bg-gray-700" data-dismiss-target="#toast-scheduled" type="button">
+<span class="sr-only">Close</span>
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Alerts</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-20 border-b border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-black dark:text-white">
+<span class="material-symbols-outlined text-primary text-3xl">home</span>
+<h2 class="text-xl font-bold">FindHome</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors" href="#">Buy</a>
+<a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors" href="#">Rent</a>
+<a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors" href="#">Mortgage</a>
+<a class="text-sm font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center">
+<label class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-black/50 dark:text-white/50">search</span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-black dark:text-white bg-black/5 dark:bg-white/5 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-transparent focus:border-transparent h-10 placeholder:text-black/50 dark:placeholder:text-white/50 pl-10 pr-4 text-sm" placeholder="Search" value=""/>
+</label>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-black/5 dark:bg-white/5 text-black/70 dark:text-white/70 hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-black/5 dark:bg-white/5 text-black/70 dark:text-white/70 hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbRfDykzr6kjtvnDy7YnNT43GCmrH5PhcqWaGCeKXKDPllGgf1vgyY-uw2h_V-3sxMT-XjU5CxTl4wfnSH4lzH2XNNRyeavNlKHven1xs7PiZSouQDwG31iZ5Srbq9hPYabnuAs62TuWbCuomc67IhqqivITMnOdDgTv2ZhIwraQwJIxX_piCCbr0e9ucM3JCQAHhGm4BnrBEdYqLqVB0e54YhUq9vodSlkKbwyi-9vu-lqQbkgGRhhie_h_pl88zH1z9IVx7u5Gtj");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+<div>
+<h1 class="text-3xl font-bold text-black dark:text-white">Property Alerts</h1>
+<p class="text-black/60 dark:text-white/60 mt-1">Get notified when new properties match your criteria</p>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-black text-sm font-bold shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span>
+<span>Create new alert</span>
+</button>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-xl font-bold text-black dark:text-white px-4 mb-4">Active alerts</h3>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 dark:border-white/5 divide-y divide-black/5 dark:divide-white/5">
+<div class="p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZ7_T2NHBqmNEaJy5HVM8keqxK5jZyzspycvZTE47gmySIHV-kITJTxJ0NU8amQ-BwNjivJv54ZgiL3UJ41LPDEiZP5BJm6J8wkwAbsoY9cMSXGAc3eNXxHWxvX2sSsVjdhnumgrhDrYJiqGs5Pb5p5BFdRQ0xETl3KM5TEBxQ_RZM2XLw_AC9vACy2Rfb1dStk0qiMSoUVwJYLeuwtVjAQc5xF1Y4K3rg-Iq458ZMA26-fALNeRIH7sPaj3Dcn_cOBzammJMVfXrD");'></div>
+<div class="flex flex-col gap-1">
+<p class="font-semibold text-black dark:text-white">Downtown, San Francisco</p>
+<p class="text-sm text-black/60 dark:text-white/60">Price: $2,000 - $3,000</p>
+<p class="text-sm text-black/60 dark:text-white/60">Apartment · 2 beds · 2 baths</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-primary/20 hover:bg-primary/30 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">pause</span>Pause
+                                    </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>Edit
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-9 w-9 bg-black/5 dark:bg-white/5 hover:bg-red-500/20 text-black/70 dark:text-white/70 hover:text-red-500 dark:hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzUiTWW29rMToATT_4Qfsq4WmgFdmEpGpLd50JEJuxoWZklUKW6_QdGJT9i8HePFy9uaiBwf5JOElI-Kv0RhxHGNaRYtVlWmt3bf2W6m4FKrofFp_NrDZ4xwfxOfodEr75ft3OVKVteDdvWX8faNvO9pfx1xnZFxclsAOq9yRjc-bDq4SM8S4bEKyaXBs0GG3oNmXIP7YLJEfEjmS7HUFv8G4vToqLBSst2zc2JZaKTCDhO0WAFlcvhuzsIILJ3ykD6W4kKxRgECqU");'></div>
+<div class="flex flex-col gap-1">
+<p class="font-semibold text-black dark:text-white">Suburban Area, Los Angeles</p>
+<p class="text-sm text-black/60 dark:text-white/60">Price: $3,500 - $4,500</p>
+<p class="text-sm text-black/60 dark:text-white/60">House · 3 beds · 2 baths</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-primary/20 hover:bg-primary/30 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">pause</span>Pause
+                                    </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>Edit
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-9 w-9 bg-black/5 dark:bg-white/5 hover:bg-red-500/20 text-black/70 dark:text-white/70 hover:text-red-500 dark:hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-qYou6UbYPIqbbpHmQ5sNOTeif_Wt2JwCl80nLhJOf0fseDgLllEFwf5A_3Gy6ApDng5qd7N0TPKO3KGq43Rl6cEGqe-v8kjv89LKKm18TqCeqCwSo_RqNCpgo7E47gzVZQL111fjfwU5u55ASfVMlbwDi4vy2O_uWlTqEpoR_jVSSkdqvLzD3KIMj4qi0Na9UxW2s_EJ8YXr6MqQxVMX1H9yKbUYd2jE-r4oy5kQJ8hSD3y_JceH2z7FZXbg7lmmMpjUidcnD6aC");'></div>
+<div class="flex flex-col gap-1">
+<p class="font-semibold text-black dark:text-white">Beachfront, Miami</p>
+<p class="text-sm text-black/60 dark:text-white/60">Price: $1,500 - $2,500</p>
+<p class="text-sm text-black/60 dark:text-white/60">Condo · 1 bed · 1 bath</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-primary/20 hover:bg-primary/30 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">pause</span>Pause
+                                    </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>Edit
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-9 w-9 bg-black/5 dark:bg-white/5 hover:bg-red-500/20 text-black/70 dark:text-white/70 hover:text-red-500 dark:hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-black dark:text-white px-4 mb-4">Paused alerts</h3>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-black/5 dark:border-white/5 divide-y divide-black/5 dark:divide-white/5">
+<div class="p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 opacity-60">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlEfJvjg-2exc2cGJxhjWFEyRpOGtlijxBjYeZqWSAT2qMovKU6BqbKHPJFO_yjGHY6FdYwTmvBCfvJ1oM3debrdyvfG5S9hqNrT6gX6EJDwWNV8xcLtK-h3Fg44RMS2qWcVm-qDKiV1NEmOSeZRzIBa7rTY8Ja8mxEbk-3WxuGTbu-Yd9046n0PwgUkd2hF0SLfz3JeQwwidwWz4ceisvlGYlWx_t6cTnKkiqW8B9gFynw5oVAUbFl-93qb8ezSxXNFrpokDgcoZJ");'></div>
+<div class="flex flex-col gap-1">
+<p class="font-semibold text-black dark:text-white">Historic District, Boston</p>
+<p class="text-sm text-black/60 dark:text-white/60">Price: $2,200 - $3,200</p>
+<p class="text-sm text-black/60 dark:text-white/60">Townhouse · 2 beds · 1.5 baths</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-primary/20 hover:bg-primary/30 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">play_arrow</span>Activate
+                                    </button>
+<button class="flex items-center justify-center gap-1.5 rounded-lg h-9 px-4 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-base">edit</span>Edit
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-9 w-9 bg-black/5 dark:bg-white/5 hover:bg-red-500/20 text-black/70 dark:text-white/70 hover:text-red-500 dark:hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

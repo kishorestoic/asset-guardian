@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin Settings</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "primary-dark": "#11A911",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1e293b",
+                        "text-light": "#1e293b",
+                        "text-dark": "#f8fafc",
+                        "text-muted-light": "#64748b",
+                        "text-muted-dark": "#94a3b8",
+                        "border-light": "#e2e8f0",
+                        "border-dark": "#334155",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .form-switch {
+            @apply relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+            @apply bg-gray-200 dark:bg-gray-700;
+        }
+
+        .form-switch-checked {
+            @apply bg-primary;
+        }
+
+        .form-switch .form-switch-knob {
+            @apply pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out;
+            @apply translate-x-0;
+        }
+
+        .form-switch-checked .form-switch-knob {
+            @apply translate-x-5;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="min-h-screen">
+        <header
+            class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark sticky top-0 z-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center space-x-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">real_estate_agent</span>
+                        <h1 class="text-xl font-bold">Admin Panel</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </button>
+                        <button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark">
+                            <span class="material-symbols-outlined">dark_mode</span>
+                        </button>
+                        <img alt="Admin avatar" class="h-8 w-8 rounded-full"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7rE6YdGaey5U4qc9C-g39wmZ7Ugcmq89-D84k66F0oio3BqF34rMaJZr54TyMMLenwl0OSn1mF_paKQ7kq6u2sxUZMBkyVJtATZ6YU9RGLAp5JGkfv4UMA9LJejnkytadCYSW7wt2zntTkrAyJlDZtNQxY7JvJdqVqlUeIpSNv-3OhPERYRP_lZe9KdSZMWhpCngv3m53sa32Si9yfQ5oSsbaEIzFyF_NhZivnXS6Ivo4_vxegKgue8nAllQJldIRNeR3Vpt_zs8" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-text-light dark:text-text-dark">Platform Settings</h2>
+                    <p class="text-text-muted-light dark:text-text-muted-dark mt-1">Manage global settings for your real
+                        estate platform.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-1">
+                    <nav class="space-y-1 sticky top-24">
+                        <a class="group flex items-center px-3 py-2 text-sm font-medium rounded-md bg-primary/10 text-primary border-l-4 border-primary"
+                            href="#notifications">
+                            <span class="material-symbols-outlined mr-3">notifications_active</span>
+                            Notifications
+                        </a>
+                        <a class="group flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted-light dark:text-text-muted-dark border-l-4 border-transparent"
+                            href="#content-policies">
+                            <span class="material-symbols-outlined mr-3">policy</span>
+                            Content Policies
+                        </a>
+                        <a class="group flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted-light dark:text-text-muted-dark border-l-4 border-transparent"
+                            href="#roles">
+                            <span class="material-symbols-outlined mr-3">manage_accounts</span>
+                            Roles &amp; Permissions
+                        </a>
+                        <a class="group flex items-center px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted-light dark:text-text-muted-dark border-l-4 border-transparent"
+                            href="#integrations">
+                            <span class="material-symbols-outlined mr-3">integration_instructions</span>
+                            Integrations
+                        </a>
+                    </nav>
+                </div>
+                <div class="lg:col-span-3 space-y-8">
+                    <div class="bg-card-light dark:bg-card-dark p-6 md:p-8 rounded-xl shadow-sm border border-border-light dark:border-border-dark"
+                        id="notifications">
+                        <h3 class="text-xl font-bold mb-1">Global Notification Settings</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-6">Control how notifications are
+                            sent to all users on the platform.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <label class="font-medium" for="email-notifications">Email Notifications</label>
+                                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Enable or disable
+                                        all email notifications globally.</p>
+                                </div>
+                                <button aria-checked="true" class="form-switch form-switch-checked"
+                                    id="email-notifications" role="switch" type="button">
+                                    <span class="form-switch-knob"></span>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <label class="font-medium" for="sms-notifications">SMS Notifications</label>
+                                    <p class="text-sm text-text-muted-light dark:text-text-muted-dark">Enable or disable
+                                        all SMS notifications globally.</p>
+                                </div>
+                                <button aria-checked="false" class="form-switch" id="sms-notifications" role="switch"
+                                    type="button">
+                                    <span class="form-switch-knob"></span>
+                                </button>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-text-light dark:text-text-dark"
+                                    for="default-frequency">Default Notification Frequency</label>
+                                <select
+                                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-border-light dark:border-border-dark focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md bg-background-light dark:bg-background-dark"
+                                    id="default-frequency" name="default-frequency">
+                                    <option>Instantly</option>
+                                    <option selected="">Daily Digest</option>
+                                    <option>Weekly Digest</option>
+                                    <option>Never</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-card-light dark:bg-card-dark p-6 md:p-8 rounded-xl shadow-sm border border-border-light dark:border-border-dark"
+                        id="content-policies">
+                        <h3 class="text-xl font-bold mb-1">Content Policies</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-6">Set guidelines and automated
+                            actions for property listings.</p>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium" for="listing-guidelines">Property Listing
+                                    Guidelines</label>
+                                <textarea
+                                    class="mt-1 block w-full shadow-sm sm:text-sm border-border-light dark:border-border-dark rounded-md bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                                    id="listing-guidelines" name="listing-guidelines" rows="4"></textarea>
+                                <p class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark">These guidelines
+                                    will be shown to users when creating a new listing.</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium" for="flagging-threshold">Auto-flagging
+                                    Threshold</label>
+                                <input
+                                    class="mt-1 block w-full shadow-sm sm:text-sm border-border-light dark:border-border-dark rounded-md bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary"
+                                    id="flagging-threshold" name="flagging-threshold" type="number" value="5" />
+                                <p class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark">Automatically
+                                    flag a property for review after this many user reports.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-card-light dark:bg-card-dark p-6 md:p-8 rounded-xl shadow-sm border border-border-light dark:border-border-dark"
+                        id="roles">
+                        <h3 class="text-xl font-bold mb-1">User Roles &amp; Permissions</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-6">Define roles and what they can
+                            access on the platform.</p>
+                        <div class="space-y-4">
+                            <div
+                                class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark">
+                                <span class="font-semibold">Administrator</span>
+                                <a class="text-sm font-medium text-primary hover:text-primary-dark" href="#">Edit
+                                    Permissions</a>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark">
+                                <span class="font-semibold">Agent</span>
+                                <a class="text-sm font-medium text-primary hover:text-primary-dark" href="#">Edit
+                                    Permissions</a>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark">
+                                <span class="font-semibold">User</span>
+                                <a class="text-sm font-medium text-primary hover:text-primary-dark" href="#">Edit
+                                    Permissions</a>
+                            </div>
+                        </div>
+                        <button
+                            class="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                            <span class="material-symbols-outlined mr-2 text-base">add</span> Add New Role
+                        </button>
+                    </div>
+                    <div class="bg-card-light dark:bg-card-dark p-6 md:p-8 rounded-xl shadow-sm border border-border-light dark:border-border-dark"
+                        id="integrations">
+                        <h3 class="text-xl font-bold mb-1">System Integrations</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-6">Connect third-party services to
+                            enhance platform functionality.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Google Maps" class="h-8 w-8 mr-4"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBGD02HsBaIixxXLr2vkDoLaH4kbblqb3qp8W04EAn6Ga8GuKao0E54hIKlsD5ce_ZHj-6ZGqBZysglUsJO2yTPpP_6MZOSweGVAI-7ao2AFhXOwUQjSjv0ylSiBGvJFoMzpOu__JGml_kzCh5JdBoOfQt9YA5LYHwdEwRfyjVcklQecWUwJ4Lo26xTStMZIY7tnN3HLJKFoEig-LXgifLX6h1hFdRmQICPRX4k6Z38nVMvHbdnuviI8xq1C4IZYKkjhyUwlcXKLQl" />
+                                    <div>
+                                        <label class="font-medium" for="google-maps">Google Maps</label>
+                                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark">For property
+                                            location and search.</p>
+                                    </div>
+                                </div>
+                                <button aria-checked="true" class="form-switch form-switch-checked" id="google-maps"
+                                    role="switch" type="button">
+                                    <span class="form-switch-knob"></span>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img alt="Stripe" class="h-8 w-8 mr-4"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIyfTbWhIjotYHITFVqCnJD9S2QeJj0DRS7cCYFQ_YVAVgpbmkg-rqO_EF_mEyVPBOEkzmo8Zcwrs0zi6LkQJW4gqlx1SSpLheXyuadSKtCQG5T97VRikTRmIDWuxbOAsQgi5ryVLxM_3Sx2bG9dqtoz4HgcN-zZiyZzYO2qFQ8ZCBGdQKDC9zHqK5V7GvKKeO0GC30HSjZULhYxrMAkPni9Cplc3QftYUpb61vxdDreTJBQgGeEX4xYq_SKg7G46N7tgx9zei3exb" />
+                                    <div>
+                                        <label class="font-medium" for="stripe-payment">Stripe</label>
+                                        <p class="text-sm text-text-muted-light dark:text-text-muted-dark">For
+                                            subscription and service payments.</p>
+                                    </div>
+                                </div>
+                                <button aria-checked="false" class="form-switch" id="stripe-payment" role="switch"
+                                    type="button">
+                                    <span class="form-switch-knob"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-12 flex justify-end space-x-3 sticky bottom-0 bg-background-light dark:bg-background-dark py-4 border-t border-border-light dark:border-border-dark">
+                <button
+                    class="px-6 py-2.5 rounded-lg text-sm font-semibold bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">Cancel</button>
+                <button
+                    class="px-6 py-2.5 rounded-lg text-sm font-semibold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20">Save
+                    Changes</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const switches = document.querySelectorAll('[role="switch"]');
+            switches.forEach(switchEl => {
+                switchEl.addEventListener('click', () => {
+                    const isChecked = switchEl.getAttribute('aria-checked') === 'true';
+                    switchEl.setAttribute('aria-checked', !isChecked);
+                    switchEl.classList.toggle('form-switch-checked');
+                });
+            });
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    navLinks.forEach(l => {
+                        l.classList.remove('bg-primary/10', 'text-primary', 'border-primary');
+                        l.classList.add('hover:bg-gray-100', 'dark:hover:bg-gray-800', 'text-text-muted-light', 'dark:text-text-muted-dark', 'border-transparent');
+                    });
+                    e.currentTarget.classList.add('bg-primary/10', 'text-primary', 'border-primary');
+                    e.currentTarget.classList.remove('hover:bg-gray-100', 'dark:hover:bg-gray-800', 'text-text-muted-light', 'dark:text-text-muted-dark', 'border-transparent');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

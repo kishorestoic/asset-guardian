@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirm Plan Change</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex items-center justify-center min-h-screen">
+<div class="w-full max-w-lg p-4">
+<div class="bg-background-light dark:bg-background-dark rounded-xl shadow-lg border border-primary/20 dark:border-primary/30">
+<div class="p-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Confirm Plan Change</h2>
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">
+                            edit_document
+                        </span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                        You are about to change your subscription plan from 'Basic' to <span class="font-semibold text-gray-900 dark:text-white">'Premium'</span>. This change will take effect immediately. Please review the details below.
+                    </p>
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">New Plan Details</h3>
+<div class="border border-primary/20 dark:border-primary/30 rounded-lg p-4 space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-600 dark:text-gray-400">Plan Name</span>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">Premium</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-sm text-gray-600 dark:text-gray-400 mt-0.5">Features</span>
+<p class="text-sm font-semibold text-gray-900 dark:text-white text-right">Unlimited Listings<br/>Detailed Analytics<br/>Priority Support</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-600 dark:text-gray-400">Monthly Cost</span>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">$49.99</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-600 dark:text-gray-400">Billing Cycle</span>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">Starts today</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Financial Impact</h3>
+<div class="border border-primary/20 dark:border-primary/30 rounded-lg p-4 space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-600 dark:text-gray-400">Pro-rated Charge</span>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">$25.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-600 dark:text-gray-400">Next Billing Date</span>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">July 1, 2024</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Feature Changes</h3>
+<div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg flex items-start space-x-3">
+<span class="material-symbols-outlined text-primary mt-1">
+                                    check_circle
+                                </span>
+<p class="text-sm text-gray-700 dark:text-gray-300">
+                                   You'll gain access to <span class="font-semibold text-gray-900 dark:text-white">unlimited listings</span>, <span class="font-semibold text-gray-900 dark:text-white">detailed analytics</span>, and <span class="font-semibold text-gray-900 dark:text-white">priority customer support</span>. Your current Basic plan limitations will be removed.
+                                </p>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-end space-x-4">
+<button class="px-6 py-2 rounded-lg text-sm font-semibold bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                            Cancel
+                        </button>
+<button class="px-6 py-2 rounded-lg text-sm font-semibold bg-primary text-black hover:bg-primary/80 transition-colors">
+                            Confirm Change
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

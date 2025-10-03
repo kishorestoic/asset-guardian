@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OTP Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#50da0b",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#162210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .otp-input::-webkit-outer-spin-button,
+        .otp-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .otp-input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-4 text-background-dark dark:text-background-light">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">FindHome</h2>
+</div>
+<div class="hidden md:flex items-center gap-8 text-background-dark dark:text-background-light">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Mortgage</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-background-dark dark:text-background-light text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+<span class="truncate">Log in</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
+<span class="truncate">Sign up</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div class="text-center">
+<h2 class="text-3xl font-extrabold text-background-dark dark:text-background-light">OTP Verification</h2>
+<p class="mt-2 text-sm text-background-dark/70 dark:text-background-light/70">
+                        A 6-digit code has been sent to <span class="font-medium text-background-dark dark:text-background-light">sophia.clark@email.com</span>
+</p>
+</div>
+<div class="flex justify-center gap-2 sm:gap-3" id="otp-container">
+<input class="otp-input h-14 w-12 rounded-lg border-2 border-primary/30 dark:border-primary/50 bg-background-light dark:bg-background-dark text-center text-2xl font-bold text-background-dark dark:text-background-light focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input h-14 w-12 rounded-lg border-2 border-primary/30 dark:border-primary/50 bg-background-light dark:bg-background-dark text-center text-2xl font-bold text-background-dark dark:text-background-light focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input h-14 w-12 rounded-lg border-2 border-primary/30 dark:border-primary/50 bg-background-light dark:bg-background-dark text-center text-2xl font-bold text-background-dark dark:text-background-light focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input h-14 w-12 rounded-lg border-2 border-primary/30 dark:border-primary/50 bg-background-light dark:bg-background-dark text-center text-2xl font-bold text-background-dark dark:text-background-light focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input h-14 w-12 rounded-lg border-2 border-primary/30 dark:border-primary/50 bg-background-light dark:bg-background-dark text-center text-2xl font-bold text-background-dark dark:text-background-light focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="otp-input h-14 w-12 rounded-lg border-2 border-primary/30 dark:border-primary/50 bg-background-light dark:bg-background-dark text-center text-2xl font-bold text-background-dark dark:text-background-light focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+</div>
+<div class="flex items-center justify-center space-x-2 text-sm text-background-dark/70 dark:text-background-light/70">
+<span>Code expires in:</span>
+<span class="font-bold text-background-dark dark:text-background-light">04:59</span>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-background-dark bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-opacity">
+                        Verify
+                    </button>
+</div>
+<div class="text-center text-sm">
+<span class="text-background-dark/70 dark:text-background-light/70">Didn't receive the code?</span>
+<a class="font-medium text-primary hover:underline" href="#">Resend OTP</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const otpContainer = document.getElementById('otp-container');
+    const inputs = [...otpContainer.querySelectorAll('input')];
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+            if (e.target.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && e.target.value === '' && index > 0) {
+                inputs[index - 1].focus();
+            }
+        });
+    });
+</script>
+
+</body></html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>FindHome - Property Search</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0df20d",
+              "background-light": "#f5f8f5",
+              "background-dark": "#102210",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-20 w-full border-b border-primary/20 bg-background-light/80 backdrop-blur-sm dark:border-primary/30 dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-gray-900 dark:text-white" href="#">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold">FindHome</h1>
+</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Mortgage</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex items-center justify-end gap-4">
+<button class="hidden h-10 items-center justify-center gap-2 rounded-full bg-primary/10 px-4 text-sm font-bold text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 lg:flex">
+<span class="material-symbols-outlined text-lg">favorite_border</span>
+<span>Favorites</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdsiCUVshnVJWFGAiX5cfJmLu8m4-sQ4PEH4HwYmAULMzZKb-IMvpMYTnp3SMRz08li78BtDaGLCBYHes0dkozgySxq8XsW_oeY3DtYp_sRpbOHS-j6BUsjuJkc520gan6smZVdousWWyN_9b_-wa04Nbu8zfBSUOzzAdRsC2QQxO_bez_3N1-atsezXiow67MRJGO9hhzTkbhPWH2cxM5xKNvdjYpF12oXIGsSi3i0Ud6MY4uwCAxUjwj9uQTM4MCZlzsqHRnSEv0");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 sm:px-6 lg:grid-cols-3 lg:px-8">
+<div class="flex flex-col gap-6 lg:col-span-1">
+<div class="rounded-lg bg-background-light p-6 shadow-sm dark:bg-background-dark">
+<h2 class="mb-4 text-lg font-bold text-gray-900 dark:text-white">Search Properties</h2>
+<div class="flex flex-col gap-4">
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="w-full rounded-lg border-primary/30 bg-background-light py-2 pl-10 pr-4 text-gray-800 placeholder:text-gray-400 focus:border-primary focus:ring-primary dark:border-primary/40 dark:bg-background-dark dark:text-gray-200 dark:placeholder:text-gray-500" placeholder="City, State, Zip Code" type="text" value="San Francisco, CA"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<select class="rounded-lg border-primary/30 bg-background-light py-2 pl-3 pr-8 text-gray-800 focus:border-primary focus:ring-primary dark:border-primary/40 dark:bg-background-dark dark:text-gray-200">
+<option>For Rent</option>
+<option>For Sale</option>
+</select>
+<select class="rounded-lg border-primary/30 bg-background-light py-2 pl-3 pr-8 text-gray-800 focus:border-primary focus:ring-primary dark:border-primary/40 dark:bg-background-dark dark:text-gray-200">
+<option>Any Price</option>
+<option>$0 - $1,000</option>
+<option>$1,000 - $2,000</option>
+<option>$2,000 - $3,000</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<select class="rounded-lg border-primary/30 bg-background-light py-2 pl-3 pr-8 text-gray-800 focus:border-primary focus:ring-primary dark:border-primary/40 dark:bg-background-dark dark:text-gray-200">
+<option>Beds: Any</option>
+<option>1+</option>
+<option>2+</option>
+<option>3+</option>
+</select>
+<select class="rounded-lg border-primary/30 bg-background-light py-2 pl-3 pr-8 text-gray-800 focus:border-primary focus:ring-primary dark:border-primary/40 dark:bg-background-dark dark:text-gray-200">
+<option>Baths: Any</option>
+<option>1+</option>
+<option>2+</option>
+<option>3+</option>
+</select>
+</div>
+<button class="w-full rounded-lg bg-primary py-2.5 text-center text-sm font-bold text-white transition hover:bg-primary/90">Search</button>
+</div>
+</div>
+<div class="@container h-[500px] w-full rounded-lg shadow-sm">
+<div class="flex h-full min-h-[320px] flex-col justify-between bg-cover bg-center p-4 @[480px]:rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDztgLdU27I5NAn3mbCpOMCTUMkEqablbkmmbfLIUvRsh2pqQRT1xH_Qy4uBDY5fq69dbM7Ha-3f8yDQqmGXsYM5zdXUGdSgpgwhn1-hf0U2VhYgxJ9wHZEuDt8OG501C1AO_lGC3MCTjWJcwZqQS1EfCpbN7K7cHAbVutqVstRMnxo2eJSgJ6wuM63nb9LJKdhzZmj-lsZIRDkbAAXUYgcA4TbEn4shHoJJUaPN9J7utJyUM3_P-AYBfmXiB4-PN3MZ_kOEh7YSV7V");'>
+<div class="relative">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">search</span>
+<input class="form-input w-full rounded-lg border-none bg-white py-3 pl-10 pr-4 text-gray-900 shadow-lg placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Search on map" value=""/>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex flex-col gap-px">
+<button class="flex h-10 w-10 items-center justify-center rounded-t-lg bg-white shadow-lg transition hover:bg-gray-100">
+<span class="material-symbols-outlined text-gray-800">add</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-b-lg bg-white shadow-lg transition hover:bg-gray-100">
+<span class="material-symbols-outlined text-gray-800">remove</span>
+</button>
+</div>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-white shadow-lg transition hover:bg-gray-100">
+<span class="material-symbols-outlined text-gray-800">my_location</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2">
+<div class="mb-4 flex items-center justify-between">
+<p class="text-sm text-gray-600 dark:text-gray-400">3,215 results in San Francisco</p>
+<select class="rounded-lg border-primary/30 bg-background-light py-2 pl-3 pr-8 text-sm text-gray-800 focus:border-primary focus:ring-primary dark:border-primary/40 dark:bg-background-dark dark:text-gray-200">
+<option>Sort by: Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+<div class="grid grid-cols-1 gap-6 @[500px]:grid-cols-2">
+<div class="group overflow-hidden rounded-lg bg-background-light shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-background-dark">
+<div class="relative">
+<img alt="Modern apartment with city view" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDStrZ7YckUTZ3N6P31jhWJJGaVuXF1Z60i0x0lT6T0xlT26cZhTbWSBo_czjqMAHh3N4FuS3P2E878SUFgqnP5s9PhiEXmHqZRNtqbed_T0uFxOGcqClbQ0lsM95RovCjLvsY3WqQ056GxzxhWMn38IDeT1IQxGr8RRn4snxX4Fw4ZV-rG3vg9na00JVf2LsGMbhnrNcBxSp4R3iWt2yNlap3ElydymhkSiO3hpMO6GcDPghnPzOpfTA2ylxt8gzUg8ezYJgaXBbeI"/>
+<button class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-700 backdrop-blur-sm transition hover:bg-white hover:text-primary dark:bg-background-dark/80 dark:text-gray-300 dark:hover:bg-background-dark dark:hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 bg-primary/80 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">FOR RENT</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">$3,200/mo</h3>
+<p class="mb-2 text-sm text-gray-600 dark:text-gray-400">2 bed | 2 bath | 1,100 sqft</p>
+<p class="text-sm text-gray-800 dark:text-gray-300">123 Main St, San Francisco, CA</p>
+</div>
+</div>
+<div class="group overflow-hidden rounded-lg bg-background-light shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-background-dark">
+<div class="relative">
+<img alt="Spacious house with a garden" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDo3MtPUOkUbfQZ0yYhNEBrG4L1tVmJgAqCP_5Jsg73fcCInfG4HEVs_NRRbNoN_OwOBy360sPUjsAcVJ7rhFYQB5FEe-G5nwnGbPrw7w8pIrvjbLkeDZhtxG6JXLQN5QKLSen7TyWAee0uGPX4Mrk1zM0j829WIkj_LUX2kjHgbKA676f2GYXbBkXBmsSbBkMocvS1GqMw6Ikcw0Fr9ezh6l7cHrmoc1q4-m0we8nQvNpJ4YZ1Zd_aBaMcU5W3HPhrOOl9fbYnySI"/>
+<button class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-700 backdrop-blur-sm transition hover:bg-white hover:text-primary dark:bg-background-dark/80 dark:text-gray-300 dark:hover:bg-background-dark dark:hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 bg-primary/80 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">FOR RENT</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">$4,500/mo</h3>
+<p class="mb-2 text-sm text-gray-600 dark:text-gray-400">3 bed | 2.5 bath | 1,800 sqft</p>
+<p class="text-sm text-gray-800 dark:text-gray-300">456 Oak Ave, San Francisco, CA</p>
+</div>
+</div>
+<div class="group overflow-hidden rounded-lg bg-background-light shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-background-dark">
+<div class="relative">
+<img alt="Cozy studio apartment" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRYsnrq2qTla8XXWefspVcgE5cf3GtxlfBW-C8bS09Ebq3WZag4V_XtTjJru-MAxtKI2gx6ygL5lAVB0v0wK2YjOi_cves2jSjUjGItf-sZrBCXrFlM9ezoSiQK_AwyvIvtUjwco57VP7e3ugX-PeNreAD4i3fyw0v3Z8VgFt-fNE1Mfl7rusdy6xAqcB-HsOoyZBKDecm1mnd_EPh2Nw5RRQvCwSvtsSP800-LbalV-X923bDGfrcHwXimStDOkVNBQsGjuTd9f6L"/>
+<button class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-700 backdrop-blur-sm transition hover:bg-white hover:text-primary dark:bg-background-dark/80 dark:text-gray-300 dark:hover:bg-background-dark dark:hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 bg-primary/80 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">FOR RENT</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">$2,100/mo</h3>
+<p class="mb-2 text-sm text-gray-600 dark:text-gray-400">Studio | 1 bath | 500 sqft</p>
+<p class="text-sm text-gray-800 dark:text-gray-300">789 Pine Ln, San Francisco, CA</p>
+</div>
+</div>
+<div class="group overflow-hidden rounded-lg bg-background-light shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-background-dark">
+<div class="relative">
+<img alt="Luxury penthouse with panoramic views" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnW7Bnuc9WZ3G4qtKkww6ws6xccMyd2oEaJtljHuSu4GpOdo5Yjgx5JCYiMXZm0c8fblYUNN0hc188cqeMYz0gmppDbmDF5d_iydH4k7g2ni3TJDes7HgE3XDYkv-WTNc0aIEqVGpr-Jw7Jmb5zBFs89WiMlDS6ESE_7wQ4oV1keHoRoicjri9HN2sLgQ4L2jSFcFLXaj1Mw1JqQfxHqfrG6cqA-cfRg9NPPNMivj9wnpukVSoY4qwnkeUNygBhG1EM4VILDnuuwDv"/>
+<button class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-700 backdrop-blur-sm transition hover:bg-white hover:text-primary dark:bg-background-dark/80 dark:text-gray-300 dark:hover:bg-background-dark dark:hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 bg-primary/80 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">FOR RENT</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">$8,000/mo</h3>
+<p class="mb-2 text-sm text-gray-600 dark:text-gray-400">4 bed | 3 bath | 2,500 sqft</p>
+<p class="text-sm text-gray-800 dark:text-gray-300">101 Skyview Rd, San Francisco, CA</p>
+</div>
+</div>
+</div>
+<nav class="mt-8 flex items-center justify-center gap-2">
+<a class="flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-primary/10 hover:text-primary dark:text-gray-400 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 font-bold text-primary dark:bg-primary/30" href="#">1</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-primary/10 hover:text-primary dark:text-gray-400 dark:hover:bg-primary/20" href="#">2</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-primary/10 hover:text-primary dark:text-gray-400 dark:hover:bg-primary/20" href="#">3</a>
+<span class="flex h-10 w-10 items-center justify-center text-gray-500 dark:text-gray-400">...</span>
+<a class="flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-primary/10 hover:text-primary dark:text-gray-400 dark:hover:bg-primary/20" href="#">10</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full text-gray-500 hover:bg-primary/10 hover:text-primary dark:text-gray-400 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

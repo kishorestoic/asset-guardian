@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#50da0b",
+              "background-light": "#f6f8f5",
+              "background-dark": "#162210",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">HomeFinder</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white" href="#">Rent</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white" href="#">Buy</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white" href="#">Sell</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white" href="#">Mortgage</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white" href="#">Manage Rentals</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">List a property</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyQ75jdpEfNeuJTFGiNNACZfh31v_ynJUTVtDJbJohOH2EAXTiqBVYmP84lqrDyVfrMcz9HJPg_F39mKlE_2gjNSLeH_DvU4foVeBiVYOuTRVpvs2Qs1jJ3q7WBYm3EMdiG7_ds6S50MIArvzofRPnKsd0K7lbL7L7XlupRKHCLAoDWIPTlTQYHde6FREGAuqftFe1CEnSO6iqCTxpHNXRM_NASy_LLeZnR4iNHjCuHcElzDRQ3pxXilqCZB-6I_Px2ylWvg0lhid4");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1 gap-8">
+<div>
+<nav class="flex items-center gap-2 text-sm font-medium">
+<a class="text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white" href="#">Manage Rentals</a>
+<span class="text-black/30 dark:text-white/30">/</span>
+<span class="text-black dark:text-white">Preview Listing</span>
+</nav>
+<div class="mt-4 flex flex-wrap items-end justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl font-bold text-black dark:text-white">Preview Listing</h1>
+<p class="text-black/60 dark:text-white/60 text-base font-normal">
+                    Review your listing before publishing. This is how it will appear to potential renters.
+                  </p>
+</div>
+<div class="flex gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-black/10 dark:bg-white/10 text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Edit Listing</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Publish Listing</span>
+</button>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-primary/20 dark:bg-primary/30">
+<div class="lg:col-span-2 lg:row-span-2">
+<img alt="Living room" class="w-full h-full object-cover aspect-[4/3] sm:aspect-video lg:aspect-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs8ohMqkqKDo9Nwo-Qcgkt3seSoACxn0VnybaOWNhtiOCv5wZrJ7_IvhcbxGA9wGOuI4jGumzDkZe23TfbJqjUnT9sLtUiTZf3xGP6a_RJQUWXnaTP36AFoetpwCPPrX-Bi_2k-oUD0IB1u7ZCbsgy_go__cNZgJUcLObVf2NHENi0e3Q18wUhbtVANxXHKfd-Ju2Z9RXoD79fbrVUycxxF0c75BgEIDPCV4X-HuHd3opl0C6hOtFxq38gbLU8nNCH69Mpq8Lm8MVJ"/>
+</div>
+<img alt="Kitchen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXuQ9XgmDMya5cM4uabM2a2B6MLEgM5WL6EjCCBSA2BG6kRKJO6QvkIhiVjm9QSRPSAibEI3ZARjgIifVrUVStMYudbq52HQiRKIPe9UmgxNVIu-P59egOaYZloV0tKE2d4eHYfrI3bToc-wLRBMn81kX0KxneCHPQyflTDaFPi2nKtkknreAOYGb--ZQDuMeiik4lDO8gwQbaJiBxPtQUUG8JqSEbpnjXDYMboRrmugah4EwaE6gv1OMwbwWPKtUUdRZ-QhiN82Xe"/>
+<img alt="Bedroom" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGPqdMWDQhVP6hLrs1WaQ-xJcuJE_OsAXCQWnA-Jn-KOACAaZx9FP2YQCk9-myS1qpLdlF5ZOid0jiuqca_CMb7Eirqz0NJvBTy_n_TIuat_O0GsTFUMSfsz0Mfg5U5tBRA4jb-8-i1gdnpVneW7nkcv8NDiaK3iAZvHGV0l-fSSPaADAwo6iwFbYQ3SkepKKbfel0PtBmTnChhYNJUnknz17bkYWhqtLrq9NZPRrt0bSWfSiKaw25EegmI348VZjcaKm2MJp0bezM"/>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div>
+<h2 class="text-2xl font-bold text-black dark:text-white">Charming 2-Bedroom Apartment in Downtown</h2>
+<p class="text-black/60 dark:text-white/60 mt-2">123 Main Street, Apt 4B, Cityville, State, 12345</p>
+<div class="mt-4 flex flex-wrap gap-4 text-sm">
+<span class="flex items-center gap-2 text-black dark:text-white"><span class="material-symbols-outlined text-base">bed</span> 2 Bedrooms</span>
+<span class="flex items-center gap-2 text-black dark:text-white"><span class="material-symbols-outlined text-base">bathtub</span> 1 Bathroom</span>
+<span class="flex items-center gap-2 text-black dark:text-white"><span class="material-symbols-outlined text-base">straighten</span> 950 sq ft</span>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-black dark:text-white border-b border-primary/20 dark:border-primary/30 pb-3 mb-4">
+                    About this property
+                  </h3>
+<p class="text-black/80 dark:text-white/80 leading-relaxed">
+                    This beautifully renovated 2-bedroom, 1-bathroom apartment is located in the heart of downtown, offering stunning city views and easy access to local
+                    amenities. Features include hardwood floors, a modern kitchen with stainless steel appliances, and a spacious living area perfect for entertaining.
+                  </p>
+</div>
+<div>
+<h3 class="text-xl font-bold text-black dark:text-white border-b border-primary/20 dark:border-primary/30 pb-3 mb-4">Amenities</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">In-unit Laundry</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Dishwasher</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Central A/C</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Fitness Center</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Rooftop Terrace</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Secure Parking</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Pet-Friendly</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-black dark:text-white">Balcony</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="lg:col-span-1">
+<div class="sticky top-12 p-6 rounded-xl bg-primary/10 dark:bg-primary/20 flex flex-col gap-4">
+<div>
+<p class="text-sm text-black/60 dark:text-white/60">Rent</p>
+<p class="text-2xl font-bold text-black dark:text-white">$2,500<span class="text-base font-normal text-black/60 dark:text-white/60">/month</span></p>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div>
+<p class="text-black/60 dark:text-white/60">Security Deposit</p>
+<p class="font-medium text-black dark:text-white">$2,500</p>
+</div>
+<div>
+<p class="text-black/60 dark:text-white/60">Application Fee</p>
+<p class="font-medium text-black dark:text-white">$50</p>
+</div>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-black text-sm font-bold">
+                    Contact Property Manager
+                  </button>
+</div>
+</aside>
+</div>
+<div>
+<h3 class="text-xl font-bold text-black dark:text-white border-b border-primary/20 dark:border-primary/30 pb-3 mb-4">Location</h3>
+<div class="aspect-video w-full rounded-lg overflow-hidden">
+<img alt="Map of property location" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD99SBm2OBePvI8w2sWIM71VbN7yiYdGfvrrOsRjrGjmP-iqUWiifkqQYnfU4V4VsWRmePUvDwvwkQphW8kFPw7Aul6m9hOtkFYolDrlp1jDSNVXzHQ5Z-FiGhWy3yywTCZ6a7nINcEAn0TTb18A62qIOOfNFxkfSEDviyrN8GOgwC_ynBwMTlN7jMLKMPJdi0rln-j2y4Tcxe7KFucxgbga2uJ6X2AsGtR77yN7TqBhzVTDyt2_-T9TXXJ4aSAtK4hW5NBD2mHuWZq"/>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

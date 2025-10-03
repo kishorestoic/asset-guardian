@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0df20d",
+              "background-light": "#f5f8f5",
+              "background-dark": "#102210",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex min-h-screen">
+<aside class="w-64 flex-col bg-white/50 dark:bg-black/20 p-4 border-r border-slate-200 dark:border-slate-800 hidden lg:flex">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">real_estate_agent</span>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">Property Platform</h1>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-bold" href="#">
+<span class="material-symbols-outlined">gite</span>
+<span>Listings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span>Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold tracking-wide">
+<span class="truncate">Add Listing</span>
+</button>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Help and Support</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-6 lg:p-8">
+<div class="max-w-7xl mx-auto">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Flagged Listings</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Review and resolve flagged property listings.</p>
+</div>
+<div class="mb-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-white/80 dark:bg-black/30 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search listings by ID, address, or user..." type="text"/>
+</div>
+</div>
+<div class="border-b border-slate-200 dark:border-slate-800 mb-6">
+<nav aria-label="Tabs" class="flex gap-8">
+<a class="pb-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 text-sm font-medium" href="#"> All </a>
+<a class="pb-3 border-b-2 border-primary text-primary text-sm font-bold" href="#"> Pending </a>
+<a class="pb-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 text-sm font-medium" href="#"> Resolved </a>
+</nav>
+</div>
+<div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-black/20">
+<table class="w-full text-left text-sm">
+<thead class="bg-white/50 dark:bg-black/20 text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">
+<tr>
+<th class="px-6 py-4" scope="col">Listing ID</th>
+<th class="px-6 py-4" scope="col">Address</th>
+<th class="px-6 py-4" scope="col">Flag Reason</th>
+<th class="px-6 py-4" scope="col">Flagged By</th>
+<th class="px-6 py-4" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-slate-800 dark:text-slate-200 font-semibold">#12345</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">123 Maple Street, Anytown, CA</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">Inaccurate Description</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">User: Alex Bennett</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<button class="text-primary hover:underline font-bold text-sm">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-slate-800 dark:text-slate-200 font-semibold">#67890</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">456 Oak Avenue, Anytown, CA</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">Inappropriate Photos</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">User: Jordan Carter</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<button class="text-primary hover:underline font-bold text-sm">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-slate-800 dark:text-slate-200 font-semibold">#11223</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">789 Pine Lane, Anytown, CA</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">Misleading Information</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">User: Taylor Evans</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<button class="text-primary hover:underline font-bold text-sm">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-slate-800 dark:text-slate-200 font-semibold">#44556</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">101 Elm Road, Anytown, CA</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">Duplicate Listing</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">User: Casey Harper</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<button class="text-primary hover:underline font-bold text-sm">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-slate-800 dark:text-slate-200 font-semibold">#77889</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">202 Cedar Drive, Anytown, CA</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">Scam Alert</td>
+<td class="px-6 py-4 whitespace-nowrap text-slate-600 dark:text-slate-300">User: Riley Foster</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<button class="text-primary hover:underline font-bold text-sm">View Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

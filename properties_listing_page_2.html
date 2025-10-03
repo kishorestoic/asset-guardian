@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>UrbanNest - Properties for Sale</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Public Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">real_estate_agent</span>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">UrbanNest</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Commercial</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">PG &amp; Co-living</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Plots</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Projects</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="form-input rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary" placeholder="Search" type="text"/>
+</div>
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKRRa_LzlG80wmsSu7FhVS3mdC8AbAssh2JOMYXGKujp3fGkV4P2BfR5KYmrxhdEUS_2OdCo-hi3GBLQesOX6D0orr3ZD--oMaJok527u0Ir9Oehb_-P5vTLAkeVNBAYgR3GXhHYv9LIfpDCDINJDyEAnwBNZrNFrC8UVQbA1JlZupRYDBzPlZ16aqJI7SqDFI1uZp7dLZQEL3pwGWWMIR_L6omSx80y5uZYeOFh7J6KcfcGM3br_97cG9s7SwxvNIoJlELRoHnXiX");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-1/4">
+<div class="sticky top-24">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Filters</h2>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="property-type">Property Type</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="property-type">
+<option>All</option>
+<option>Apartment</option>
+<option>House</option>
+<option>Villa</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="amount-range">Amount Range</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="amount-range">
+<option>Any</option>
+<option>$500k - $1M</option>
+<option>$1M - $2M</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="furnished-type">Furnished Type</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="furnished-type">
+<option>Any</option>
+<option>Furnished</option>
+<option>Semi-Furnished</option>
+<option>Unfurnished</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="occupancy">Occupancy</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="occupancy">
+<option>Any</option>
+<option>Ready to move</option>
+<option>Under Construction</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="appliances">Appliances</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="appliances">
+<option>Any</option>
+<option>Full</option>
+<option>Partial</option>
+<option>None</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="features">Features</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="features">
+<option>Any</option>
+<option>Balcony</option>
+<option>Private Garden</option>
+<option>Terrace</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="community-features">Community Features</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="community-features">
+<option>Any</option>
+<option>Swimming Pool</option>
+<option>Gym</option>
+<option>Clubhouse</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="utilities">Utilities</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="utilities">
+<option>Any</option>
+<option>All Included</option>
+<option>Water Included</option>
+<option>Gas Included</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="availability">Availability</label>
+<select class="form-select w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="availability">
+<option>Any</option>
+<option>Immediately</option>
+<option>Within 30 days</option>
+</select>
+</div>
+</div>
+</div>
+</aside>
+<div class="w-full lg:w-3/4">
+<nav aria-label="Breadcrumb" class="text-sm mb-4">
+<ol class="list-none p-0 inline-flex">
+<li class="flex items-center">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined mx-2 text-gray-400 dark:text-gray-500">chevron_right</span>
+</li>
+<li class="flex items-center">
+<span class="text-gray-700 dark:text-gray-200">Properties</span>
+</li>
+</ol>
+</nav>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-0">Properties for Sale in Mumbai</h1>
+<div class="flex items-center gap-2">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300" for="sort-by">Sort by:</label>
+<select class="form-select rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-sm focus:ring-primary focus:border-primary" id="sort-by">
+<option>Price Low to High</option>
+<option>Updated Newest to Oldest</option>
+</select>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-primary text-white">All</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30">Apartments</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30">Houses</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30">Villas</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30">Penthouses</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-primary/30">Farmhouses</button>
+</div>
+<div class="space-y-6">
+<div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 relative group">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXHxcQ1bULQ2Tk6y0qwKWT_xmt5aFNGiue3giD9YBqEoEDOCWgU6m9KwiQBs5NjmNvFw2qQHyI3V5Gap7ttMyIBuF5mKY-TaoPa9B3u0JWGmEMJs4qvYJ2UYLkbypP_J6GSjfOvEYGQ-y8X3jyahvRg9JCaa-iPdtE1M1M_fJt8k3hilRx9KtROQDcge7LJ0Y2GHntrWvEADALrDJFImIIpb_oDxJ0A4FivrS4epBWo_ZT9LirI1ogk6DOk5YKX9X7Zn1aCXNRSMJL");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+</div>
+</div>
+<div class="p-6 md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">
+<a class="hover:text-primary" href="#">Luxury Apartment in Bandra West</a>
+</h2>
+<p class="text-xl font-bold text-primary">$1,200,000</p>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Bandra West, Mumbai</p>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 3 Beds</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 3 Baths</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 1,800 sq ft</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+<span class="material-symbols-outlined text-base">mail</span> Contact
+                    </button>
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                      Get Enquiry Call
+                    </button>
+<div class="flex-grow"></div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+<button class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-red-500 dark:hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">flag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 relative group h-48 md:h-auto">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIIUzSoYES-B3wvanS8tglrEj7zYMnMtu3-pTz1mveQBl9K-dLekVYJPRM_-B-r3i3gqFLzsaVv7pUI1TJp0-3Ry9t2IsW-VMv2aq1lbLft2FEwm4k1AUIu6iRWGI_gakabLifeL-Wj23dvaCM2OQ7c88638BTBtbNJ6qJuG_0PR6ysaoi_zcHf48vPeE-mrB7p531Xw27bW9mchbnXsywVYzw97bErG08tOaaKHrfoAFjeOwkI5rCh1YGNz53pTj6iolfCyAgEbpZ");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+</div>
+</div>
+<div class="p-6 md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">
+<a class="hover:text-primary" href="#">Spacious Villa in Juhu</a>
+</h2>
+<p class="text-xl font-bold text-primary">$2,500,000</p>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Juhu, Mumbai</p>
+<div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bed</span> 4 Beds</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-base">bathtub</span> 5 Baths</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-base">square_foot</span> 3,200 sq ft</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+<span class="material-symbols-outlined text-base">mail</span> Contact
+                    </button>
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+                      Get Enquiry Call
+                    </button>
+<div class="flex-grow"></div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+<button class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800 hover:text-red-500 dark:hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">flag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

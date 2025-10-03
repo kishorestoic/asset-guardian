@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#50da0b",
+              "background-light": "#f6f8f5",
+              "background-dark": "#162210",
+              "content-light": "#131811",
+              "content-dark": "#e3e8e1",
+              "subtle-light": "#e3e8e1",
+              "subtle-dark": "#2a3f21",
+              "placeholder-light": "#6e8a60",
+              "placeholder-dark": "#9cb48e",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<style>
+      .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236e8a60' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .dark .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239cb48e' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      }
+      .form-checkbox:checked {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-content-light dark:text-content-dark">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-subtle-light bg-background-light/80 px-4 py-3 dark:border-subtle-dark dark:bg-background-dark/80 backdrop-blur-sm sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-3" href="#">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h1 class="text-lg font-bold">Urban Dwellings</h1>
+</a>
+</div>
+<nav class="hidden items-center gap-8 lg:flex">
+<a class="text-sm font-medium hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Mortgage</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Property Management</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden rounded-lg bg-primary px-4 py-2 text-sm font-bold text-background-dark transition-colors hover:bg-primary/90 sm:block">
+            List your property
+          </button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDimAdpoFC5HO9HcYWD3z_IZfF3FrZaT24x1KUVRjtr3LzbZHbxhV-6e05qIJqhX98mru4p2m_xZOKGckf2cxHMjL9jlIRbG2xqFk720-GigJbKxQfXcZQZ11c2gvY_x1la6DhJQvbNQgCpFXzoPVW6tkwzLRvACAG6Lu0dei1VE4qreSN06R1VqUXbpTKMGaY9z9MMCYD6UDH7IDGi-hG91Fk4zqXrdl27QDzadhyLZ_4l_Zmtg0dlRPZScrT0SGdAdoGWgURlaX3L");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 sm:py-12 lg:py-16">
+<div class="w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Create a New Property Listing</h2>
+<p class="mt-2 text-content-light/80 dark:text-content-dark/80">Fill in the details below to publish your property.</p>
+</div>
+<div class="space-y-8">
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium" for="property-title">Property Title</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="property-title" placeholder="e.g., Spacious 2BR Apartment with City Views" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium" for="property-description">Property Description</label>
+<textarea class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="property-description" placeholder="Describe your property in detail..." rows="6"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium" for="property-address">Property Address</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="property-address" placeholder="Start typing your address..." type="text"/>
+</div>
+<div class="aspect-video w-full rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3Ej5jXfmAX0KfBvNuNYXo1zIQXMWZvl_Ll1Bsm_Gi-fYMaiKzaGDfis19Z5DxRXjonGXYEHxhSlD4JU3Z1AxhiIz6S2TAZJbT2Or8fxed5ku5kNtQpm8dknrQM7WtKWWz7VANc8fiLf_-7tzviEPHAwUZmKjSzCchMChX9J5HKo4Fe3Dwl-i4YQYNIg5NvpC1S9fqnaW2cAb2R1XZECmzQr8FO8S9ODh4TnxQuGzU46UdyYsZEy3kd5d08LsTbOoPfHhpO_WgC749");'></div>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium" for="property-type">Property Type</label>
+<select class="form-select mt-1 block w-full appearance-none rounded-lg border-subtle-light bg-background-light p-3 text-sm focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark" id="property-type">
+<option>Select Type</option>
+<option>Apartment</option>
+<option>House</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium" for="property-category">Property Category</label>
+<select class="form-select mt-1 block w-full appearance-none rounded-lg border-subtle-light bg-background-light p-3 text-sm focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark" id="property-category">
+<option>Select Category</option>
+<option>For Rent</option>
+<option>For Sale</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div>
+<label class="block text-sm font-medium" for="bedrooms">Bedrooms</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="bedrooms" placeholder="e.g., 2" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium" for="bathrooms">Bathrooms</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="bathrooms" placeholder="e.g., 2" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium" for="sq-footage">Sq. Footage</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="sq-footage" placeholder="e.g., 1200" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div>
+<label class="block text-sm font-medium" for="monthly-rent">Monthly Rent ($)</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="monthly-rent" placeholder="e.g., 2500" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium" for="security-deposit">Security Deposit ($)</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="security-deposit" placeholder="e.g., 2500" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium" for="other-fees">Other Fees (Optional)</label>
+<input class="mt-1 block w-full rounded-lg border-subtle-light bg-background-light p-3 text-sm placeholder-placeholder-light focus:border-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark dark:placeholder-placeholder-dark" id="other-fees" placeholder="e.g., Application fee" type="text"/>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold">Amenities &amp; Features</h3>
+<div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+                {[
+                  "In-unit Laundry",
+                  "Dishwasher",
+                  "Central A/C",
+                  "Hardwood Floors",
+                  "Balcony/Patio",
+                  "Fitness Center",
+                  "Swimming Pool",
+                  "Parking Garage",
+                  "Pet-Friendly",
+                  "24-Hour Security",
+                ].map((amenity, index) =&gt; (
+                  <label class="flex items-center gap-2" key="{index}">
+<input class="form-checkbox h-4 w-4 rounded border-subtle-light bg-background-light text-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark" type="checkbox"/>
+<span class="text-sm">{amenity}</span>
+</label>
+                ))}
+              </div>
+</div>
+<div class="flex justify-end pt-4">
+<button class="rounded-lg bg-primary px-6 py-3 text-base font-bold text-background-dark transition-colors hover:bg-primary/90">
+                Submit Listing
+              </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+      // A simple script to render the amenities to avoid repetition in HTML
+      const amenitiesContainer = document.querySelector('.grid.grid-cols-2.gap-4');
+      amenitiesContainer.innerHTML = '';
+      const amenities = [
+        "In-unit Laundry", "Dishwasher", "Central A/C",
+        "Hardwood Floors", "Balcony/Patio", "Fitness Center",
+        "Swimming Pool", "Parking Garage", "Pet-Friendly", "24-Hour Security"
+      ];
+      amenities.forEach(amenity => {
+        const label = document.createElement('label');
+        label.className = 'flex items-center gap-2 cursor-pointer';
+        label.innerHTML = `
+          <input type="checkbox" class="form-checkbox h-4 w-4 rounded border-subtle-light bg-background-light text-primary focus:ring-primary dark:border-subtle-dark dark:bg-subtle-dark">
+          <span class="text-sm">${amenity}</span>
+        `;
+        amenitiesContainer.appendChild(label);
+      });
+    </script>
+
+</body></html>

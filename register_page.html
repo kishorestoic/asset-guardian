@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#50da0b",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#162210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-radio:checked {
+            background-color: #50da0b;
+            border-color: #50da0b;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark/50 backdrop-blur-sm sticky top-0 z-10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-background-dark dark:text-background-light" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+<h1 class="text-xl font-bold text-background-dark dark:text-background-light">Urban Dwellings</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium text-background-dark/80 dark:text-background-light/80 hover:text-primary" href="#">Manage Property</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden md:inline-flex items-center justify-center rounded-lg h-10 px-4 bg-primary/20 text-background-dark dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors" href="#">
+                            Log in
+                        </a>
+<button class="md:hidden flex items-center justify-center size-10 rounded-full bg-primary/20 hover:bg-primary/30 transition-colors">
+<svg class="w-6 h-6 text-background-dark dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div>
+<h2 class="mt-6 text-center text-3xl font-extrabold text-background-dark dark:text-background-light">Create your account</h2>
+<p class="mt-2 text-center text-sm text-background-dark/70 dark:text-background-light/70">
+                        Already have an account?
+                        <a class="font-medium text-primary hover:text-primary/80" href="#">
+                            Log in
+                        </a>
+</p>
+</div>
+<form action="#" class="mt-8 space-y-6" method="POST">
+<div class="rounded-lg shadow-sm -space-y-px">
+<div>
+<label class="sr-only" for="full-name">Full name</label>
+<input class="appearance-none rounded-t-lg relative block w-full px-3 py-3 border border-background-dark/20 dark:border-background-light/20 placeholder-background-dark/50 dark:placeholder-background-light/50 text-background-dark dark:text-background-light bg-background-light dark:bg-background-dark focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="full-name" name="name" placeholder="Full name" required="" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="appearance-none relative block w-full px-3 py-3 border border-background-dark/20 dark:border-background-light/20 placeholder-background-dark/50 dark:placeholder-background-light/50 text-background-dark dark:text-background-light bg-background-light dark:bg-background-dark focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="email-address" name="email" placeholder="Email address" required="" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<input autocomplete="new-password" class="appearance-none relative block w-full px-3 py-3 border border-background-dark/20 dark:border-background-light/20 placeholder-background-dark/50 dark:placeholder-background-light/50 text-background-dark dark:text-background-light bg-background-light dark:bg-background-dark focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+<div>
+<label class="sr-only" for="confirm-password">Confirm password</label>
+<input autocomplete="new-password" class="appearance-none rounded-b-lg relative block w-full px-3 py-3 border border-background-dark/20 dark:border-background-light/20 placeholder-background-dark/50 dark:placeholder-background-light/50 text-background-dark dark:text-background-light bg-background-light dark:bg-background-dark focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="confirm-password" name="confirm-password" placeholder="Confirm password" required="" type="password"/>
+</div>
+</div>
+<fieldset>
+<legend class="sr-only">Register as</legend>
+<div class="flex items-center justify-around">
+<div class="flex items-center">
+<input class="form-radio h-4 w-4 text-primary focus:ring-primary border-background-dark/30 dark:border-background-light/30 bg-background-light dark:bg-background-dark" id="tenant" name="user-type" type="radio"/>
+<label class="ml-2 block text-sm text-background-dark dark:text-background-light" for="tenant">I'm a tenant</label>
+</div>
+<div class="flex items-center">
+<input class="form-radio h-4 w-4 text-primary focus:ring-primary border-background-dark/30 dark:border-background-light/30 bg-background-light dark:bg-background-dark" id="landlord" name="user-type" type="radio"/>
+<label class="ml-2 block text-sm text-background-dark dark:text-background-light" for="landlord">I'm a landlord</label>
+</div>
+</div>
+</fieldset>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-black bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-colors" type="submit">
+                            Sign up
+                        </button>
+</div>
+<p class="text-center text-xs text-background-dark/60 dark:text-background-light/60">
+                        By signing up, you agree to our <a class="font-medium text-primary hover:text-primary/80" href="#">Terms of Service</a> and <a class="font-medium text-primary hover:text-primary/80" href="#">Privacy Policy</a>.
+                    </p>
+</form>
+</div>
+</main>
+</div>
+
+</body></html>

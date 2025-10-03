@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#50da0b",
+              "background-light": "#f6f8f5",
+              "background-dark": "#162210",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<title>Edit Property Listing</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100">
+<div class="flex h-full min-h-screen w-full flex-col">
+<header class="sticky top-0 z-20 flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm px-10 py-3">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h2 class="text-lg font-bold">Urban Dwellings</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Property Management</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 text-primary dark:bg-primary/20 text-sm font-bold leading-normal tracking-wide hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span>List a property</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKf-6kb8jiSzLayFjiehB3fNB-ES6XuY1i1enzqECQHKMU1V44FaAajVVaq0kDFezrF2oPtPfosm0kj4szZrBITBt-4yk5Ssd7rI4GquuZixJ13XTm8_6fkXorurvrLgqXtVMTA9j2D9FNIsv-hOQzEFA46KF_x2Fv5PWjiJ_UJU7eQoHkwQtHisvH4Y0-4Z4KuTo1MQL52S2ElVxefSXFWH_PZZQrt15YBFHuUf-tlJP8ve9sOvjdXaLuFGKi-xTdITlI91-bwamN");'></div>
+</div>
+</header>
+<div class="flex flex-1 mx-auto max-w-7xl w-full">
+<aside class="w-80 border-r border-gray-200 dark:border-gray-800 p-6 sticky top-[65px] h-[calc(100vh-65px)] hidden lg:flex flex-col gap-4">
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100 bg-primary/10 dark:bg-primary/20 font-semibold" href="#">
+<span class="material-symbols-outlined">description</span>
+              Overview
+            </a>
+<a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50" href="#">
+<span class="material-symbols-outlined">apartment</span>
+              Details
+            </a>
+<a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+              Photos
+            </a>
+<a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50" href="#">
+<span class="material-symbols-outlined">sell</span>
+              Pricing
+            </a>
+<a class="flex items-center gap-3 rounded-lg px-4 py-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50" href="#">
+<span class="material-symbols-outlined">event_available</span>
+              Availability
+            </a>
+</nav>
+<div class="mt-auto flex flex-col gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-black text-sm font-bold shadow-sm hover:bg-primary/90 transition-all">
+<span class="truncate">Save Changes</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm font-bold hover:bg-gray-300 dark:hover:bg-gray-700 transition-all">
+<span class="truncate">Duplicate Listing</span>
+</button>
+</div>
+</aside>
+<main class="flex-1 p-6 lg:p-8">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<h1 class="text-3xl font-bold tracking-tight">Edit Property Listing</h1>
+<p class="text-gray-500 dark:text-gray-400 mt-2">
+                Update the details of your property listing to keep it accurate and attractive to potential tenants or buyers.
+              </p>
+</div>
+<section class="mb-8">
+<h3 class="text-xl font-bold mb-4">Property Status</h3>
+<div class="flex flex-wrap gap-3">
+<label class="flex items-center justify-center rounded-lg border-2 border-gray-200 dark:border-gray-700 px-4 py-2 text-sm font-medium cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 transition-all">
+<input checked="" class="sr-only" name="property-status" type="radio"/>
+                  Active
+                </label>
+<label class="flex items-center justify-center rounded-lg border-2 border-gray-200 dark:border-gray-700 px-4 py-2 text-sm font-medium cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 transition-all">
+<input class="sr-only" name="property-status" type="radio"/>
+                  Inactive
+                </label>
+<label class="flex items-center justify-center rounded-lg border-2 border-gray-200 dark:border-gray-700 px-4 py-2 text-sm font-medium cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 transition-all">
+<input class="sr-only" name="property-status" type="radio"/>
+                  Under Contract
+                </label>
+<label class="flex items-center justify-center rounded-lg border-2 border-gray-200 dark:border-gray-700 px-4 py-2 text-sm font-medium cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 dark:has-[:checked]:bg-primary/20 transition-all">
+<input class="sr-only" name="property-status" type="radio"/>
+                  Sold/Rented
+                </label>
+</div>
+</section>
+<section class="mb-8">
+<h3 class="text-xl font-bold mb-4">Availability</h3>
+<div class="max-w-xs">
+<label class="block text-sm font-medium mb-1" for="availability-date">Availability Date</label>
+<div class="relative">
+<input class="form-input w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary h-12 px-4" id="availability-date" type="text" value="2024-08-15"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold">Photos</h3>
+<button class="flex items-center gap-2 min-w-[84px] cursor-pointer justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined text-base">add_photo_alternate</span>
+<span class="truncate">Add Photos</span>
+</button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+<div class="relative group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_aen7xACGBO6E_B4GZAcZiSO-u7c8k3g0HW4cYr0faeax9THz9QT8DwaCvO8-6ing_YDXvTEjujbHmdtRgAYHjMn_d2iMq-IvKVgVNBD_3p9uWAr0gzGez0NIu-RjopKXVhL7Zt9dPOVTDuz-iHBo38CsIUIUn_ENQH-pTARNAlZtmwwuw6tW4_rnLRKiChnl-hUOEFLThBPlqIJ-5OtItBXpKYDbqhFGnOA3sGOP_Gk86VmV5jO2HKRJFnsgMsVM2XR9pjUcLRne");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="relative group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9dr-DjnzlSU6K_uhZFVuXaBodjfQgc5UFdiU3gJsgfpVi9adIniOxrlt7RqF1zcgw9jvGXReuju9nTVoRZXz1TDNWaGedKcWWDBFSVeaZce8QE4kL2yCsPMawWxHImzifFIL_ey1emDaFjamhmIec7PcW95-DKGC8tIX9mA6usoTh6X0H5Y-HenUFs3DjA2qnKbgSPA6GwU7nGDdAemRLq-8NMN8XDzuplqM_OAisqyeR41n8rkGSMDsxjowWKr5dtajnrrBPHSvJ");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="relative group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDG-gfnhSHr3e6VBrZvDSfNmkkxjb34gTDA9Xp7TCKMKwYGaMiY1E9d6vaqu2kB22w0X4PIqeDhCyX9qMS6NOyHQAaWEXmUWywhdrTVGNSXFldbVAtMNz988B2udpeYZHv4if6zRkCLLCZAhfmrO2jnBQ8L3XmManukvxegOAlJJ9FsJcMVfz9j0NX5efWoplyLcfUUkvDRSCgsKwNXY3gzE_uUxRc3CvU_2WUPwf7d32WYZ58xd9k03DvnphyrSHNFgrnH2JYgjuHV");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="relative group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9-f1-NZe1J7akU1DN-aakyvIRsyYKFuy_SETKV4tN0tf2TcoVRLnu5nSeZBfQJsQDR_6_XxoOeS_c-AlAW_vWaFFnDlbjh8eBAh2FR_SSq5HzSkdWnUqlvnoPH_Hh10HKhpf16xpYcJyLSY1zl3DVImoIeONB0mPzXUcSzlh64q7Kx9L-cxpCfZCtmGfrhMyekbMn3N5bUSBtFfdenxqmpM-uxEs0whhBknd6Mrjda7RM9eEq4j24c677JyGqUaVgbhpO01Rr1UlX");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="relative group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkrDeB05HNGhm2DQsN2q-r7C4hbpjjaA8ULaPx7-hsFTxwrCSBYajqcQZKavy7lbFPLAmBPSfgdrQm_WfJURj6ch8REWRPoLOXwohqnlR4MsjhvL-xI4AeVcRdGbyNMvoYxqAm0ABgiYEvWdxODVn5aEBl5tVFyff1CyTZ4NBjTu3TS42nJdk5l5V3yJ3575C5DJk16JrmKYmZiSV_AARJs3I399UaOis9ZxKue-BxCsZxoR3hr4gdMYgZX7ln6rhdXORTaM2sEpfE");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="relative group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEwK8M2fuLddVnet9v9lSYAKvlu-gTI3SrVOeVCDUCkGTTUzHMyHntAYfAZSeJmx_AXKNxt7egyphQgdK9MgNS1SVwTI6wFA5wcw9Ip4Y7AuvSO31WTwCTufR7TLSdhIAwMIWPePDuznuq6-GcojRndHUzXP53ziDiLFV_TGezuZTJC9BnB9F3eIfA0P_35jU6e8q5QfVEYtKCTBTWhYx8LdV7Araw5AopdBrLMTOGtgPblP2tDgLGfbasCrwhMeFp7q7lPqvhjL4J");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-xl font-bold mb-4">Live Preview</h3>
+<div class="rounded-lg border-2 border-gray-200 dark:border-gray-800 overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDA9uQ5VqbBPfYsersqmtzFePfhWPn_wUjX7EDGnCitKVJUDc4HSzrl0vG2Y1T55-dkiT857GkPLX12HEKUWuuXTKidnHdWMy6jsczfY_ypGxfZiE_qZtazZOzDOxAibksvxY55gRThDH5JINFteGDLJmVTt1ozYe4ErgFReYvW0lPh2rhEtzra5p1H-pty8oedHe5JnKIJ58XZs0Q9zNOFBrHuuw9lwUO_lJoBFoV_loQKa9pSCV74dF47ls_JZnYogaOPpl_Y6ZFJ");'></div>
+<div class="p-6 bg-background-light dark:bg-background-dark">
+<h4 class="text-lg font-bold">Spacious 2-Bedroom Apartment in Downtown</h4>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">2 Beds · 2 Baths · 1200 sq ft</p>
+<p class="text-gray-600 dark:text-gray-300 mt-4 text-sm leading-relaxed">
+                    This modern apartment features a spacious living area, a fully equipped kitchen, and two large bedrooms with ample closet space. Enjoy city views from the private balcony and take advantage of the building's amenities, including a fitness center and rooftop terrace.
+                  </p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

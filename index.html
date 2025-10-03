@@ -2,104 +2,624 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta charset="utf-8" />
-    <title>AssetGuardian : List of pages</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style type="text/tailwindcss">
-        :root {
-            --olive-green: #4EBE38;
-            --leaf-green: #24981C;
-            --navy-blue: #000074;
-            --blue: #0140AC;
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "var(--olive-green)",
-                        "secondary": "var(--navy-blue)",
-                        "background-light": "#f7f9f5",
-                        "background-dark": "#0d1a12",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Centralized Page Index</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		html,
+		body {
+			background: #f8fafc;
+			padding: 10px;
+			margin: 0;
+		}
+
+		#preview-container {
+			max-height: 100vh;
+			overflow: scroll;
+		}
+
+		.preview-img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 8px;
+			border: 1px solid #ddd;
+		}
+
+		.table thead th {
+			background: #e2e8f0;
+		}
+
+		.table tbody tr td a {
+			margin-right: 10px;
+		}
+
+		.table-hover tbody tr:hover {
+			background: #f1f5f9;
+		}
+
+		.container {
+			max-width: 100vw;
+		}
+
+		#page-index {
+			max-height: 100vh;
+			overflow: scroll;
+		}
+	</style>
 </head>
 
 <body>
-    <style>
-        table {
-            border-collapse: collapse;
-            border: 1px solid #ded2e8;
-        }
+	<div class="container">
+		<div class="row">
+			<div class="col-5">
+				<div id="page-index">
+					<table class="table table-bordered table-hover align-middle">
+						<thead>
+							<tr>
+								<th>Page Name</th>
+								<th>Link - Preview</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>About Us Page 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="about_us_page_1.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/about_us_page_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>About Us Page 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="about_us_page_2.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/about_us_page_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Account Action Success Confirmation 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="account_action_success_confirmation_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/account_action_success_confirmation_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Account Action Success Confirmation 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="account_action_success_confirmation_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/account_action_success_confirmation_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Admin Verification Dashboard</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="admin_verification_dashboard.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/admin_verification_dashboard.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Agent Contact Confirmation</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="agent_contact_confirmation.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/agent_contact_confirmation.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Appeal Property Rejection</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="appeal_property_rejection.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/appeal_property_rejection.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Appeal Submitted Confirmation</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="appeal_submitted_confirmation.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/appeal_submitted_confirmation.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Billing & Payment Methods</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="billing_&_payment_methods.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/billing_&_payment_methods.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Bulk Action Success Message</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="bulk_action_success_message.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/bulk_action_success_message.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Communication Preferences</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="communication_preferences.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/communication_preferences.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Confirm Bulk Action Modal</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="confirm_bulk_action_modal.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/confirm_bulk_action_modal.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Confirm Plan Change 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="confirm_plan_change_1.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/confirm_plan_change_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Confirm Plan Change 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="confirm_plan_change_2.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/confirm_plan_change_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Contact Agent Modal</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="contact_agent_modal.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/contact_agent_modal.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Contact Us Page 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="contact_us_page_1.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/contact_us_page_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Contact Us Page 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="contact_us_page_2.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/contact_us_page_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Create Property Listing Form</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="create_property_listing_form.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/create_property_listing_form.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Critical Verification Update Modal 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="critical_verification_update_modal_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/critical_verification_update_modal_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Critical Verification Update Modal 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="critical_verification_update_modal_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/critical_verification_update_modal_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Edit Property Listing Interface</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="edit_property_listing_interface.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/edit_property_listing_interface.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Flagged Listings Review</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="flagged_listings_review.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/flagged_listings_review.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Forgot Password Flow</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="forgot_password_flow.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/forgot_password_flow.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Interaction History</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="interaction_history.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/interaction_history.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Landlord In-App Notification Center</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="landlord_in-app_notification_center.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/landlord_in-app_notification_center.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Landlord Notification Preferences</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="landlord_notification_preferences.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/landlord_notification_preferences.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Listing Analytics Dashboard</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="listing_analytics_dashboard.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/listing_analytics_dashboard.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Login Page</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="login_page.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn" data-img="preview/login_page.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Manage Property Alerts</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="manage_property_alerts.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/manage_property_alerts.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Manage Property Listings Dashboard</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="manage_property_listings_dashboard.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/manage_property_listings_dashboard.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>New Property Alert Notification</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="new_property_alert_notification.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/new_property_alert_notification.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Notification Center 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="notification_center_1.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/notification_center_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Notification Center 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="notification_center_2.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/notification_center_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Notification Center 3</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="notification_center_3.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/notification_center_3.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>OTP Verification Page</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="otp_verification_page.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/otp_verification_page.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>OTP Verification Success</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="otp_verification_success.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/otp_verification_success.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Photo Upload and Management</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="photo_upload_and_management.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/photo_upload_and_management.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Activity Summary</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_activity_summary.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_activity_summary.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Settings Saved Confirmation 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_settings_saved_confirmation_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_settings_saved_confirmation_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Settings Saved Confirmation 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_settings_saved_confirmation_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_settings_saved_confirmation_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Settings Saved Confirmation 3</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_settings_saved_confirmation_3.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_settings_saved_confirmation_3.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Settings Saved Confirmation 4</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_settings_saved_confirmation_4.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_settings_saved_confirmation_4.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Settings Saved Confirmation 5</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_settings_saved_confirmation_5.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_settings_saved_confirmation_5.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Platform Settings Saved Confirmation 6</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="platform_settings_saved_confirmation_6.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/platform_settings_saved_confirmation_6.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Preview Property Listing</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="preview_property_listing.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/preview_property_listing.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Properties Listing Page 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="properties_listing_page_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/properties_listing_page_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Properties Listing Page 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="properties_listing_page_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/properties_listing_page_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Properties Listing Page 3</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="properties_listing_page_3.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/properties_listing_page_3.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Properties Listing Page 4</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="properties_listing_page_4.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/properties_listing_page_4.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Properties Listing Page 5</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="properties_listing_page_5.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/properties_listing_page_5.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Properties Listing Page 6</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="properties_listing_page_6.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/properties_listing_page_6.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Alerts Setup</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_alerts_setup.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_alerts_setup.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Appeals Review 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_appeals_review_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_appeals_review_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Appeals Review 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_appeals_review_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_appeals_review_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Appeals Review 3</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_appeals_review_3.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_appeals_review_3.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Review & Verification 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_review_&_verification_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_review_&_verification_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Review & Verification 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_review_&_verification_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_review_&_verification_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Search & Listings Page 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_search_&_listings_page_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_search_&_listings_page_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Property Search & Listings Page 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="property_search_&_listings_page_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/property_search_&_listings_page_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Re-Verification Documents Submitted 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="re-verification_documents_submitted_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/re-verification_documents_submitted_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Re-Verification Documents Submitted 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="re-verification_documents_submitted_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/re-verification_documents_submitted_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Register Page</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="register_page.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/register_page.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Saved Properties List View 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="saved_properties_list_view_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/saved_properties_list_view_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Saved Properties List View 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="saved_properties_list_view_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/saved_properties_list_view_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Subscription & Payments Management 1</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="subscription_&_payments_management_1.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/subscription_&_payments_management_1.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Subscription & Payments Management 2</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="subscription_&_payments_management_2.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/subscription_&_payments_management_2.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>User Dashboard</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="user_dashboard.html" target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/user_dashboard.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>User Management Audit Log</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="user_management_audit_log.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/user_management_audit_log.png">Preview</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Verification Statistics Dashboard</td>
+								<td><a class="btn btn-sm btn-outline-primary" href="verification_statistics_dashboard.html"
+										target="_blank">Open</a>
+									<button class="btn btn-primary btn-sm preview-btn"
+										data-img="preview/verification_statistics_dashboard.png">Preview</button>
+								</td>
+							</tr>
+							<!-- PAGE INDEX ROWS END -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-7 text-center">
+				<div id="preview-container">
+					<img id="preview-img" class="preview-img" src="" alt="Preview Image" style="display:none;">
+				</div>
+			</div>
+		</div>
 
-        th {
-            background-color: #f7f9f5;
-        }
-
-        a {
-            color: #24981C;
-        }
-
-        a:hover {
-            color: #000074;
-        }
-    </style>
-    <div class="p-8 m-8">
-        <h1 class="text-xl font-medium text-gray-900 dark:text-white mb-5">List of pages</h1>
-        <table class="w-[550px] text-sm text-left text-gray-500">
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-                <tr>
-                    <th scope="col" class="px-6 py-3">Page</th>
-                    <th scope="col" class="px-6 py-3">List</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-white border-b">
-                    <td class="px-6 py-4">Property Listing</td>
-                    <td class="px-6 py-4"><a href="property-listing.html" class="hover:text-primary">View page</a></td>
-                </tr>
-                <tr class="bg-white border-b">
-                    <td class="px-6 py-4">Property Listing - 1</td>
-                    <td class="px-6 py-4"><a href="property-list-1.html" class="hover:text-primary">View page</a></td>
-                </tr>
-                <tr class="bg-gray-50 ">
-                    <td class="px-6 py-4">Property Listing - 2</td>
-                    <td class="px-6 py-4"><a href="property-list-2.html" class="hover:text-primary">View page</a></td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800">
-                    <td class="px-6 py-4">Property Details - 1</td>
-                    <td class="px-6 py-4"><a href="property-details-1.html" class="hover:text-primary">View page</a>
-                    </td>
-                </tr>
-
-                <tr class="bg-white border-b dark:bg-gray-800">
-                    <td class="px-6 py-4">Property Details - 2</td>
-                    <td class="px-6 py-4"><a href="property-details-2.html" class="hover:text-primary">View page</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			document.querySelectorAll('.preview-btn').forEach(function (btn) {
+				btn.addEventListener('click', function () {
+					var imgSrc = btn.getAttribute('data-img');
+					var previewImg = document.getElementById('preview-img');
+					previewImg.src = imgSrc;
+					previewImg.style.display = 'block';
+				});
+			});
+		</script>
 </body>
 
 </html>

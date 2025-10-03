@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                        "success": "#17cf17",
+                        "warning": "#ffc107",
+                        "danger": "#dc3545",
+                        "info": "#0dcaf0"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .timeline-item:not(:last-child)::before {
+            content: "";
+            position: absolute;
+            top: 2.5rem;
+            left: 1.25rem;
+            width: 2px;
+            height: calc(100% - 2.5rem);
+            background-color: #e5e7eb;
+        }
+        .dark .timeline-item:not(:last-child)::before {
+            background-color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="min-h-screen p-4 sm:p-6 lg:p-8">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<a class="flex items-center text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+                Back to Property Management
+            </a>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mt-2">Property Verification History</h1>
+<p class="text-slate-600 dark:text-slate-300 mt-1">123 Greenfield Avenue, Springfield, IL 62704</p>
+</div>
+<div class="bg-white dark:bg-background-dark shadow-lg rounded-xl border border-slate-200 dark:border-slate-700">
+<div class="p-6">
+<h2 class="text-xl font-bold text-slate-800 dark:text-white mb-6">Verification Log</h2>
+<div class="relative">
+<div class="timeline-item relative pb-8 pl-12">
+<div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 bg-success/20 rounded-full">
+<span class="material-symbols-outlined text-success">check_circle</span>
+</div>
+<div class="ml-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-success text-lg">Approved</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">July 22, 2024, 10:05 AM</p>
+</div>
+<p class="mt-1 text-slate-600 dark:text-slate-300">All documents verified. Property is now listed as "Verified".</p>
+</div>
+</div>
+<div class="timeline-item relative pb-8 pl-12">
+<div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 bg-info/20 rounded-full">
+<span class="material-symbols-outlined text-info">history</span>
+</div>
+<div class="ml-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-info text-lg">Re-verification Requested</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">July 21, 2024, 03:30 PM</p>
+</div>
+<p class="mt-1 text-slate-600 dark:text-slate-300">New documents submitted for re-verification.</p>
+</div>
+</div>
+<div class="timeline-item relative pb-8 pl-12">
+<div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 bg-danger/20 rounded-full">
+<span class="material-symbols-outlined text-danger">cancel</span>
+</div>
+<div class="ml-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-danger text-lg">Rejected</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">July 20, 2024, 11:15 AM</p>
+</div>
+<div class="mt-2 p-3 bg-slate-100 dark:bg-slate-800 rounded-lg">
+<p class="font-semibold text-slate-700 dark:text-slate-200">Reason for rejection:</p>
+<p class="text-slate-600 dark:text-slate-300">Utility bill is older than 3 months. Please upload a recent utility bill as proof of address.</p>
+</div>
+</div>
+</div>
+<div class="timeline-item relative pb-8 pl-12">
+<div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 bg-warning/20 rounded-full">
+<span class="material-symbols-outlined text-warning">pending</span>
+</div>
+<div class="ml-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-warning text-lg">Pending</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">July 19, 2024, 09:00 AM</p>
+</div>
+<p class="mt-1 text-slate-600 dark:text-slate-300">Documents submitted for verification. Awaiting review.</p>
+</div>
+</div>
+<div class="timeline-item relative pb-8 pl-12">
+<div class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 bg-danger/20 rounded-full">
+<span class="material-symbols-outlined text-danger">flag</span>
+</div>
+<div class="ml-4">
+<div class="flex items-center justify-between">
+<p class="font-bold text-danger text-lg">Flagged</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">June 15, 2024, 05:45 PM</p>
+</div>
+<div class="mt-2 p-3 bg-slate-100 dark:bg-slate-800 rounded-lg">
+<p class="font-semibold text-slate-700 dark:text-slate-200">Reason for flagging:</p>
+<p class="text-slate-600 dark:text-slate-300">Discrepancy found between ownership documents and public records. Manual review required.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

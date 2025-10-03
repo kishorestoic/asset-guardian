@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - FindHome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#50da0b",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#162210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-input::placeholder {
+            color: #6e8a60;
+        }
+        .dark .form-input::placeholder {
+            color: #a0b895;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex flex-col min-h-screen">
+<header class="border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">FindHome</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Sell</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden md:block text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Manage Rentals</a>
+<a class="text-sm font-bold bg-primary/20 hover:bg-primary/30 text-primary px-4 py-2 rounded-lg" href="#">Sign up</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8 bg-white dark:bg-background-dark/50 p-8 rounded-xl shadow-lg">
+<div>
+<h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        Welcome back
+                    </h2>
+<p class="mt-2 text-center text-sm text-slate-600 dark:text-slate-400">
+                        Sign in to continue your property search
+                    </p>
+</div>
+<form action="#" class="mt-8 space-y-6" method="POST">
+<div class="rounded-md -space-y-px">
+<div>
+<label class="sr-only" for="email-address">Email or username</label>
+<input autocomplete="email" class="form-input appearance-none rounded-t-lg relative block w-full px-3 py-3 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark placeholder-slate-500 dark:placeholder-slate-400 text-slate-900 dark:text-white focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="email-address" name="email" placeholder="Email or username" required="" type="email"/>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<input autocomplete="current-password" class="form-input appearance-none rounded-b-lg relative block w-full px-3 py-3 border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark placeholder-slate-500 dark:placeholder-slate-400 text-slate-900 dark:text-white focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<div class="text-sm">
+<a class="font-medium text-primary hover:text-primary/80" href="#">
+                                Forgot your password?
+                            </a>
+</div>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                            Log in
+                        </button>
+</div>
+</form>
+<div class="relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-300 dark:border-slate-700"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-white dark:bg-background-dark/50 text-slate-500 dark:text-slate-400">Or continue with</span>
+</div>
+</div>
+<div>
+<div class="mt-6 grid grid-cols-2 gap-3">
+<div>
+<a class="w-full inline-flex justify-center py-2 px-4 border border-slate-300 dark:border-slate-700 rounded-lg shadow-sm bg-white dark:bg-background-dark/50 text-sm font-medium text-slate-500 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-background-dark" href="#">
+<span class="sr-only">Sign in with a search engine</span>
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 48 48">
+<path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"></path>
+</svg>
+</a>
+</div>
+<div>
+<a class="w-full inline-flex justify-center py-2 px-4 border border-slate-300 dark:border-slate-700 rounded-lg shadow-sm bg-white dark:bg-background-dark/50 text-sm font-medium text-slate-500 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-background-dark" href="#">
+<span class="sr-only">Sign in with a social network</span>
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+<path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="text-sm text-center">
+<a class="font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary" href="#">
+                        Don't have an account? <span class="font-bold text-primary">Sign up</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+
+
+</body></html>

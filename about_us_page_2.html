@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FindHome - About Us</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#50da0b",
+              "background-light": "#f6f8f5",
+              "background-dark": "#162210",
+              "text-light": "#131811",
+              "text-dark": "#e8ede6",
+              "text-muted-light": "#6e8a60",
+              "text-muted-dark": "#9cb393",
+              "border-light": "#dfe6db",
+              "border-dark": "#3a4a33",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: { DEFAULT: "0.5rem", lg: "0.75rem", xl: "1rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply font-display bg-background-light text-text-light dark:bg-background-dark dark:text-text-dark;
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 w-full border-b border-border-light bg-background-light/80 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold">FindHome</h1>
+</div>
+<nav class="hidden md:flex md:items-center md:gap-8">
+<a class="text-sm font-medium transition-colors hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium transition-colors hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium transition-colors hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium transition-colors hover:text-primary" href="#">Manage</a>
+<a class="text-sm font-medium transition-colors hover:text-primary" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="flex h-10 min-w-[84px] items-center justify-center overflow-hidden rounded-full bg-primary/20 px-4 text-sm font-bold text-primary transition-colors hover:bg-primary/30 dark:bg-primary/20 dark:hover:bg-primary/30">
+<span>Log in</span>
+</button>
+<button class="flex h-10 min-w-[84px] items-center justify-center overflow-hidden rounded-full bg-primary px-4 text-sm font-bold text-background-dark transition-opacity hover:opacity-90">
+<span>Join</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+<div class="text-center">
+<p class="text-base font-semibold uppercase tracking-wider text-primary">About Us</p>
+<h2 class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">Revolutionizing Your Rental Experience</h2>
+<p class="mx-auto mt-6 max-w-3xl text-lg text-text-muted-light dark:text-text-muted-dark">
+              At FindHome, our mission is to make finding, listing, and managing rental properties simpler, more transparent, and more efficient for everyone involved. We believe the right home is out there, and we're here to help you find it.
+            </p>
+</div>
+<div class="mt-20">
+<h3 class="text-center text-3xl font-bold tracking-tight">Our Core Values</h3>
+<div class="mt-12 grid gap-8 md:grid-cols-3">
+<div class="flex flex-col items-center text-center">
+<div class="flex h-16 w-16 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
+</div>
+<h4 class="mt-5 text-xl font-bold">Transparency</h4>
+<p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">We provide clear, honest information about properties, fees, and processes, ensuring everyone has a complete understanding.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="flex h-16 w-16 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path></svg>
+</div>
+<h4 class="mt-5 text-xl font-bold">Trust</h4>
+<p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">We prioritize your safety with verified listings, secure payments, and robust data protection.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="flex h-16 w-16 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path></svg>
+</div>
+<h4 class="mt-5 text-xl font-bold">Innovation</h4>
+<p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">We leverage smart technology to streamline processes and constantly improve the rental experience.</p>
+</div>
+</div>
+</div>
+<div class="mt-20 rounded-lg bg-background-light p-8 shadow-lg ring-1 ring-border-light dark:bg-background-dark dark:ring-border-dark md:p-12">
+<div class="grid gap-12 md:grid-cols-2">
+<div>
+<h3 class="text-3xl font-bold tracking-tight">Key Features</h3>
+<p class="mt-4 text-lg text-text-muted-light dark:text-text-muted-dark">
+                  FindHome is designed with powerful features to make your property journey as smooth as possible.
+                </p>
+<dl class="mt-10 space-y-10">
+<div class="relative">
+<dt>
+<div class="absolute flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-background-dark">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+</div>
+<p class="ml-16 text-lg font-bold leading-6">Easy Property Search</p>
+</dt>
+<dd class="ml-16 mt-2 text-base text-text-muted-light dark:text-text-muted-dark">
+                      Intuitive filters help you pinpoint the perfect property based on location, size, budget, and amenities.
+                    </dd>
+</div>
+<div class="relative">
+<dt>
+<div class="absolute flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-background-dark">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"></path></svg>
+</div>
+<p class="ml-16 text-lg font-bold leading-6">Secure Payments</p>
+</dt>
+<dd class="ml-16 mt-2 text-base text-text-muted-light dark:text-text-muted-dark">
+                      Pay and receive rent and fees through our secure, convenient payment system that protects all parties.
+                    </dd>
+</div>
+<div class="relative">
+<dt>
+<div class="absolute flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-background-dark">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path></svg>
+</div>
+<p class="ml-16 text-lg font-bold leading-6">Seamless Communication</p>
+</dt>
+<dd class="ml-16 mt-2 text-base text-text-muted-light dark:text-text-muted-dark">
+                      Our built-in messaging facilitates direct and efficient communication for quick responses and clear interactions.
+                    </dd>
+</div>
+</dl>
+</div>
+<div class="flex items-center justify-center">
+<img alt="Modern living room" class="rounded-lg object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVLCXXMc8o8ULIP-ktKGLtFuUl7LMiIxLpTIaiaetmJd7ifJtYb4lV6d1TX7dENtQ0kXeBw1N-gJmuN9nNaS92zW6NyyVHucbU9fRdGv5dhwwbFBNS4b0-C5DhZhPoG8u0CcFMcFVYQ2pGXD8-JWqIkyOQXxOoQuXnh9Cv9s_ooAX_BMQobXxb385Rje2fpU4uQ7RTG-2cjGc0MTFBeXurKGiQmhniJunDXlC8z1s-3vfgUi12mTXgllbXiiECq3rrBUo5gJb8hejL"/>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<h3 class="text-3xl font-bold tracking-tight">Our Vision for the Future</h3>
+<p class="mx-auto mt-6 max-w-3xl text-lg text-text-muted-light dark:text-text-muted-dark">
+              Our vision is to create a world where renting and letting are stress-free and accessible for everyone. We aim to be the leading platform for property rentals, known for reliability, innovation, and our unwavering commitment to user success.
+            </p>
+</div>
+</div>
+</main>
+<footer class="border-t border-border-light bg-background-light dark:border-border-dark dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">© 2024 FindHome. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="text-sm text-text-muted-light transition-colors hover:text-primary dark:text-text-muted-dark dark:hover:text-primary" href="#">About</a>
+<a class="text-sm text-text-muted-light transition-colors hover:text-primary dark:text-text-muted-dark dark:hover:text-primary" href="#">Contact</a>
+<a class="text-sm text-text-muted-light transition-colors hover:text-primary dark:text-text-muted-dark dark:hover:text-primary" href="#">Terms</a>
+<a class="text-sm text-text-muted-light transition-colors hover:text-primary dark:text-text-muted-dark dark:hover:text-primary" href="#">Privacy</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

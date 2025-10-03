@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Appeal Submitted</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex items-center justify-center min-h-screen">
+<div class="bg-background-light dark:bg-background-dark/50 shadow-lg rounded-xl p-6 md:p-8 w-full max-w-md mx-4 text-center border border-primary/20">
+<div class="flex justify-center items-center mx-auto bg-primary/10 dark:bg-primary/20 rounded-full w-16 h-16 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">
+                    check_circle
+                </span>
+</div>
+<h1 class="text-2xl font-bold text-slate-800 dark:text-white mb-2">Appeal Submitted Successfully!</h1>
+<p class="text-slate-600 dark:text-slate-300 mb-6">We have received your appeal and it is now under review. We'll get back to you shortly.</p>
+<button class="w-full bg-primary text-black font-bold py-2 px-4 rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-colors duration-300">
+                Dismiss
+            </button>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Listing Rejected</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d0d",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#221010",
+                        "content-light": "#181111",
+                        "content-dark": "#E5E3E3"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="fixed inset-0 bg-black/30 flex items-center justify-center p-4">
+<div class="bg-background-light dark:bg-background-dark rounded-xl shadow-2xl w-full max-w-md">
+<div class="p-6 sm:p-8">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">
+                                warning
+                            </span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-content-light dark:text-content-dark">Property Listing Rejected</h1>
+<p class="text-sm text-content-light/70 dark:text-content-dark/70 mt-1">Urgent action required.</p>
+</div>
+</div>
+<button class="text-content-light/50 dark:text-content-dark/50 hover:text-content-light dark:hover:text-content-dark transition-colors">
+<span class="material-symbols-outlined">
+                            close
+                        </span>
+</button>
+</div>
+<div class="mt-6 border-t border-content-light/10 dark:border-content-dark/10 pt-6">
+<p class="text-base text-content-light dark:text-content-dark">
+                        Your property listing for '<span class="font-bold">Cozy Apartment in Downtown</span>' has been rejected due to incomplete documentation.
+                    </p>
+<p class="mt-2 text-sm text-content-light/80 dark:text-content-dark/80">
+                        Please upload the required documents to proceed with your listing.
+                    </p>
+</div>
+</div>
+<div class="bg-content-light/5 dark:bg-content-dark/5 px-6 py-4 rounded-b-xl flex justify-end gap-3">
+<button class="px-4 py-2 rounded-lg text-sm font-semibold text-content-light/80 dark:text-content-dark/80 hover:bg-content-light/10 dark:hover:bg-content-dark/10 transition-colors">
+                    View Details
+                </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-colors">
+                    Upload Documents
+                </button>
+</div>
+</div>
+</div>
+
+</body></html>

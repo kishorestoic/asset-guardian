@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_535">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-xl font-bold">Urban Dwellings</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors" href="#">Buy</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors" href="#">Rent</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors" href="#">Sell</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors" href="#">Mortgage</a>
+<a class="text-sm font-medium text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-black/40 dark:text-white/40">search</span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 h-10 px-10 text-sm focus:ring-primary focus:border-primary" placeholder="Search" value=""/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 text-black dark:text-white hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 text-black dark:text-white hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+<span class="material-symbols-outlined">inbox</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArWqA-NN3eZsHgj1RB7twEoR43zuJsPPEZyXYotGP5tWRR19MIUyTmueQHpaEdZRGbnJr8ip_TcTxZimogJjcoCpK_0VmyeZgFOE7K49-uqcGPUScD0lwlsDYYgwPse_Fy6lEEAewyq9S5WQZaeJHzmkDWUaDHWJe0XiDKT6LNr50hLzThYoBIYiDlbeb5Ol_cXSJoQ99iYcyO4IMJf0XCuJFGAuYefwQbTQvS3O_OSJ8Zjmozx8FE9eZKGKAaaxfcc8L3WXNUsQQu");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-2xl space-y-8">
+<div>
+<h1 class="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">Appeal Property Rejection</h1>
+<p class="mt-3 text-base text-black/60 dark:text-white/60">Submit an appeal for your rejected property listing. Please provide the required information below.</p>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 sm:p-8 rounded-xl border border-primary/20 dark:border-primary/30">
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-black dark:text-white" for="property-address">Property Address</label>
+<p class="mt-2 text-base text-black/80 dark:text-white/80 p-3 bg-background-light dark:bg-black/20 rounded-lg" id="property-address">123 Sunshine Avenue, Apt 4B, Meadowville</p>
+</div>
+<div>
+<label class="block text-sm font-medium text-black dark:text-white" for="rejection-reason">Original Rejection Reason</label>
+<p class="mt-2 text-base text-black/80 dark:text-white/80 p-3 bg-background-light dark:bg-black/20 rounded-lg" id="rejection-reason">Insufficient proof of ownership documentation provided.</p>
+</div>
+<div>
+<label class="block text-sm font-medium text-black dark:text-white" for="appeal-justification">Appeal Justification <span class="text-red-500">*</span></label>
+<textarea class="form-textarea mt-2 block w-full resize-none rounded-lg border border-primary/20 dark:border-primary/30 bg-background-light dark:bg-background-dark p-3 text-base text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:border-primary focus:ring-primary" id="appeal-justification" name="appeal-justification" required="" rows="6"></textarea>
+<p class="mt-2 text-xs text-black/50 dark:text-white/50">Please provide a detailed explanation for your appeal. Include any additional information that supports your case.</p>
+</div>
+<div>
+<label class="block text-sm font-medium text-black dark:text-white">Supporting Documents</label>
+<div class="mt-2 flex justify-center rounded-lg border border-dashed border-primary/40 dark:border-primary/50 px-6 py-10">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-black/50 dark:text-white/50">upload_file</span>
+<div class="mt-4 flex text-sm leading-6 text-black/60 dark:text-white/60">
+<label class="relative cursor-pointer rounded-md font-semibold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 dark:focus-within:ring-offset-background-dark hover:text-primary/80" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs leading-5 text-black/50 dark:text-white/50">PNG, JPG, PDF up to 10MB</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col-reverse sm:flex-row sm:justify-end sm:gap-4 pt-4">
+<button class="mt-4 sm:mt-0 flex w-full justify-center items-center rounded-lg h-12 px-6 bg-primary/20 dark:bg-primary/30 text-sm font-bold text-black dark:text-white hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors sm:w-auto" type="button">
+                                    Cancel
+                                </button>
+<button class="flex w-full justify-center items-center rounded-lg h-12 px-6 bg-primary text-sm font-bold text-white hover:bg-primary/90 transition-colors sm:w-auto" type="submit">
+                                    Submit Appeal
+                                </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

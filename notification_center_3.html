@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Password Recovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#50da0b",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#162210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-background-dark/80 p-4">
+<div class="w-full max-w-md">
+<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-lg p-8">
+<div class="text-center mb-8">
+<div class="inline-block bg-primary p-3 rounded-lg mb-4">
+<svg fill="white" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.62,82.38a12,12,0,0,0-17.24-1,100,100,0,0,1-120.76,0,12,12,0,0,0-18.38,15.24,124,124,0,0,0,157.38,0A12,12,0,0,0,213.62,82.38Zm-40.24,67.24a12,12,0,0,0-12,12,44,44,0,0,1-70.76,0,12,12,0,0,0-21.24,15.24,68,68,0,0,0,113.24,0,12,12,0,0,0-9.24-27.24Z"></path>
+</svg>
+</div>
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Forgot Password?</h1>
+<p class="text-gray-500 dark:text-gray-400 mt-2">No worries, we'll send you reset instructions.</p>
+</div>
+<form class="space-y-6" id="recovery-form">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="recovery-method">Recovery Method</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex items-center p-4 border border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 transition-all">
+<input checked="" class="hidden" name="recovery-method" type="radio" value="email"/>
+<span class="material-symbols-outlined text-primary mr-3">email</span>
+<span class="font-medium text-gray-800 dark:text-gray-200">Email</span>
+</label>
+<label class="flex items-center p-4 border border-gray-300 dark:border-gray-600 rounded-lg cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/10 transition-all">
+<input class="hidden" name="recovery-method" type="radio" value="sms"/>
+<span class="material-symbols-outlined text-primary mr-3">sms</span>
+<span class="font-medium text-gray-800 dark:text-gray-200">SMS</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="contact-info">Email Address / Phone Number</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" id="contact-info" placeholder="you@example.com" required="" type="text"/>
+</div>
+</div>
+<div id="otp-section" style="display: none;">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="otp">Enter OTP</label>
+<div class="flex gap-2 justify-center" id="otp-inputs">
+<input class="w-12 h-12 text-center text-lg font-bold rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" maxlength="1" type="text"/>
+<input class="w-12 h-12 text-center text-lg font-bold rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" maxlength="1" type="text"/>
+<input class="w-12 h-12 text-center text-lg font-bold rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" maxlength="1" type="text"/>
+<input class="w-12 h-12 text-center text-lg font-bold rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" maxlength="1" type="text"/>
+<input class="w-12 h-12 text-center text-lg font-bold rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" maxlength="1" type="text"/>
+<input class="w-12 h-12 text-center text-lg font-bold rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" maxlength="1" type="text"/>
+</div>
+<p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">Didn't receive the code? <button class="font-medium text-primary hover:underline" id="resend-otp" type="button">Resend OTP</button> <span class="text-red-500 text-xs hidden" id="rate-limit-message"></span></p>
+</div>
+<div id="password-section" style="display: none;">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="new-password">New Password</label>
+<input class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" id="new-password" placeholder="Enter new password" required="" type="password"/>
+</div>
+<div class="mt-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="confirm-password">Confirm New Password</label>
+<input class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/50" id="confirm-password" placeholder="Confirm new password" required="" type="password"/>
+</div>
+</div>
+<div>
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 dark:focus:ring-offset-background-dark" id="submit-button" type="submit">Send Reset Link</button>
+</div>
+</form>
+<div class="text-center mt-6">
+<a class="text-sm font-medium text-primary hover:underline" href="#">
+<span class="material-symbols-outlined align-middle text-base">arrow_back</span>
+                        Back to Login
+                    </a>
+</div>
+</div>
+</div>
+</div>
+<script>
+        const form = document.getElementById('recovery-form');
+        const recoveryMethodRadios = document.querySelectorAll('input[name="recovery-method"]');
+        const contactInfoInput = document.getElementById('contact-info');
+        const otpSection = document.getElementById('otp-section');
+        const passwordSection = document.getElementById('password-section');
+        const submitButton = document.getElementById('submit-button');
+        const resendOtpButton = document.getElementById('resend-otp');
+        const rateLimitMessage = document.getElementById('rate-limit-message');
+        const otpInputs = document.querySelectorAll('#otp-inputs input');
+        let step = 'request'; // 'request', 'otp', 'reset'
+        let resendAttempts = 0;
+        const maxResendAttempts = 3;
+        function updateFormUI() {
+            const selectedMethod = document.querySelector('input[name="recovery-method"]:checked').value;
+            if (selectedMethod === 'email') {
+                contactInfoInput.placeholder = 'you@example.com';
+                contactInfoInput.type = 'email';
+            } else {
+                contactInfoInput.placeholder = '+1 (555) 123-4567';
+                contactInfoInput.type = 'tel';
+            }
+            if (step === 'request') {
+                otpSection.style.display = 'none';
+                passwordSection.style.display = 'none';
+                submitButton.textContent = 'Send Reset Instructions';
+            } else if (step === 'otp') {
+                otpSection.style.display = 'block';
+                passwordSection.style.display = 'none';
+                submitButton.textContent = 'Verify Code';
+                document.querySelectorAll('input[name="recovery-method"]').forEach(radio => radio.disabled = true);
+                contactInfoInput.disabled = true;
+            } else if (step === 'reset') {
+                 otpSection.style.display = 'none';
+                 passwordSection.style.display = 'block';
+                 submitButton.textContent = 'Reset Password';
+            }
+        }
+        recoveryMethodRadios.forEach(radio => {
+            radio.addEventListener('change', updateFormUI);
+        });
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (step === 'request') {
+                // Simulate API call for OTP request
+                console.log('Requesting OTP for:', contactInfoInput.value);
+                step = 'otp';
+                updateFormUI();
+            } else if (step === 'otp') {
+                const otp = Array.from(otpInputs).map(input => input.value).join('');
+                // Simulate API call for OTP validation
+                console.log('Verifying OTP:', otp);
+                if (otp === '123456') { // Mock success
+                    step = 'reset';
+                    updateFormUI();
+                } else {
+                    alert('Invalid OTP. Please try again.');
+                    otpInputs.forEach(input => input.value = '');
+                    otpInputs[0].focus();
+                }
+            } else if (step === 'reset') {
+                const newPassword = document.getElementById('new-password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                if (newPassword !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    return;
+                }
+                if(newPassword.length < 8) {
+                    alert('Password must be at least 8 characters long.');
+                    return;
+                }
+                // Simulate API call for password reset
+                console.log('Resetting password');
+                alert('Password has been reset successfully!');
+                window.location.reload(); // Or redirect to login
+            }
+        });
+        resendOtpButton.addEventListener('click', () => {
+             if (resendAttempts >= maxResendAttempts) {
+                rateLimitMessage.textContent = 'Too many attempts. Please try again later.';
+                rateLimitMessage.classList.remove('hidden');
+                resendOtpButton.disabled = true;
+                return;
+            }
+            resendAttempts++;
+            console.log('Resending OTP...');
+            // Simulate API call to resend OTP
+            rateLimitMessage.textContent = `OTP resent. (${maxResendAttempts - resendAttempts} attempts left)`;
+            rateLimitMessage.classList.remove('hidden');
+            setTimeout(() => rateLimitMessage.classList.add('hidden'), 5000);
+        });
+        // OTP input auto-focus logic
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !input.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+        updateFormUI();
+    </script>
+
+</body></html>

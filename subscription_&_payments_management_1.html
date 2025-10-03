@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-black dark:text-white text-lg font-bold">PropertyHub</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<nav class="flex items-center gap-6">
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Dashboard</a>
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Listings</a>
+<a class="text-primary text-sm font-bold" href="#">Subscription</a>
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Billing</a>
+</nav>
+<div class="flex items-center gap-4 pl-4 border-l border-primary/20 dark:border-primary/30">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark text-black dark:text-white hover:bg-primary/20 dark:hover:bg-primary/30">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmiclI3uSgtrXp_9X7giqI-zmK6ngIwFOwcdVfZ7FcAM_GQXAGg4leuzDVJzAxBrvSqnH24xhMX5CakNLLOG2z3M0xusvBjMOOauF_6Hv_WAcTGq4VcAV-KD6Doq_0LKIMGU0z3v98EU9TFv3fXFcKx8YtQJPUjGBW2Axn0D8gWhh0GDsB3o1cJTPjAoSYPGbK0HOL38iIT9ZDxACqx22OWQeTVZAWxm2qbjpZELtwAXKJhq1giBZ1yZibRb4tTPVrqKKtc0vYho5Y");'></div>
+</div>
+</div>
+</header>
+<main class="px-10 flex-1 py-12">
+<div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center">
+<h1 class="text-black dark:text-white text-4xl font-bold mb-3">Subscription Plans</h1>
+<p class="text-black/60 dark:text-white/60 text-lg">Choose the plan that's right for you.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="border border-primary/20 dark:border-primary/30 bg-white dark:bg-background-dark rounded-xl p-8 flex flex-col hover:shadow-2xl hover:border-primary transition-all duration-300">
+<h3 class="text-black dark:text-white text-2xl font-bold">Free</h3>
+<p class="text-black/60 dark:text-white/60 mt-2 flex-grow">Basic features for getting started.</p>
+<div class="my-8">
+<span class="text-black dark:text-white text-5xl font-bold">$0</span>
+<span class="text-black/60 dark:text-white/60">/month</span>
+</div>
+<ul class="space-y-4 text-black dark:text-white flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>1 property listing</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Standard support</span>
+</li>
+</ul>
+<button class="w-full mt-8 rounded-lg h-12 bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30">
+                                Current Plan
+                            </button>
+</div>
+<div class="border border-primary/20 dark:border-primary/30 bg-white dark:bg-background-dark rounded-xl p-8 flex flex-col ring-2 ring-primary shadow-2xl relative">
+<div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+<h3 class="text-primary text-2xl font-bold">Basic</h3>
+<p class="text-black/60 dark:text-white/60 mt-2 flex-grow">Ideal for individual landlords and small portfolios.</p>
+<div class="my-8">
+<span class="text-black dark:text-white text-5xl font-bold">$49</span>
+<span class="text-black/60 dark:text-white/60">/month</span>
+</div>
+<ul class="space-y-4 text-black dark:text-white flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Up to 10 property listings</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Advanced search visibility</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Email &amp; chat support</span>
+</li>
+</ul>
+<button class="w-full mt-8 rounded-lg h-12 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/80">
+                                Upgrade to Basic
+                            </button>
+</div>
+<div class="border border-primary/20 dark:border-primary/30 bg-white dark:bg-background-dark rounded-xl p-8 flex flex-col hover:shadow-2xl hover:border-primary transition-all duration-300">
+<h3 class="text-black dark:text-white text-2xl font-bold">Premium</h3>
+<p class="text-black/60 dark:text-white/60 mt-2 flex-grow">For property managers and growing businesses.</p>
+<div class="my-8">
+<span class="text-black dark:text-white text-5xl font-bold">$99</span>
+<span class="text-black/60 dark:text-white/60">/month</span>
+</div>
+<ul class="space-y-4 text-black dark:text-white flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Unlimited property listings</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Featured listings</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Advanced analytics</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Priority phone support</span>
+</li>
+</ul>
+<button class="w-full mt-8 rounded-lg h-12 bg-primary/20 text-primary text-sm font-bold hover:bg-primary/30">
+                                Upgrade to Premium
+                            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="border border-primary/20 dark:border-primary/30 bg-white dark:bg-background-dark rounded-xl p-8">
+<h3 class="text-black dark:text-white text-xl font-bold mb-4">Billing History</h3>
+<div class="divide-y divide-primary/20 dark:divide-primary/30">
+<div class="flex justify-between items-center py-3">
+<div>
+<p class="font-medium text-black dark:text-white">Basic Plan - March 2024</p>
+<p class="text-sm text-black/60 dark:text-white/60">Paid on March 1, 2024</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-black dark:text-white">$49.00</p>
+<a class="text-sm text-primary hover:underline" href="#">Download Invoice</a>
+</div>
+</div>
+<div class="flex justify-between items-center py-3">
+<div>
+<p class="font-medium text-black dark:text-white">Basic Plan - February 2024</p>
+<p class="text-sm text-black/60 dark:text-white/60">Paid on February 1, 2024</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-black dark:text-white">$49.00</p>
+<a class="text-sm text-primary hover:underline" href="#">Download Invoice</a>
+</div>
+</div>
+<div class="flex justify-between items-center py-3">
+<div>
+<p class="font-medium text-black dark:text-white">Free Plan - January 2024</p>
+<p class="text-sm text-black/60 dark:text-white/60">Switched on January 15, 2024</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-black dark:text-white">$0.00</p>
+<a class="text-sm text-primary hover:underline" href="#">Download Invoice</a>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full text-center text-primary font-bold hover:underline">View all billing history</button>
+</div>
+<div class="border border-primary/20 dark:border-primary/30 bg-white dark:bg-background-dark rounded-xl p-8">
+<h3 class="text-black dark:text-white text-xl font-bold mb-4">Payment Method</h3>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-primary/10 dark:bg-primary/20">
+<div class="flex items-center justify-center size-10 bg-white dark:bg-background-dark rounded-md">
+<svg class="text-black dark:text-white" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+</div>
+<div>
+<p class="font-bold text-black dark:text-white">Visa ending in 1234</p>
+<p class="text-sm text-black/60 dark:text-white/60">Expires 12/2025</p>
+</div>
+<button class="ml-auto text-primary font-bold text-sm hover:underline">Update</button>
+</div>
+<p class="text-sm text-black/60 dark:text-white/60 mt-4">Your next bill for the Basic plan is $49.00 on April 1, 2024.</p>
+<div class="mt-6 flex flex-col gap-2">
+<a class="text-primary font-bold hover:underline" href="#">Downgrade to Free</a>
+<a class="text-red-500 font-bold hover:underline" href="#">Cancel Subscription</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="flex justify-center border-t border-primary/20 dark:border-primary/30">
+<div class="w-full max-w-7xl px-5 py-8 text-center">
+<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-4">
+<a class="text-black dark:text-white text-sm hover:text-primary" href="#">Terms of Service</a>
+<a class="text-black dark:text-white text-sm hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-black dark:text-white text-sm hover:text-primary" href="#">Contact Us</a>
+</div>
+<p class="text-black/50 dark:text-white/50 text-sm">© 2023 PropertyHub. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

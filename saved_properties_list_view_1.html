@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0df20d",
+            "background-light": "#f5f8f5",
+            "background-dark": "#102210",
+          },
+          fontFamily: {
+            "display": ["Public Sans"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .filled-heart {
+      fill: #FF0000;}
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">FindHome</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Manage Rentals</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Home Loans</a>
+</nav>
+</div>
+<div class="flex items-center justify-end gap-4">
+<div class="hidden sm:flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5">
+<div class="pointer-events-none flex items-center justify-center p-2.5">
+<svg class="text-gray-500 dark:text-gray-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="form-input w-full flex-1 resize-none overflow-hidden rounded-lg bg-transparent text-sm focus:outline-none focus:ring-0 border-none h-10 placeholder:text-gray-500 dark:placeholder:text-gray-400 p-0" placeholder="Search" value=""/>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-dark/5 dark:bg-background-light/5 text-gray-800 dark:text-gray-200 hover:bg-primary/20">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-dark/5 dark:bg-background-light/5 text-gray-800 dark:text-gray-200 hover:bg-primary/20">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBA0s8JPOMIUyliNsTIwPpFmG1cbnjJ5WE7SE6mNLaRsnayHEfCkxzk29-k-kgzyRXB874OyztKmA9yBYLnJ_P5JNyEo9SG30LhmpvpVgR_zaUPl847xBDVxUokTi5YvJ_jmUeZR6L-4gff53kIM5__Lqj7yNGyH687f1BdqYc4gQJW1Ho47l6Cuk21DzSX_-EWmFi8VeZJi0xXMSAG5-APwjJY4jKK65kQWfbD_bkeqN4Cg6kaVZ_LDWx1lvWPxDlm6kxxqzGdoxT5");'></div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-5xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col gap-8">
+<h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Saved Properties</h1>
+<div class="grid grid-cols-1 gap-8">
+<div class="group flex flex-col md:flex-row items-start gap-6 bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-primary/10">
+<a class="block w-full md:w-1/3 flex-shrink-0" href="#">
+<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+<img alt="Charming 3-Bedroom Home with Garden" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhLEq6wWUmeQ5MpWCNQe-BfssAkCBA-fx62H-wSVcqDSKST-PzNIDxw7o_KdrGivQhkJCpiEGnHFxdr--k1B8dWkEF3HJFvb5Gb0IuNTV9-u0rQFCteMIrsFBvEkMy7vmKfxSRDl_ZvwQ5VnjcC7M8zaebilFR0IqUkzO0yueYsTzgrqX91lVyb0uPULD6PUUq9ZJjdO9drcNLrKzyreB9bQf0MyK70GtNEe4zLosfjE-6EHy4HajiVEIYNAF8zHHmMGJHs-GrvZCi"/>
+</div>
+</a>
+<div class="flex flex-col justify-between flex-grow w-full md:w-2/3">
+<div>
+<p class="text-sm font-medium text-primary">House for sale</p>
+<a class="block mt-1" href="#">
+<p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Charming 3-Bedroom Home with Garden</p>
+</a>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">123 Maple Street, Anytown, CA</p>
+<p class="mt-2 text-lg font-bold text-gray-800 dark:text-gray-200">$550,000</p>
+</div>
+<div class="mt-4">
+<button class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary/20 dark:bg-primary/30 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/30 dark:hover:bg-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background-light dark:focus-visible:ring-offset-background-dark">
+<svg class="text-red-500 filled-heart" fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,94a62.07,62.07,0,0,1-62,62,59.79,59.79,0,0,1-10.42-1,62.06,62.06,0,0,1-49.58,51,8,8,0,0,1-7.58,0C106.21,202.66,32,164,32,94A62.07,62.07,0,0,1,94,32c20.65,0,38.73,8.88,50,23.89C155.27,40.88,173.35,32,194,32A62.07,62.07,0,0,1,240,94Z"></path>
+</svg>
+<span>Unsave</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row items-start gap-6 bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-primary/10">
+<a class="block w-full md:w-1/3 flex-shrink-0" href="#">
+<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+<img alt="Modern 2-Bedroom Apartment with Balcony" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvoxWzoiuMcBcgWB1Sl4R1M0aIxO_cKydHxuEkQkoc-xNUtB8U8UcQwztvIXXjf_G4NhMIO00Vtk58B_0iL19G1Qgz9CtdP4pVgrzskSYh4cdSM9U8Wq9oKSrwHKnwzoXJuIN9Fsv1iqu8iUgKF0xwX_gjTetgAu6yX8MYui6FanUrTjchvVw3f5Owl22sxK7XHsZU61lNL4g0kjTxnsDTpteiPPSssVzd7M7CZ_9diNox2CBxhvTiNRVnduTZGUzwggRgMGIQYANh"/>
+</div>
+</a>
+<div class="flex flex-col justify-between flex-grow w-full md:w-2/3">
+<div>
+<p class="text-sm font-medium text-primary">Apartment for rent</p>
+<a class="block mt-1" href="#">
+<p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Modern 2-Bedroom Apartment with Balcony</p>
+</a>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">456 Oak Avenue, Anytown, CA</p>
+<p class="mt-2 text-lg font-bold text-gray-800 dark:text-gray-200">$2,200/month</p>
+</div>
+<div class="mt-4">
+<button class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary/20 dark:bg-primary/30 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/30 dark:hover:bg-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background-light dark:focus-visible:ring-offset-background-dark">
+<svg class="text-red-500 filled-heart" fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,94a62.07,62.07,0,0,1-62,62,59.79,59.79,0,0,1-10.42-1,62.06,62.06,0,0,1-49.58,51,8,8,0,0,1-7.58,0C106.21,202.66,32,164,32,94A62.07,62.07,0,0,1,94,32c20.65,0,38.73,8.88,50,23.89C155.27,40.88,173.35,32,194,32A62.07,62.07,0,0,1,240,94Z"></path>
+</svg>
+<span>Unsave</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row items-start gap-6 bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-primary/10">
+<a class="block w-full md:w-1/3 flex-shrink-0" href="#">
+<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+<img alt="Luxury Condo with City Views" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4YKYh7NCBI9zrT6GrB8CJxALVAin4joVy7qfL584AWcAz-bwrhNi7VrkCGvvOxuNea6SFhieX0O05Y-HoVysK8VjmnlipEQDTD3ifHuH6NFFhsFB3o7yrWJY5KjI6tHxHy4ngSNPW-Iw9suYxbK5XjDgVjbIldiHgt-4NpsxQA95SMLw4vGo_rpVyCY6WQwgcsiVjAv5t4IcdbnT0ysBT0EW8-aG-yoA5xhfs9JuITuzFOB6CZDoWFRvTld44mDb0Lo5sTDyqLtjU"/>
+</div>
+</a>
+<div class="flex flex-col justify-between flex-grow w-full md:w-2/3">
+<div>
+<p class="text-sm font-medium text-primary">Condo for sale</p>
+<a class="block mt-1" href="#">
+<p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Luxury Condo with City Views</p>
+</a>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">789 Pine Lane, Anytown, CA</p>
+<p class="mt-2 text-lg font-bold text-gray-800 dark:text-gray-200">$850,000</p>
+</div>
+<div class="mt-4">
+<button class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary/20 dark:bg-primary/30 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/30 dark:hover:bg-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background-light dark:focus-visible:ring-offset-background-dark">
+<svg class="text-red-500 filled-heart" fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,94a62.07,62.07,0,0,1-62,62,59.79,59.79,0,0,1-10.42-1,62.06,62.06,0,0,1-49.58,51,8,8,0,0,1-7.58,0C106.21,202.66,32,164,32,94A62.07,62.07,0,0,1,94,32c20.65,0,38.73,8.88,50,23.89C155.27,40.88,173.35,32,194,32A62.07,62.07,0,0,1,240,94Z"></path>
+</svg>
+<span>Unsave</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row items-start gap-6 bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 border border-primary/10">
+<a class="block w-full md:w-1/3 flex-shrink-0" href="#">
+<div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+<img alt="Spacious 3-Bedroom Townhouse" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFyRKIHFgIdsx_mBkphnSI9ij2F0P77LuMyBJ_ogpbZCSsOVe3hh7ABOQY7S5XT-nlcnIproDHV71W0jaBpJFfblBmilsszk70QJUrzc0_ymvglHyeeiPKM9Tzr_LvZxLEIuWiWHXXaq2pfnOyEgnRdbiaPihE_9f1f9IgXfhXEWWm0npFhdGirLtmk0q85ZINnkuhhz66ZkDITMCFq9hpxbcXwu3qyti0VlnqcN36AMOuoRX3GxjwzN8pHCFXCnHesOrnEZbmssST"/>
+</div>
+</a>
+<div class="flex flex-col justify-between flex-grow w-full md:w-2/3">
+<div>
+<p class="text-sm font-medium text-primary">Townhouse for rent</p>
+<a class="block mt-1" href="#">
+<p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">Spacious 3-Bedroom Townhouse</p>
+</a>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">101 Elm Street, Anytown, CA</p>
+<p class="mt-2 text-lg font-bold text-gray-800 dark:text-gray-200">$2,800/month</p>
+</div>
+<div class="mt-4">
+<button class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary/20 dark:bg-primary/30 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/30 dark:hover:bg-primary/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background-light dark:focus-visible:ring-offset-background-dark">
+<svg class="text-red-500 filled-heart" fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg">
+<path d="M240,94a62.07,62.07,0,0,1-62,62,59.79,59.79,0,0,1-10.42-1,62.06,62.06,0,0,1-49.58,51,8,8,0,0,1-7.58,0C106.21,202.66,32,164,32,94A62.07,62.07,0,0,1,94,32c20.65,0,38.73,8.88,50,23.89C155.27,40.88,173.35,32,194,32A62.07,62.07,0,0,1,240,94Z"></path>
+</svg>
+<span>Unsave</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

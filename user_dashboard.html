@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#50da0b",
+              "background-light": "#f6f8f5",
+              "background-dark": "#162210",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-auto min-h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px"> home_work </span>
+<h2 class="text-lg font-bold">Urban Dwellings</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-background-dark dark:text-background-light text-sm font-medium" href="#">Rent</a>
+<a class="text-background-dark dark:text-background-light text-sm font-medium" href="#">Buy</a>
+<a class="text-background-dark dark:text-background-light text-sm font-medium" href="#">Sell</a>
+<a class="text-background-dark dark:text-background-light text-sm font-medium" href="#">Mortgage</a>
+<a class="text-background-dark dark:text-background-light text-sm font-medium" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-background-dark/50 dark:text-background-light/50"> search </span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-background-dark dark:text-background-light focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-primary/10 dark:bg-primary/20 h-10 placeholder:text-background-dark/50 dark:placeholder:text-background-light/50 pl-10 pr-4 text-sm" placeholder="Search" value=""/>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary/10 dark:bg-primary/20 text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined"> favorite_border </span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary/10 dark:bg-primary/20 text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined"> notifications_none </span>
+</button>
+</div>
+<button class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1KavhQRvfnx6geP-qWw8Njil2fIRCsx9mqv3rkJWUvMleyLFk3pDWKVa94b8CCqz5I5-_Boa_tt_GpSszciiecGG1PbwfZ1LKTbP9nac_7odlCNnh5L98a5L5aN61QAIYVjgVSGBllZ79e4474ert4DmHRoQu92Gd_nMjZMgUwXGarcwBDz_tOGb59Ml54IG0EOH4qV7SxRuJOmd8wyF1icEnF3Kp5QHIH-MX50R3dawB4W5U2UxxJLg3v10IHtLi44UDbTkDRNmp");'></button>
+</div>
+</header>
+<div class="flex flex-1">
+<aside class="w-64 shrink-0 p-6 hidden lg:block">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined"> home </span>
+<p class="text-sm font-medium">Home</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined"> inbox </span>
+<p class="text-sm font-medium">Inbox</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded bg-primary text-white" href="#">
+<span class="material-symbols-outlined"> manage_search </span>
+<p class="text-sm font-medium">My Inquiries</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined"> bookmark_border </span>
+<p class="text-sm font-medium">Saved Properties</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded text-background-dark dark:text-background-light hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined"> person_outline </span>
+<p class="text-sm font-medium">Profile</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-6">
+<div class="flex flex-col gap-8">
+<h1 class="text-3xl font-bold text-background-dark dark:text-background-light">My Inquiries</h1>
+<div class="flex flex-col gap-4">
+<h3 class="text-xl font-bold text-background-dark dark:text-background-light">Sent Messages</h3>
+<div class="overflow-x-auto rounded-lg border border-primary/20 dark:border-primary/30">
+<table class="w-full text-left">
+<thead class="bg-primary/10 dark:bg-primary/20">
+<tr>
+<th class="px-6 py-4 text-sm font-bold text-background-dark dark:text-background-light">Property</th>
+<th class="px-6 py-4 text-sm font-bold text-background-dark dark:text-background-light">Message</th>
+<th class="px-6 py-4 text-sm font-bold text-background-dark dark:text-background-light">Status</th>
+<th class="px-6 py-4 text-sm font-bold text-background-dark dark:text-background-light">Agent Response</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/20 dark:divide-primary/30">
+<tr>
+<td class="px-6 py-4 text-sm text-background-dark dark:text-background-light">Charming 2-Bedroom Apartment in Downtown</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">Interested in scheduling a viewing for this property.</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-primary/20 dark:bg-primary/30 px-3 py-1 text-xs font-medium text-background-dark dark:text-background-light">Sent</span>
+</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">No response yet</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-background-dark dark:text-background-light">Spacious 3-Bedroom House with Garden</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">Inquiring about the availability of this property.</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-primary/20 dark:bg-primary/30 px-3 py-1 text-xs font-medium text-background-dark dark:text-background-light">Sent</span>
+</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">Agent responded: Available for viewing</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-background-dark dark:text-background-light">Modern Studio Apartment near University</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">Requesting more information about the rental terms.</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-primary/20 dark:bg-primary/30 px-3 py-1 text-xs font-medium text-background-dark dark:text-background-light">Sent</span>
+</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">Agent responded: Please call to discuss</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-background-dark dark:text-background-light">Luxury Penthouse with City Views</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">Interested in the property. Please provide more details.</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-primary/20 dark:bg-primary/30 px-3 py-1 text-xs font-medium text-background-dark dark:text-background-light">Sent</span>
+</td>
+<td class="px-6 py-4 text-sm text-background-dark/70 dark:text-background-light/70">No response yet</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-xl font-bold text-background-dark dark:text-background-light">Saved Properties</h3>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="group flex flex-col gap-3 overflow-hidden rounded-lg">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_t4jqE6XdEnd98nItIuuRP3QnuwZ1FLmOE3OsFNbbUXG_dJu92PUkjfKprYt2sfZ4vG3JtkY9pX5G_fdWlgVCQzBiC_UbnkSq-iX61xuzFEQ8cAz9_NaE7Xo3xezqVkNVwvMXYzStLIedyZSrRdOqLLfQrpQMEZZfMnFwiw778bP1xyynApuoHPAcB-Q6ugYseLwsWK1KDXaz-JPox6FzbH5XyIkXbjAglSUaISCQsjnoEsrabs6AnUYMHNn5E0PxPElJ3sQqbKJv");'></div>
+<button class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-xl"> bookmark </span>
+</button>
+</div>
+<div>
+<p class="font-medium text-background-dark dark:text-background-light">Cozy 1-Bedroom Apartment in Historic District</p>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">$1,800/month</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 overflow-hidden rounded-lg">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuEpSLKwj8IQXcICM3fWaUc2D0J48sRd5JK3g6w7cK4EEjIufD20FbwZ0yaf4Ab62j3Vmz2aiO922rBsVaWW7vOn91y93ouPuEyFsyULF15fQ3-coGLhfZz0pJItFyWr9H6NqiFiiXkQZTphxgfkkZg2cYyCyrUjJeTgHfy6ugVlSKWZxsSgNlcfthPSByZTCjINpMDo26_Qy_sNG5aLwPlC-x7Zx0rRLeEByH8-jkS0wG-xMcIRXnaMyEa6M-LVjVapQaY2s0ATqy");'></div>
+<button class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-xl"> bookmark </span>
+</button>
+</div>
+<div>
+<p class="font-medium text-background-dark dark:text-background-light">Modern 2-Bedroom Condo with Balcony</p>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">$2,500/month</p>
+</div>
+</div>
+<div class="group flex flex-col gap-3 overflow-hidden rounded-lg">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvifIjrn55g0dEb0l_wXE7LXuE04bYiOG_2Ua50HXxjg3ZKm09nA-mSGwU0RYUiG3jpEIVWLmKof4IQmfMJIFVaXFL86N5P4K5BS11Lnp_qYC2drQJ65cVqtSedhwYsck3jcVK8jLNTqwpUMz8kqCh_gFg5PHs6gWUI3fSheDKMJOLWdkkRSPfON2N-C6VRXwFrhTrkpM_TjXXQGNjBLuO9zWK0XPBLYadWlEw51ePBR279-ic5chxqIEddHdZQIRNOqpB5sogTeaB");'></div>
+<button class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-xl"> bookmark </span>
+</button>
+</div>
+<div>
+<p class="font-medium text-background-dark dark:text-background-light">Spacious 3-Bedroom House with Large Yard</p>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">$3,200/month</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

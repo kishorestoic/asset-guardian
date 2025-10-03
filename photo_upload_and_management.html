@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#50da0b",
+              "background-light": "#f6f8f5",
+              "background-dark": "#162210",
+            },
+            fontFamily: {
+              "display": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<svg class="text-primary" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12 2H21V8.66667V15.3333H12V22H3V15.3333V8.66667H12V2Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold">FindHome</h2>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium text-black/80 dark:text-white/80">
+<a class="hover:text-primary transition-colors" href="#">Rent</a>
+<a class="hover:text-primary transition-colors" href="#">Buy</a>
+<a class="hover:text-primary transition-colors" href="#">Sell</a>
+<a class="hover:text-primary transition-colors" href="#">Mortgage</a>
+<a class="hover:text-primary transition-colors" href="#">Manage Rentals</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 px-4 text-sm font-bold bg-primary/20 hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40 text-black dark:text-white transition-colors">
+              Sign Up
+            </button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDq2DM8cBNN4w6TfCC1ojtmVCFQ6LxdReETnEfyEFELJA-Wq3OKGeFS81D_HQnRs6FZ0Mkuzemsw1T2N7wkWDzGEJ-eQTrdE_J1XvgkJEKV_2UCY7Wo6_5jkf3ApQERKZcmaf5SjO6-4Gb1Ph_7R3DbMr6pFsBdI5zDfn1fhmadAlyLLQj-VOo8S2sfiH7v6jNh5r8eY7uxlMN3IwbTJaP2VNe8UHvyG9znGSH77-dEs6WeXNt57ruDhNnLgxfWZdNqIgyRjxEBNMou");'></div>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-8 py-10">
+<div class="mx-auto max-w-2xl">
+<div class="mb-8">
+<h1 class="text-4xl font-bold text-black dark:text-white">Add photos to your listing</h1>
+<p class="mt-2 text-base text-black/60 dark:text-white/60">Help potential buyers visualize their future home. Upload high-quality images to attract more interest.</p>
+</div>
+<div class="flex flex-col gap-8">
+<div class="rounded-xl border-2 border-dashed border-primary/40 bg-primary/10 dark:bg-primary/20 p-8 text-center">
+<div class="flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-primary">
+                    cloud_upload
+                  </span>
+<div class="text-center">
+<p class="text-lg font-bold text-black dark:text-white">Drag and drop or click to upload</p>
+<p class="text-sm text-black/60 dark:text-white/60">Recommended: 1920x1080px. Max 20MB per image. Up to 50 images.</p>
+</div>
+<button class="mt-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-background-dark transition-opacity hover:opacity-90">
+                    Select Files
+                  </button>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-bold text-black dark:text-white mb-4">Uploaded Photos (3)</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="group relative overflow-hidden rounded-lg">
+<div class="absolute inset-0 z-10 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="text-white p-2 rounded-full bg-black/30 hover:bg-black/50">
+<span class="material-symbols-outlined">star</span>
+</button>
+<button class="text-white p-2 rounded-full bg-black/30 hover:bg-black/50">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmhyvQsTlbA_gdEdxCf6yj5SIQ9XccGp-Gy569nhHetchDT_nro8lpP0H1vR9yg8wK2YOLroZHagEw_RFMEWbM7OEqO462ItOX9lij7Pe7MR1txyPOOsuJmKRthHdclJapnlVJh-bbEbr8hyRJ5o5QNEUJR-SJPSQw0Sye1WPq3-btTJSnFrilCxdEsaXlljKJgAvyGVkQ8IlDwoNofieHJc_9_Qw9AcyugTc22tINjM1o_xIYQDFXlvbitr_lEje5SfIUGBx3D_vC");'></div>
+<div class="absolute bottom-2 left-2 bg-primary px-2 py-0.5 rounded text-xs font-bold text-background-dark">
+                      Featured
+                    </div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<div class="absolute inset-0 z-10 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="text-white p-2 rounded-full bg-black/30 hover:bg-black/50">
+<span class="material-symbols-outlined">star</span>
+</button>
+<button class="text-white p-2 rounded-full bg-black/30 hover:bg-black/50">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBUyaeNcilrAua3KWL7L7D1COOT-U3SA4cb_WwCtp2lqDzaUbBvGeBo9GTm69Tv3DxJuwpgKLPqFK4tdPYq3j6dT0-p-KP0LRQD8-FG1PWBCgTlp6bbJmT3r-pGbhU-JuwHaWec5gbMl35jT7ZRGkMDJMe2mRcMlP8vQMln9CaqZfimwvgvJhPagckSShO2mstGJSskjgpOL86bhXs90Eo0LsO-XHNSb-qAk0w5sqV6iWWkXcYLoih016rmSLMzSpt2tzOKiUI4Whp");'></div>
+</div>
+<div class="group relative overflow-hidden rounded-lg">
+<div class="absolute inset-0 z-10 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="text-white p-2 rounded-full bg-black/30 hover:bg-black/50">
+<span class="material-symbols-outlined">star</span>
+</button>
+<button class="text-white p-2 rounded-full bg-black/30 hover:bg-black/50">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGjBgkcBvxJd88EUcGiG-Nu_DOmvpaBG-c1IEZI5I7FS2nUVI8Xk4nXSDP9htcTBiNsLXovQ68gVYFSn-9DAHhQpfAOaFxiQfZ_RxikT8IZVqJg7ueL6I4bz-bteFY7r-MucM5mGw9HgMUY9g1ZXkvMyp-UFpBcYBRXhz6-g_6RnGWstAk0JywWJlSKm9P2wZwQ3XftGY2wfgh9v8ncke78UBBzBwuw4hWGYuxEDsnxAVhshI95pBOBcjYu_8m1PL7JsDDw8Y4AWqb");'></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-end gap-4">
+<button class="rounded-lg h-10 px-6 text-sm font-bold text-black dark:text-white bg-primary/20 hover:bg-primary/30 dark:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+                Cancel
+              </button>
+<button class="rounded-lg bg-primary px-6 h-10 text-sm font-bold text-background-dark transition-opacity hover:opacity-90">
+                Save &amp; Continue
+              </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

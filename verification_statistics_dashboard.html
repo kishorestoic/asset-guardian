@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df20d",
+              "background-light": "#f5f8f5",
+              "background-dark": "#102210",
+            },
+            fontFamily: {
+              "display": ["Public Sans"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">EstateVerify</h2>
+</div>
+<div class="flex flex-1 justify-end gap-2">
+<nav class="flex items-center gap-2">
+<a class="px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 text-black dark:text-white" href="#">Dashboard</a>
+<a class="px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 text-black dark:text-white" href="#">Properties</a>
+<a class="px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 text-black dark:text-white" href="#">Users</a>
+<a class="px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 text-black dark:text-white" href="#">Reports</a>
+</nav>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/10 text-black dark:text-white dark:bg-primary/20 hover:bg-primary/20 dark:hover:bg-primary/30 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqNp0bG1gJmC8cs9XkELJeICPu88XbfowMnsrg5EhzqFSOo6GD-XcMkgKZP450sO5s5e8LBAiByvocnpN2Hk0FTryP8pAyh_ciQJtIDIui-SjpM_n8pHr31fKZ7PGmcPnVXaOvk4OXYz8V_lxasUjK9bmPvd7siVWryEV5WpHoC1IvfJyshZ3tLaoCfqHbtQhuMTrdPg8ElMvXRtBNAZjDevkbk1s7Hc3CYEKQi3CewV56Z95xB5fqGLabv9Pe9ks2DfUjFvi_gxAY");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-6 lg:px-10 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-7xl flex-1 gap-8">
+<div class="flex flex-wrap justify-between items-start gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl font-bold text-black dark:text-white">Verification Statistics Dashboard</h1>
+<p class="text-black/60 dark:text-white/60 text-base">Overview of property verification performance</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center gap-2 h-10 px-4 rounded bg-primary text-black font-semibold text-sm">
+<span class="material-symbols-outlined">add</span>
+<span>New Verification</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="relative flex-1">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-black/40 dark:text-white/40">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border-primary/20 dark:border-primary/30 bg-background-light dark:bg-background-dark h-12 placeholder:text-black/40 dark:placeholder:text-white/40 px-4 pl-10 text-base font-normal leading-normal" placeholder="Search by property ID or admin name" value=""/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 h-12 shrink-0 justify-center rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 px-4 text-black dark:text-white text-sm font-medium">
+<span>Time Period</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<button class="flex items-center gap-2 h-12 shrink-0 justify-center rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 px-4 text-black dark:text-white text-sm font-medium">
+<span>Property Type</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<button class="flex items-center gap-2 h-12 shrink-0 justify-center rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 px-4 text-black dark:text-white text-sm font-medium">
+<span>Administrator</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-primary/10 dark:bg-primary/20">
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Total Verified</p>
+<p class="text-3xl font-bold text-black dark:text-white">1,250</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-primary/10 dark:bg-primary/20">
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Pending</p>
+<p class="text-3xl font-bold text-black dark:text-white">150</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-primary/10 dark:bg-primary/20">
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Rejected</p>
+<p class="text-3xl font-bold text-black dark:text-white">50</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg p-4 bg-primary/10 dark:bg-primary/20">
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Avg. Verification Time</p>
+<p class="text-3xl font-bold text-black dark:text-white">2 days</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="text-xl font-bold text-black dark:text-white">Verification Trends</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<div class="flex flex-col gap-4 rounded-lg border border-primary/20 dark:border-primary/30 p-6 bg-background-light dark:bg-background-dark">
+<div class="flex flex-col gap-1">
+<p class="text-base font-medium text-black dark:text-white">Properties Verified Over Time</p>
+<p class="text-black/60 dark:text-white/60 text-sm">Last 6 Months</p>
+</div>
+<p class="text-3xl font-bold text-green-500">+15%</p>
+<div class="flex min-h-[200px] flex-1 flex-col">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z" fill="url(#paint0_linear_chart)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0df20d" stroke-linecap="round" stroke-width="3"></path>
+<defs><linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_chart" x1="236" x2="236" y1="1" y2="150"><stop stop-color="#0df20d" stop-opacity="0.3"></stop><stop offset="1" stop-color="#0df20d" stop-opacity="0"></stop></linearGradient></defs>
+</svg>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border border-primary/20 dark:border-primary/30 p-6 bg-background-light dark:bg-background-dark">
+<div class="flex flex-col gap-1">
+<p class="text-base font-medium text-black dark:text-white">Rejection Rates by Property Type</p>
+<p class="text-black/60 dark:text-white/60 text-sm">Last 6 Months</p>
+</div>
+<p class="text-3xl font-bold text-red-500">-5%</p>
+<div class="grid min-h-[200px] flex-1 grid-flow-col gap-4 items-end px-3">
+<div class="flex flex-col items-center gap-2">
+<div class="bg-primary/20 w-full rounded" style="height: 20%;"></div>
+<p class="text-black/60 dark:text-white/60 text-xs font-medium">Houses</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="bg-primary/20 w-full rounded" style="height: 90%;"></div>
+<p class="text-black/60 dark:text-white/60 text-xs font-medium">Apartments</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="bg-primary/20 w-full rounded" style="height: 40%;"></div>
+<p class="text-black/60 dark:text-white/60 text-xs font-medium">Condos</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="bg-primary/20 w-full rounded" style="height: 100%;"></div>
+<p class="text-black/60 dark:text-white/60 text-xs font-medium">Townhouses</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="bg-primary/20 w-full rounded" style="height: 50%;"></div>
+<p class="text-black/60 dark:text-white/60 text-xs font-medium">Commercial</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="text-xl font-bold text-black dark:text-white">Administrator Performance</h2>
+<div class="overflow-x-auto rounded-lg border border-primary/20 dark:border-primary/30">
+<table class="w-full text-left">
+<thead class="bg-background-light dark:bg-background-dark">
+<tr>
+<th class="px-6 py-3 text-sm font-semibold text-black dark:text-white">Administrator</th>
+<th class="px-6 py-3 text-sm font-semibold text-black dark:text-white">Verified</th>
+<th class="px-6 py-3 text-sm font-semibold text-black dark:text-white">Pending</th>
+<th class="px-6 py-3 text-sm font-semibold text-black dark:text-white">Rejected</th>
+<th class="px-6 py-3 text-sm font-semibold text-black dark:text-white">Avg. Time</th>
+<th class="px-6 py-3 text-sm font-semibold text-black dark:text-white">Rejection Rate</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/20 dark:divide-primary/30 text-sm text-black/80 dark:text-white/80">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap font-medium text-black dark:text-white">Emily Carter</td>
+<td class="px-6 py-4 whitespace-nowrap">320</td>
+<td class="px-6 py-4 whitespace-nowrap">20</td>
+<td class="px-6 py-4 whitespace-nowrap">5</td>
+<td class="px-6 py-4 whitespace-nowrap">1.5 days</td>
+<td class="px-6 py-4 whitespace-nowrap">1.5%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap font-medium text-black dark:text-white">David Lee</td>
+<td class="px-6 py-4 whitespace-nowrap">280</td>
+<td class="px-6 py-4 whitespace-nowrap">30</td>
+<td class="px-6 py-4 whitespace-nowrap">10</td>
+<td class="px-6 py-4 whitespace-nowrap">2 days</td>
+<td class="px-6 py-4 whitespace-nowrap">3.5%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap font-medium text-black dark:text-white">Sophia Clark</td>
+<td class="px-6 py-4 whitespace-nowrap">250</td>
+<td class="px-6 py-4 whitespace-nowrap">40</td>
+<td class="px-6 py-4 whitespace-nowrap">15</td>
+<td class="px-6 py-4 whitespace-nowrap">2.5 days</td>
+<td class="px-6 py-4 whitespace-nowrap">5.5%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap font-medium text-black dark:text-white">Ethan Walker</td>
+<td class="px-6 py-4 whitespace-nowrap">200</td>
+<td class="px-6 py-4 whitespace-nowrap">50</td>
+<td class="px-6 py-4 whitespace-nowrap">20</td>
+<td class="px-6 py-4 whitespace-nowrap">3 days</td>
+<td class="px-6 py-4 whitespace-nowrap">8.0%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap font-medium text-black dark:text-white">Olivia Green</td>
+<td class="px-6 py-4 whitespace-nowrap">200</td>
+<td class="px-6 py-4 whitespace-nowrap">10</td>
+<td class="px-6 py-4 whitespace-nowrap">0</td>
+<td class="px-6 py-4 whitespace-nowrap">1 day</td>
+<td class="px-6 py-4 whitespace-nowrap">0.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

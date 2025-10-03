@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0df20d",
+            "background-light": "#f5f8f5",
+            "background-dark": "#102210",
+          },
+          fontFamily: {
+            "display": ["Public Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-black dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">FindHome</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Mortgage</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<div class="hidden sm:flex items-center bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-lg px-3">
+<svg class="size-5 text-black/50 dark:text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg bg-transparent focus:outline-none focus:ring-0 border-none h-10 placeholder:text-black/50 dark:placeholder:text-white/50 px-2 text-sm" placeholder="Search" value=""/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 hover:bg-primary/30 dark:hover:bg-primary/40">
+<svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/20 dark:bg-primary/30 hover:bg-primary/30 dark:hover:bg-primary/40">
+<svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo_tnYTo-dKTsBXQqyh9pmtwEPNGTOLCqrf9919yWJm5OCklh4lNuKFxACdtJN2b4XtuLGz8DKyLT4gxw6u9fzMpV8hpda-_Se709CDnm0RJSWvdzEpvyyYrw2HOuofPXzMh4C5b0tCrQWj3mZd2LYEomeHhT5xdEKLkhRiEDllSxh9pQU_Yu7fIYGfn8izjYFmL1FNmLCXSWzRccIAZZ3cIzYn8uWz0Q54XxzgLN1YJKNr6ljm8Y2ubgZ79S55RbtfYBzq6UG8b0o");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8">
+<div class="w-full max-w-4xl">
+<div class="mb-6">
+<h1 class="text-3xl font-bold">Your Activity</h1>
+</div>
+<div class="border-b border-primary/20 dark:border-primary/30">
+<nav class="flex gap-8 -mb-px">
+<a class="flex items-center justify-center border-b-2 border-primary text-primary px-1 py-4 text-sm font-semibold" href="#">
+                Inquiries Sent
+              </a>
+<a class="flex items-center justify-center border-b-2 border-transparent text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary hover:border-primary px-1 py-4 text-sm font-semibold" href="#">
+                Properties Viewed
+              </a>
+<a class="flex items-center justify-center border-b-2 border-transparent text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary hover:border-primary px-1 py-4 text-sm font-semibold" href="#">
+                Saved Searches
+              </a>
+</nav>
+</div>
+<div class="space-y-8 mt-6">
+<section>
+<h2 class="text-xl font-bold mb-4">Inquiries Sent</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-lg h-16 w-24" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzBfVfD5eiwd_rPlq5Br7NkRWIwO0mr2jPVKupTnKU7M5PkXCWozpiZjxkcJEkaOCsd9a_qTQtZ_1tcMCDxV03qKiptWz0eYlXgt2QGXusAxR0lyWD4zHyEPmLOlGEIxKIwxOgVr0Nz6eZV0zfWlXhsrs7VX3Mo0mJeIV9w3bt63ZrMhttlYgjyzK1RITlezCssuD0deEOj1HNvIe66R6AQowaS3bpD4DBcO6rjRgoICxDTOhmG31dZEAf7RgbVKMRdAmZtBPVvRLW");'></div>
+<div class="flex-grow">
+<p class="font-semibold">123 Oak Street, Apartment 2B</p>
+<p class="text-sm text-black/60 dark:text-white/60">Sent: 03/15/2024</p>
+</div>
+<span class="text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white px-3 py-1 rounded-full">Pending</span>
+</div>
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-lg h-16 w-24" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9XEzqh0ubOt1-2a4us4Y1Gt-2GiMwZwNT5cCGqESp833YZlmmtSnge75HG9ypGLiXsPryVdgQa-e6z9gOybYvzEHyKEArqpBZ6lFPzpjs9USsKmH0Hr24vDahdQbdq60RPRjPGWiOJAvi0W39Lv_EnNMS8SVHOOoCKmsqGjmAKIKTmtNCGKgNfqvjm2i55yZyQNK-0R-yXkNTnU6QMfQ1w_LfHcq0xC8RKG5uNLVvgyZxj2iYjdrqmcd-WbGMGgGbqv4jW66mDhlr");'></div>
+<div class="flex-grow">
+<p class="font-semibold">456 Maple Avenue, House</p>
+<p class="text-sm text-black/60 dark:text-white/60">Sent: 03/10/2024</p>
+</div>
+<span class="text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white px-3 py-1 rounded-full">Accepted</span>
+</div>
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-lg h-16 w-24" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4hbc5JiOkDkvc7biRpyuYMxizcdpIHqJMsHFdNvk9e2wfMJhBfu5N7YbNwcaoXm0M4l0zQP4jmPQkvqj_fC74IEoZqLxrDc7dkfoTmmTzeYYoaKoaB0lkS0DzOf1gp7Esk6UWPFE8YdDA8egh1Xs5ZyJ2lseIhiE5W0PCul8z9h-bdJy3ybKi4VSC5k5AOZrdhDvhlAJVO9uM99VZRq5pvxOb2vXl8sPTdcd1-J0lKIZDl9lQwqtqKW7gTqi6UO0LoyuVS0ZYeGlg");'></div>
+<div class="flex-grow">
+<p class="font-semibold">789 Pine Lane, Condo</p>
+<p class="text-sm text-black/60 dark:text-white/60">Sent: 03/05/2024</p>
+</div>
+<span class="text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white px-3 py-1 rounded-full">Rejected</span>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-4">Properties Viewed</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-lg h-16 w-24" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-JVHMaPHuAADQnxiBZbqW-Ft5Ngx6nRJAwPHK-ZyoUj1GMG_A4PjpNTvQ9Tpkzb7QZKr7RIh5do-Z7aOyOEWvSmKwRCBEZWthVglV84XnhkCATh39IetAO2qxvnoEcYzDiXYmSfq_JN7Ps6oiVLc-CPxDAmdxbB4fbUTiWSNh93IbDHY6YhOkC3RHJ3QqvoyzrIY01VO8A_AIcD4lnNMu5NxxgbDxCNundcql2C666-vweMFjbNBjVZq7eKenRGbaR1vf5gMg8PJK");'></div>
+<div class="flex-grow">
+<p class="font-semibold">321 Elm Street, Townhouse</p>
+<p class="text-sm text-black/60 dark:text-white/60">Viewed: 03/18/2024</p>
+</div>
+<button class="bg-primary text-black font-semibold text-sm px-4 py-2 rounded-lg hover:opacity-90">View</button>
+</div>
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-lg h-16 w-24" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxfoZDDfR5zjBKv6Rg0zKE-jmiXI0-dyLdNjkdT2AXzK8QlAaoMrzh2GRdDzjH5rglZhLQoC3Cv5lcQ5pkDTynMGJ_iVUN0_g9W6jOvfVaoWnFDECi1gPA_gfIHhU62mu2miPr96dFrdG-7t5UsEzMrSKVknmnDCjGQvcjl_30wdzNsMZvW8908zJaD21bpo2x61GfrDDzEovJrx0ZgGupiJZm_RD_90PKo6xp8A1CHpOQgswBykuG53MBWo4OQFccJkASUimSnx6t");'></div>
+<div class="flex-grow">
+<p class="font-semibold">654 Cedar Road, Duplex</p>
+<p class="text-sm text-black/60 dark:text-white/60">Viewed: 03/17/2024</p>
+</div>
+<button class="bg-primary text-black font-semibold text-sm px-4 py-2 rounded-lg hover:opacity-90">View</button>
+</div>
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-lg h-16 w-24" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZ_a5kq9GktzaZ1p_sIeeUtrW_POfL--fYq8RVmiY3uD9bZU3soRk4GTz5StrutEratNYHI-a1ws-eIUAeC0DZvz3utv_8Kk3XPmjgw3tuZ89BYLNdzNGUZaKi2Ni7Pta0RszZ6k4vQIXrGLg68XthXJ1RZ2mh0c0YjgBL1yphHm8Tb8jKPHPC-yRkfC9sfH8aRPl_U0Ccx5t3POdVCz842UyhfvOjRZmW7T-ywguPtAd-mHzm2VE7O3whxeBZM0lOfTB8quNbi0Ut");'></div>
+<div class="flex-grow">
+<p class="font-semibold">987 Birch Court, Studio</p>
+<p class="text-sm text-black/60 dark:text-white/60">Viewed: 03/16/2024</p>
+</div>
+<button class="bg-primary text-black font-semibold text-sm px-4 py-2 rounded-lg hover:opacity-90">View</button>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-4">Saved Searches</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30 shrink-0 size-12">
+<svg class="size-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex-grow">
+<p class="font-semibold">Apartments in Downtown</p>
+<p class="text-sm text-black/60 dark:text-white/60">Created: 03/12/2024</p>
+</div>
+<button class="bg-primary text-black font-semibold text-sm px-4 py-2 rounded-lg hover:opacity-90">View</button>
+</div>
+<div class="flex items-center gap-4 bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+<div class="flex items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30 shrink-0 size-12">
+<svg class="size-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex-grow">
+<p class="font-semibold">Houses with a Yard</p>
+<p class="text-sm text-black/60 dark:text-white/60">Created: 03/08/2024</p>
+</div>
+<button class="bg-primary text-black font-semibold text-sm px-4 py-2 rounded-lg hover:opacity-90">View</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

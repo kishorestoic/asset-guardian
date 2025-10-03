@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#17cf17",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112111",
+          },
+          fontFamily: {
+            "display": ["Public Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-black dark:text-white text-lg font-bold">PropertyHub</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<nav class="flex items-center gap-6">
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Dashboard</a>
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Listings</a>
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Users</a>
+<a class="text-primary text-sm font-bold" href="#">Payments</a>
+<a class="text-black dark:text-white text-sm font-medium hover:text-primary" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4 pl-4 border-l border-primary/20 dark:border-primary/30">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light dark:bg-background-dark text-black dark:text-white hover:bg-primary/20 dark:hover:bg-primary/30">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmiclI3uSgtrXp_9X7giqI-zmK6ngIwFOwcdVfZ7FcAM_GQXAGg4leuzDVJzAxBrvSqnH24xhMX5CakNLLOG2z3M0xusvBjMOOauF_6Hv_WAcTGq4VcAV-KD6Doq_0LKIMGU0z3v98EU9TFv3fXFcKx8YtQJPUjGBW2Axn0D8gWhh0GDsB3o1cJTPjAoSYPGbK0HOL38iIT9ZDxACqx22OWQeTVZAWxm2qbjpZELtwAXKJhq1giBZ1yZibRb4tTPVrqKKtc0vYho5Y");'></div>
+</div>
+</div>
+</header>
+<main class="px-10 flex flex-1 justify-center py-8">
+<div class="w-full max-w-7xl flex flex-col">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<h1 class="text-black dark:text-white text-3xl font-bold">Subscription Plans</h1>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/80">
+<span>Create New Plan</span>
+</button>
+</div>
+<div class="overflow-x-auto rounded-lg border border-primary/20 dark:border-primary/30 bg-white dark:bg-background-dark">
+<table class="w-full text-left">
+<thead class="bg-primary/10 dark:bg-primary/20">
+<tr class="text-black dark:text-white">
+<th class="px-6 py-4 text-sm font-bold">Plan Name</th>
+<th class="px-6 py-4 text-sm font-bold">Features</th>
+<th class="px-6 py-4 text-sm font-bold text-right">Price</th>
+<th class="px-6 py-4 text-sm font-bold text-center">Duration</th>
+<th class="px-6 py-4 text-sm font-bold text-center">Status</th>
+<th class="px-6 py-4 text-sm font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/20 dark:divide-primary/30">
+<tr class="text-black dark:text-white">
+<td class="px-6 py-4 font-medium">Basic</td>
+<td class="px-6 py-4 text-sm">Up to 5 listings, basic analytics</td>
+<td class="px-6 py-4 text-sm text-right">$9.99</td>
+<td class="px-6 py-4 text-sm text-center">Monthly</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center justify-center rounded-full bg-primary/20 text-primary px-3 py-1 text-xs font-bold">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-bold text-primary hover:underline">Edit</button>
+</td>
+</tr>
+<tr class="text-black dark:text-white bg-primary/5 dark:bg-primary/10">
+<td class="px-6 py-4 font-medium">Premium</td>
+<td class="px-6 py-4 text-sm">Up to 20 listings, advanced analytics</td>
+<td class="px-6 py-4 text-sm text-right">$29.99</td>
+<td class="px-6 py-4 text-sm text-center">Monthly</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center justify-center rounded-full bg-primary/20 text-primary px-3 py-1 text-xs font-bold">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-bold text-primary hover:underline">Edit</button>
+</td>
+</tr>
+<tr class="text-black dark:text-white">
+<td class="px-6 py-4 font-medium">Enterprise</td>
+<td class="px-6 py-4 text-sm">Unlimited listings, full analytics</td>
+<td class="px-6 py-4 text-sm text-right">$99.99</td>
+<td class="px-6 py-4 text-sm text-center">Monthly</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center justify-center rounded-full bg-primary/20 text-primary px-3 py-1 text-xs font-bold">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-bold text-primary hover:underline">Edit</button>
+</td>
+</tr>
+<tr class="text-black dark:text-white bg-primary/5 dark:bg-primary/10">
+<td class="px-6 py-4 font-medium">Trial</td>
+<td class="px-6 py-4 text-sm">Up to 2 listings, basic analytics</td>
+<td class="px-6 py-4 text-sm text-right">$0.00</td>
+<td class="px-6 py-4 text-sm text-center">14 Days</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-3 py-1 text-xs font-bold">Inactive</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-bold text-primary hover:underline">Edit</button>
+</td>
+</tr>
+<tr class="text-black dark:text-white">
+<td class="px-6 py-4 font-medium">Custom</td>
+<td class="px-6 py-4 text-sm">Tailored to specific needs</td>
+<td class="px-6 py-4 text-sm text-right">Contact Us</td>
+<td class="px-6 py-4 text-sm text-center">Annual</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center justify-center rounded-full bg-primary/20 text-primary px-3 py-1 text-xs font-bold">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="font-bold text-primary hover:underline">Edit</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<footer class="flex justify-center border-t border-primary/20 dark:border-primary/30">
+<div class="w-full max-w-7xl px-5 py-8 text-center">
+<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-4">
+<a class="text-black dark:text-white text-sm hover:text-primary" href="#">Terms of Service</a>
+<a class="text-black dark:text-white text-sm hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-black dark:text-white text-sm hover:text-primary" href="#">Contact Us</a>
+</div>
+<p class="text-black/50 dark:text-white/50 text-sm">© 2023 PropertyHub. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+
+
+</body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df20d",
+              "background-light": "#f5f8f5",
+              "background-dark": "#102210",
+            },
+            fontFamily: {
+              "display": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23102210' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+      }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light text-background-dark dark:bg-background-dark dark:text-background-light overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-b-primary/20 px-10 py-3 dark:border-b-primary/30">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-background-dark dark:text-background-light">
+<div class="h-8 w-8 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">HomeFinder</h2>
+</div>
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Sell</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Mortgage</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Find Agent</a>
+</nav>
+</div>
+<div class="flex flex-1 items-center justify-end gap-4">
+<div class="relative flex-1 max-w-xs">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-background-dark/50 dark:text-background-light/50"> search </span>
+<input class="form-input w-full rounded border-primary/20 bg-transparent pl-10 text-sm focus:border-primary focus:ring-0 dark:border-primary/30" placeholder="Search" type="search"/>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/20 bg-transparent hover:bg-primary/10 dark:border-primary/30 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined text-xl"> favorite_border </span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/20 bg-transparent hover:bg-primary/10 dark:border-primary/30 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined text-xl"> notifications_none </span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUh3-wCNpQKa_4GeUUMEIx-Nj_zAI6VK7K80UjypEBa_S1N2cf8gBQyg7bc-nJoKb1h55u572CqObjSB2qZFwxl4khBmkE6AoPf82cs7bxBedyH5U9kgU_FV_jZ9wPsvDDw8fl0KHOYtOZTfFwFHwMjduQ1rJDWAawDfF1UTP10oPwM6jYtlvFeAG28lBbuqGJAccdgaH7kzfD46Fywau6g1pkIfVTVURxrqfMUZ7lYUZkuHAEEon_qDq74OBxRTdqMrEwUTpwIhCE");'></div>
+</div>
+</header>
+<main class="w-full flex-1 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="mb-8">
+<h1 class="text-4xl font-bold tracking-tight">Listing Performance</h1>
+<p class="mt-2 text-base text-background-dark/60 dark:text-background-light/60">
+              Track the performance of your listings over time. Use the filters below to refine your view.
+            </p>
+</div>
+<div class="mb-8 flex flex-wrap items-center gap-4">
+<div class="w-full sm:w-auto sm:flex-1 md:max-w-xs">
+<label class="sr-only" for="listing-filter">Filter by Listing</label>
+<select class="form-select w-full rounded border-primary/20 bg-transparent py-3 text-sm focus:border-primary focus:ring-0 dark:border-primary/30" id="listing-filter">
+<option>All Listings</option>
+<option>123 Maple Street</option>
+<option>456 Oak Avenue</option>
+<option>789 Pine Lane</option>
+</select>
+</div>
+<div class="w-full sm:w-auto sm:flex-1 md:max-w-xs">
+<label class="sr-only" for="period-filter">Filter by Time Period</label>
+<select class="form-select w-full rounded border-primary/20 bg-transparent py-3 text-sm focus:border-primary focus:ring-0 dark:border-primary/30" id="period-filter">
+<option>Last 30 Days</option>
+<option>Last 7 Days</option>
+<option>Last 90 Days</option>
+<option>All Time</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark">
+<p class="text-sm font-medium text-background-dark/60 dark:text-background-light/60">Total Views</p>
+<p class="mt-1 text-4xl font-bold">1,234</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark">
+<p class="text-sm font-medium text-background-dark/60 dark:text-background-light/60">Inquiries</p>
+<p class="mt-1 text-4xl font-bold">56</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark">
+<p class="text-sm font-medium text-background-dark/60 dark:text-background-light/60">Click-Through Rate</p>
+<p class="mt-1 text-4xl font-bold">12.5%</p>
+</div>
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark">
+<p class="text-sm font-medium text-background-dark/60 dark:text-background-light/60">Response Time</p>
+<p class="mt-1 text-4xl font-bold">2h</p>
+</div>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark lg:col-span-1">
+<h2 class="text-lg font-bold">Views</h2>
+<p class="mt-1 text-4xl font-bold">1,234</p>
+<div class="mt-2 flex items-center gap-2">
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Last 30 Days</p>
+<p class="text-sm font-medium text-green-500">+15%</p>
+</div>
+<div class="mt-6 h-48">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#paint0_linear_views)"></path>
+<path class="text-primary" d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_views" x1="236" x2="236" y1="1" y2="149">
+<stop class="text-primary/20 dark:text-primary/30" stop-color="currentColor"></stop>
+<stop class="text-primary/0" offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="mt-4 flex justify-between text-xs text-background-dark/60 dark:text-background-light/60">
+<span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span>
+</div>
+</div>
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark lg:col-span-1">
+<h2 class="text-lg font-bold">Inquiries</h2>
+<p class="mt-1 text-4xl font-bold">56</p>
+<div class="mt-2 flex items-center gap-2">
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Last 30 Days</p>
+<p class="text-sm font-medium text-green-500">+8%</p>
+</div>
+<div class="mt-6 grid h-48 grid-cols-4 items-end gap-4 px-2">
+<div class="w-full rounded-t bg-primary/20 dark:bg-primary/30" style="height: 40%"></div>
+<div class="w-full rounded-t bg-primary/20 dark:bg-primary/30" style="height: 60%"></div>
+<div class="w-full rounded-t bg-primary/20 dark:bg-primary/30" style="height: 30%"></div>
+<div class="w-full rounded-t bg-primary/20 dark:bg-primary/30" style="height: 70%"></div>
+</div>
+<div class="mt-4 flex justify-between text-xs text-background-dark/60 dark:text-background-light/60">
+<span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span>
+</div>
+</div>
+<div class="rounded-xl border border-primary/20 bg-background-light p-6 dark:border-primary/30 dark:bg-background-dark lg:col-span-1">
+<h2 class="text-lg font-bold">Click-Through Rate</h2>
+<p class="mt-1 text-4xl font-bold">12.5%</p>
+<div class="mt-2 flex items-center gap-2">
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">Last 30 Days</p>
+<p class="text-sm font-medium text-green-500">+2%</p>
+</div>
+<div class="mt-6 grid h-48 grid-cols-1 items-center gap-y-4">
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+<span class="text-xs text-background-dark/60 dark:text-background-light/60">Week 1</span>
+<div class="h-2 w-full rounded-full bg-primary/20 dark:bg-primary/30"><div class="h-2 rounded-full bg-primary" style="width: 25%"></div></div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+<span class="text-xs text-background-dark/60 dark:text-background-light/60">Week 2</span>
+<div class="h-2 w-full rounded-full bg-primary/20 dark:bg-primary/30"><div class="h-2 rounded-full bg-primary" style="width: 70%"></div></div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+<span class="text-xs text-background-dark/60 dark:text-background-light/60">Week 3</span>
+<div class="h-2 w-full rounded-full bg-primary/20 dark:bg-primary/30"><div class="h-2 rounded-full bg-primary" style="width: 40%"></div></div>
+</div>
+<div class="grid grid-cols-[auto_1fr] items-center gap-x-4">
+<span class="text-xs text-background-dark/60 dark:text-background-light/60">Week 4</span>
+<div class="h-2 w-full rounded-full bg-primary/20 dark:bg-primary/30"><div class="h-2 rounded-full bg-primary" style="width: 55%"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

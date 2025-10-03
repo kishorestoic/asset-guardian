@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>AssetGuard - Luxury Apartment in Bandra West</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --olive-green: #556B2F;
+            --navy-blue: #000080;
+        }
+        .slideshow-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--olive-green)",
+                        "secondary": "var(--navy-blue)",
+                        "background-light": "#f7f9f5",
+                        "background-dark": "#0d1a12",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">real_estate_agent</span>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">AssetGuard</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Buy</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Rent</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Commercial</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">PG &amp; Co-living</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Plots</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Projects</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="form-input rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary" placeholder="Search" type="text"/>
+</div>
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKRRa_LzlG80wmsSu7FhVS3mdC8AbAssh2JOMYXGKujp3fGkV4P2BfR5KYmrxhdEUS_2OdCo-hi3GBLQesOX6D0orr3ZD--oMaJok527u0Ir9Oehb_-P5vTLAkeVNBAYgR3GXhHYv9LIfpDCDINJDyEAnwBNZrNFrC8UVQbA1JlZupRYDBzPlZ16aqJI7SqDFI1uZp7dLZQEL3pwGWWMIR_L6omSx80y5uZYeOFh7J6KcfcGM3br_97cG9s7SwxvNIoJlELRoHnXiX");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<nav aria-label="Breadcrumb" class="text-sm mb-4">
+<ol class="list-none p-0 inline-flex">
+<li class="flex items-center">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined mx-2 text-gray-400 dark:text-gray-500">chevron_right</span>
+</li>
+<li class="flex items-center">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Properties</a>
+<span class="material-symbols-outlined mx-2 text-gray-400 dark:text-gray-500">chevron_right</span>
+</li>
+<li class="flex items-center">
+<span class="text-gray-700 dark:text-gray-200">Luxury Apartment in Bandra West</span>
+</li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<div class="slideshow-container rounded-lg overflow-hidden shadow-xl mb-8">
+<div class="slides" id="slides">
+<div class="slide h-[500px] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXHxcQ1bULQ2Tk6y0qwKWT_xmt5aFNGiue3giD9YBqEoEDOCWgU6m9KwiQBs5NjmNvFw2qQHyI3V5Gap7ttMyIBuF5mKY-TaoPa9B3u0JWGmEMJs4qvYJ2UYLkbypP_J6GSjfOvEYGQ-y8X3jyahvRg9JCaa-iPdtE1M1M_fJt8k3hilRx9KtROQDcge7LJ0Y2GHntrWvEADALrDJFImIIpb_oDxJ0A4FivrS4epBWo_ZT9LirI1ogk6DOk5YKX9X7Zn1aCXNRSMJL");'></div>
+<div class="slide h-[500px] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkYrDmEpUDSumCqh_K6SAfv6EiqXOoXfJOzwBdRh8roltgqNflOqr_AHWcM-UlgQ_ymPzAoX0uY1mtAKbK9RnMkF8dm0EWYQVTCQiLwr4d0MX0m9jnPubgaiv_IFVsPkffVUZiM51n5S8JzrinUjXU8CyO9bvD0tkCCNJnfwF9vl6JKprk2TJVGAXJ4mCoEnfgyCBq59jxOqZv_vdFH5lByceEnbZ33lrINxJ2baOxSOWjKSQOf-imzPifCW1KRPzeYwHcw2BwiXiI");'></div>
+<div class="slide h-[500px] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkYrDmEpUDSumCqh_K6SAfv6EiqXOoXfJOzwBdRh8roltgqNflOqr_AHWcM-UlgQ_ymPzAoX0uY1mtAKbK9RnMkF8dm0EWYQVTCQiLwr4d0MX0m9jnPubgaiv_IFVsPkffVUZiM51n5S8JzrinUjXU8CyO9bvD0tkCCNJnfwF9vl6JKprk2TJVGAXJ4mCoEnfgyCBq59jxOqZv_vdFH5lByceEnbZ33lrINxJ2baOxSOWjKSQOf-imzPifCW1KRPzeYwHcw2BwiXiI");'></div>
+</div>
+</div>
+<div class="bg-white dark:bg-secondary/10 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h1 class="text-3xl font-bold text-secondary dark:text-white">Luxury Apartment in Bandra West</h1>
+<p class="text-md text-gray-500 dark:text-gray-400 flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-base">location_on</span> Bandra West, Mumbai
+                                </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"><span class="material-symbols-outlined">share</span></button>
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800"><span class="material-symbols-outlined text-primary">favorite</span></button>
+</div>
+</div>
+<p class="text-3xl font-bold text-primary mb-4">$1,200,000</p>
+<div class="flex flex-wrap gap-x-6 gap-y-4 text-lg text-gray-700 dark:text-gray-300 border-t border-b border-gray-200 dark:border-gray-700 py-4 mb-6">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-xl text-primary">bed</span> 3 Bedrooms</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-xl text-primary">bathtub</span> 3 Bathrooms</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-xl text-primary">square_foot</span> 1,800 sq ft</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-xl text-primary">event_seat</span> Semi-Furnished</span>
+</div>
+<h2 class="text-2xl font-bold text-secondary dark:text-white mb-3">About this property</h2>
+<p class="text-gray-600 dark:text-gray-300 mb-6">
+                            This exquisite 3 BHK apartment in the heart of Bandra West offers a perfect blend of luxury and comfort. With stunning sea views, spacious interiors, and world-class amenities, this property is an ideal home for those seeking a premium lifestyle. The apartment is semi-furnished, allowing you to design your space to your taste.
+                        </p>
+<h2 class="text-2xl font-bold text-secondary dark:text-white mb-4">Features</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700 dark:text-gray-300">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Swimming Pool</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Gymnasium</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> 24/7 Security</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Reserved Parking</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Power Backup</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Sea View</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Children's Play Area</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">check_circle</span> Clubhouse</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="sticky top-24 space-y-6">
+<div class="bg-white dark:bg-secondary/10 p-6 rounded-lg shadow-md">
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-4">Contact Agent</h3>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/a-/ALV-UjV_0cOyY_2S-T3jB_S8f_4R_4Y_d8fJ2s3jV_zN=s96-c");'></div>
+<div>
+<p class="font-bold text-lg text-gray-800 dark:text-white">Rohan Sharma</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">AssetGuard Realty</p>
+</div>
+</div>
+<div class="space-y-3 mb-4">
+<p class="flex items-center gap-2 text-gray-700 dark:text-gray-300"><span class="material-symbols-outlined text-primary">call</span> +91 98765 43210</p>
+<p class="flex items-center gap-2 text-gray-700 dark:text-gray-300"><span class="material-symbols-outlined text-primary">mail</span> rohan.sharma@assetguard.com</p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/80 transition-colors">
+<span class="material-symbols-outlined">chat</span> Contact Agent
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<h2 class="text-2xl font-bold text-secondary dark:text-white mb-4">Related Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative group h-48">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIIUzSoYES-B3wvanS8tglrEj7zYMnMtu3-pTz1mveQBl9K-dLekVYJPRM_-B-r3i3gqFLzsaVv7pUI1TJp0-3Ry9t2IsW-VMv2aq1lbLft2FEwm4k1AUIu6iRWGI_gakabLifeL-Wj23dvaCM2OQ7c88638BTBtbNJ6qJuG_0PR6ysaoi_zcHf48vPeE-mrB7p531Xw27bW9mchbnXsywVYzw97bErG08tOaaKHrfoAFjeOwkI5rCh1YGNz53pTj6iolfCyAgEbpZ");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="absolute top-2 right-2">
+<button class="p-2 rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h2 class="text-lg font-bold text-secondary dark:text-white">
+<a class="hover:text-primary" href="#">Oceanfront Residences</a>
+</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Juhu, Mumbai</p>
+<p class="text-lg font-bold text-primary mb-3">Starting from $2,100,000</p>
+<div class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative group h-48">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuzHDamgdex9GP1_pRR7NHXeTEsYET0sXq8_AruvW5uB5G3Px2jb6B80lwgcKIKIPJ8pu1DCXVH94YJi2vXBRJLXKao5fQYvCQJOpQOvDvFbwMBKAgu9cRF0zKpyxcbFuDCJg1WcQ1YaPQ0ZqmQmvCNq3jJc7YADa9EYz0TUBBLHAR74IV5GmGSXsJwQ9hAQ86JMeKbeM2l2ChP8ChbvVFSAJs-DAQHlp_VaCfkFIhbiMCKH_OjasArK4lv72IbYVS_eOVgrynqLhk");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="absolute top-2 right-2">
+<button class="p-2 rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h2 class="text-lg font-bold text-secondary dark:text-white">
+<a class="hover:text-primary" href="#">Powai Lake View Towers</a>
+</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Powai, Mumbai</p>
+<p class="text-lg font-bold text-primary mb-3">Starting from $900,000</p>
+<div class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-secondary/10 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+<div class="relative group h-48">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkYrDmEpUDSumCqh_K6SAfv6EiqXOoXfJOzwBdRh8roltgqNflOqr_AHWcM-UlgQ_ymPzAoX0uY1mtAKbK9RnMkF8dm0EWYQVTCQiLwr4d0MX0m9jnPubgaiv_IFVsPkffVUZiM51n5S8JzrinUjXU8CyO9bvD0tkCCNJnfwF9vl6JKprk2TJVGAXJ4mCoEnfgyCBq59jxOqZv_vdFH5lByceEnbZ33lrINxJ2baOxSOWjKSQOf-imzPifCW1KRPzeYwHcw2BwiXiI");'></div>
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="absolute top-2 right-2">
+<button class="p-2 rounded-full text-white bg-black/30 hover:bg-primary transition-colors">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h2 class="text-lg font-bold text-secondary dark:text-white">
+<a class="hover:text-primary" href="#">The Malabar Greens</a>
+</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Malabar Hill, Mumbai</p>
+<p class="text-lg font-bold text-primary mb-3">Starting from $3,500,000</p>
+<div class="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold text-sm hover:bg-primary/80 transition-colors">
+                                    View Details
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        let currentSlide = 0;
+        const slides = document.getElementById('slides');
+        const slideCount = slides.children.length;
+        function showSlide(index) {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideCount;
+            showSlide(currentSlide);
+        }
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+
+</body></html>

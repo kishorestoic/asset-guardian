@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen">
+<aside class="w-72 bg-white dark:bg-background-dark border-r border-gray-200 dark:border-gray-800 flex-col hidden lg:flex">
+<div class="p-6">
+<div class="flex items-center gap-3 text-gray-900 dark:text-white">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-2xl font-bold">FindHome</h2>
+</div>
+</div>
+<nav class="mt-8 flex-1">
+<div class="px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path>
+</svg>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+<span>Saved</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49c7.15-8.42,14.27-16.35,22.39-24.57a80,80,0,1,1,1.66,114.75,8,8,0,1,0-11,11.64A96,96,0,1,0,128,32Z"></path>
+</svg>
+<span>Recently Viewed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+<span>Saved Searches</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 bg-primary/20 dark:bg-primary/30 text-primary rounded-lg" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216Z"></path>
+</svg>
+<span class="font-bold">Property Alerts</span>
+</a>
+</div>
+</nav>
+</aside>
+<main class="flex-1">
+<header class="sticky top-0 z-10 flex items-center justify-between h-20 px-6 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="flex-1">
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3">
+<svg class="h-5 w-5 text-gray-400" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</span>
+<input class="w-full max-w-sm pl-10 pr-4 py-2 rounded-lg border bg-background-light dark:bg-gray-800 dark:text-white border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Search" type="search"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-gray-800">
+<svg class="h-6 w-6 text-gray-600 dark:text-gray-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+</svg>
+</button>
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-gray-800">
+<svg class="h-6 w-6 text-gray-600 dark:text-gray-400" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRtdeq0h0-gwJHNZ8NTioCXQABRmW7hRZASpERmiY5vl7eovPE0xHQ5Rw5UcCkW0hfivb45T6qsJEss8nU78co4hzNrz64T2xE79BJ_LP7Ow9ZQVecyofpEPPW_gyNzPT--2FLq7KtaNmsrhOR_tA7jGSmXCH7GqGer5Xs0kYP07Uzx5sa4Woa_aGjGu2ZRPNNZ22IWH-JjZkKIpkGcEUk01wF5GN0D4ao68ESn8bu1lepkdkKJvvQrILSPxPcFzlNXLG1FzswUZcN");'></div>
+</div>
+</header>
+<div class="p-6 md:p-8 lg:p-12">
+<div class="max-w-4xl mx-auto">
+<div class="mb-12">
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white">Property Alerts</h1>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Get notified when new properties matching your criteria become available.</p>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-sm p-8 mb-12">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Create New Alert</h3>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-1 md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="location">Location</label>
+<input class="w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" id="location" placeholder="Enter city, neighborhood, or address" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="property-type">Property Type</label>
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none" id="property-type">
+<option>Any</option>
+<option>Apartment</option>
+<option>House</option>
+<option>Condo</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Price Range</label>
+<div class="grid grid-cols-2 gap-4">
+<input class="w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Min" type="number"/>
+<input class="w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Max" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Bedrooms</label>
+<div class="grid grid-cols-2 gap-4">
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+<option>Any</option>
+<option>1+</option>
+<option>2+</option>
+<option>3+</option>
+<option>4+</option>
+</select>
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+<option>Any</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Bathrooms</label>
+<div class="grid grid-cols-2 gap-4">
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+<option>Any</option>
+<option>1+</option>
+<option>2+</option>
+<option>3+</option>
+</select>
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+<option>Any</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="amenities">Amenities</label>
+<textarea class="w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary" id="amenities" placeholder="e.g., Pool, Gym, Parking" rows="3"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="frequency">Notification Frequency</label>
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none" id="frequency">
+<option>Instant</option>
+<option>Daily</option>
+<option>Weekly</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="delivery">Delivery Method</label>
+<select class="form-select w-full px-4 py-3 rounded-lg border bg-background-light dark:bg-gray-800 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary appearance-none" id="delivery">
+<option>Email</option>
+<option>In-app Notification</option>
+</select>
+</div>
+<div class="col-span-1 md:col-span-2 pt-4">
+<button class="w-full md:w-auto px-8 py-3 bg-primary text-black font-bold rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary" type="submit">Save Alert</button>
+</div>
+</form>
+</div>
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Existing Alerts</h3>
+<div class="space-y-4">
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-sm p-6 flex items-center justify-between">
+<div>
+<p class="font-bold text-gray-800 dark:text-white">Downtown Apartment Alert</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Apartment in Downtown, $1500 - $2500, 2 Beds, 2 Baths</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-gray-800">
+<svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM51.31,160,136,75.31,152.69,92,68,176.68ZM48,179.31,76.69,208H48Zm48,25.38L79.31,188,164,103.31,180.69,120Zm96-96L147.31,64l24-24L216,84.68Z"></path></svg>
+</button>
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-gray-800">
+<svg class="h-5 w-5 text-red-500" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl shadow-sm p-6 flex items-center justify-between">
+<div>
+<p class="font-bold text-gray-800 dark:text-white">Suburban House Alert</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">House in Suburbia, $2000 - $3500, 3 Beds, 2.5 Baths</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-gray-800">
+<svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM51.31,160,136,75.31,152.69,92,68,176.68ZM48,179.31,76.69,208H48Zm48,25.38L79.31,188,164,103.31,180.69,120Zm96-96L147.31,64l24-24L216,84.68Z"></path></svg>
+</button>
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-gray-800">
+<svg class="h-5 w-5 text-red-500" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

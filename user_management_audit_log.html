@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#17cf17",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+<div class="flex items-center gap-4 text-background-dark dark:text-background-light">
+<div class="h-6 w-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">EstateFinder</h2>
+</div>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Listings</a>
+<a class="text-sm font-medium text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Users</a>
+<a class="text-sm font-medium text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Agents</a>
+<a class="text-sm font-medium text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Transactions</a>
+<a class="text-sm font-medium text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-background-light text-background-dark/60 ring-1 ring-primary/20 hover:text-background-dark dark:bg-background-dark dark:text-background-light/60 dark:hover:text-background-light">
+<span class="material-symbols-outlined"> notifications </span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCWUo3dS4WTsgkVDPUz2c6RVnHKAqUoWDk6BXzZSWePAMKpLMiAQQ3VeOBL638_MWqyVMkFlhUKcMkIEO9rXMuZHiDmyG1xswem6BFWpBPWWKcFZsqg5_F-1McZvy0wKQKn70pyWQS78rSk-2D1X_STOsjnEc07g8GUoG9hsblDVT-cc_ZhFvUuuFZvdQ-AjrwHmls2bewTK19BkNs97v8h8HbpTtfm2zMPv5pW1FJ9MMoLBzFeFKfKmBcRso7d0Ubaf6G1aE7xJO7")'></div>
+</div>
+</header>
+<main class="flex-1 px-4 py-8 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-7xl">
+<div class="mb-8">
+<h1 class="text-3xl font-bold tracking-tight text-background-dark dark:text-background-light">Audit Log</h1>
+<p class="mt-2 text-sm text-background-dark/60 dark:text-background-light/60">Track all user management actions performed by administrators.</p>
+</div>
+<div class="rounded-lg border border-primary/20 bg-background-light dark:bg-background-dark">
+<div class="p-4 sm:p-6">
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div class="relative sm:col-span-2 lg:col-span-4">
+<span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-background-dark/50 dark:text-background-light/50"> search </span>
+<input class="form-input w-full rounded border-primary/20 bg-background-light py-2 pl-10 pr-4 text-background-dark placeholder:text-background-dark/50 focus:border-primary focus:ring-primary dark:bg-background-dark dark:text-background-light dark:placeholder:text-background-light/50" placeholder="Search by user, action, or details..."/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-background-dark dark:text-background-light" for="start-date">Start Date</label>
+<input class="form-input rounded border-primary/20 bg-background-light text-background-dark placeholder:text-background-dark/50 focus:border-primary focus:ring-primary dark:bg-background-dark dark:text-background-light dark:placeholder:text-background-light/50" id="start-date" type="date"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-background-dark dark:text-background-light" for="end-date">End Date</label>
+<input class="form-input rounded border-primary/20 bg-background-light text-background-dark placeholder:text-background-dark/50 focus:border-primary focus:ring-primary dark:bg-background-dark dark:text-background-light dark:placeholder:text-background-light/50" id="end-date" type="date"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-background-dark dark:text-background-light" for="admin">Administrator</label>
+<select class="form-select rounded border-primary/20 bg-background-light text-background-dark focus:border-primary focus:ring-primary dark:bg-background-dark dark:text-background-light" id="admin">
+<option>All Administrators</option>
+<option>Emily Carter</option>
+<option>David Miller</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-background-dark dark:text-background-light" for="action-type">Action Type</label>
+<select class="form-select rounded border-primary/20 bg-background-light text-background-dark focus:border-primary focus:ring-primary dark:bg-background-dark dark:text-background-light" id="action-type">
+<option>All Actions</option>
+<option>User Account Created</option>
+<option>User Account Updated</option>
+<option>User Account Suspended</option>
+<option>User Account Activated</option>
+<option>Password Reset</option>
+<option>User Account Deleted</option>
+</select>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-primary/20">
+<thead class="bg-primary/5 dark:bg-primary/10">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-background-dark dark:text-background-light" scope="col">Date &amp; Time</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-background-dark dark:text-background-light" scope="col">Administrator</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-background-dark dark:text-background-light" scope="col">Action</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-background-dark dark:text-background-light" scope="col">Affected User</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-background-dark dark:text-background-light" scope="col">Details</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/20 bg-background-light dark:bg-background-dark">
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">2024-03-15 10:30 AM</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Emily Carter</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:bg-primary/20"> User Account Created </span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Liam Bennett (liam.bennett@email.com)</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/60 dark:text-background-light/60">New user registration</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">2024-03-15 11:45 AM</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">David Miller</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:bg-primary/20"> User Account Updated </span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Olivia Harper (olivia.harper@email.com)</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/60 dark:text-background-light/60">Updated contact information</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">2024-03-15 01:20 PM</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Emily Carter</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:bg-primary/20"> User Account Suspended </span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Noah Thompson (noah.thompson@email.com)</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/60 dark:text-background-light/60">Reason: Violation of terms</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">2024-03-15 02:55 PM</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">David Miller</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:bg-primary/20"> User Account Activated </span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Ava Mitchell (ava.mitchell@email.com)</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/60 dark:text-background-light/60">Account reactivated</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">2024-03-15 04:10 PM</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Emily Carter</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary dark:bg-primary/20"> Password Reset </span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Ethan Parker (ethan.parker@email.com)</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/60 dark:text-background-light/60">User requested password reset</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">2024-03-16 09:00 AM</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">David Miller</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm">
+<span class="inline-flex items-center rounded-full bg-red-500/10 px-2.5 py-0.5 text-xs font-medium text-red-500 dark:bg-red-500/20"> User Account Deleted </span>
+</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/80 dark:text-background-light/80">Isabella Hayes (isabella.hayes@email.com)</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-background-dark/60 dark:text-background-light/60">Account deleted by user request</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-primary/20 bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-5 py-8">
+<div class="flex flex-wrap items-center justify-between gap-6">
+<div class="flex flex-wrap gap-x-6 gap-y-2">
+<a class="text-sm text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Terms of Service</a>
+<a class="text-sm text-background-dark/60 hover:text-background-dark dark:text-background-light/60 dark:hover:text-background-light" href="#">Privacy Policy</a>
+</div>
+<p class="text-sm text-background-dark/60 dark:text-background-light/60">© 2024 EstateFinder. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
